@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+@font-face {
+    font-family: 'Baloo'; 
+    src: url('../assets/fonts/baloo.regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.bg-start {
+    background-image: url('../assets/bg_inicio.png'); 
+    background-size: cover;           /* Faz a imagem cobrir a tela toda */
+    background-position: center;      /* Centraliza a imagem */
+    background-repeat: no-repeat;     /* Não deixa a imagem repetir */
+    background-attachment: fixed;
+}
+
+body.bg-intro {
+    background-image: url('../assets/bgIntro.png'); 
+    background-size: cover;           /* Faz a imagem cobrir a tela toda */
+    background-position: center;      /* Centraliza a imagem */
+    background-repeat: no-repeat;     /* Não deixa a imagem repetir */
+    background-attachment: fixed;
+}
+
+body.bg-bakery {
+    background-image: url('../assets/bgBakery.png'); 
+    background-size: cover;           /* Faz a imagem cobrir a tela toda */
+    background-position: center;      /* Centraliza a imagem */
+    background-repeat: no-repeat;     /* Não deixa a imagem repetir */
+    background-attachment: fixed;
+}
+
+#game-container {
+    width: 100%;       /* Ocupa toda a largura disponível */
+    max-width: 1024px; /* Opcional: define um limite para não pixelar em telas gigantes */
+    height: 100vh;      /* Ocupa 80% da altura da tela, por exemplo */
+    margin: auto;
+}
+
+.divStart {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.btnStart {
+    background-color: #20B3E9;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-family: "Baloo";
+    border: none;
+}
+
+.logoConexao{ 
+    height: 14rem;
+}
+
+.introText {
+    font-family: 'Baloo';
+    color: black;
+    font-size: 1.2rem;
+    width: 20rem;
+    text-align: center;
+    line-height: 1.4;
+
+}
+
+.introTextClick {
+    font-family: 'Baloo';
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.dialogBg{
+    width: 37rem;
+    height: 13rem;
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Baloo';
+    font-size: 1.2rem;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.instrucao { 
+    font-family: 'baloo';
+    font-size: 1rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Celulares pequenos (ex: iPhone SE antigo) */
+@media (max-width: 320px) {
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+ 
+}
+
+/* Celulares padrão (a maioria dos Androids e iPhones atuais) */
+@media (max-width: 480px) {
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        background-size: cover;   
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .btnStart { 
+        width: 10rem;
+        height: 3rem;
+    }
+}
