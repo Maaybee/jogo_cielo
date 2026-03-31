@@ -2,18 +2,45 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Cielo Sales Simulator - Artefato de Treinamento</title>
-    <link rel="stylesheet" href="./style/style.css"></head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Conexão Cielo</title>
     
-    <div id="game-container">
+    <style> 
+
+        @font-face {
+        font-family: 'Pixelify';
+        src: url('/assets/fonts/pixelify-sans/Font/ttf/PixelifySans-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Upheavel';
+            src: url('/assets/fonts/upheaval/upheavtt.ttf');
         
-    </div>
-    
-    <!-- Carregue o Phaser -->
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgb(71, 71, 71);
+            font-family: 'Pixelify';
+        } 
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div style="font-family: 'Upheavel'; position: absolute; left: -999px;">.</div>
+    <div style="font-family: 'Pixelify'; position: absolute; left: -999px;">.</div>
+
+    <!-- Carregue o Phaser --> 
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
     
     <!-- Carregue seu jogo -->
-    <script type="module" src="./telas/main.js"></script>
+    <script type="module" src="src/telas/main.js"></script>
+
 </body>
 </html>
