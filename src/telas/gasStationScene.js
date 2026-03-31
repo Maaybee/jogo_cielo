@@ -39,9 +39,9 @@ export class GasStationScene extends Phaser.Scene {
   // Carrega todos os assets utilizados na fase
   preload() {
     // Elementos visuais da fase
-    this.load.image("bgGasStation", "/assets/backgrounds/bgGasstation.png");
-    this.load.image("dialogBoxLevel", "/assets/levels/dialogBoxLevels.png");
-    this.load.image("btnExit", "/assets/levels/btnExit.png");
+    this.load.image("bgGasStation", "assets/backgrounds/bgGasstation.png");
+    this.load.image("dialogBoxLevel", "assets/levels/dialogBoxLevels.png");
+    this.load.image("btnExit", "assets/levels/btnExit.png");
     this.load.image("optionBox", "assets/levels/optionBox.png");
 
     // Sons de feedback
@@ -49,9 +49,9 @@ export class GasStationScene extends Phaser.Scene {
     this.load.audio("soundDefeat", "assets/sounds/soundDefeat.mp3");
 
     // Sprites do NPC (José)
-    this.load.image("neutralgasManager", "/assets/characters/neutralGasManager.png");
-    this.load.image("angryGasManager", "/assets/characters/angryGasManager.png");
-    this.load.image("gasmanager", "/assets/characters/gasmanager.png");
+    this.load.image("neutralgasManager", "assets/characters/neutralGasManager.png");
+    this.load.image("angryGasManager", "assets/characters/angryGasManager.png");
+    this.load.image("gasmanager", "assets/characters/gasmanager.png");
 
     // Áudios de interação
     this.load.audio("buttonDialog", "assets/sounds/buttonDialog.mp3");

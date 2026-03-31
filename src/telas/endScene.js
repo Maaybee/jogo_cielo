@@ -12,9 +12,9 @@ export class EndScene extends Phaser.Scene {
 
   // Carrega os assets visuais antes da cena ser exibida
   preload() {
-    this.load.image("bgEndScene", "/assets/backgrounds/bgEndScene.png");
-    this.load.image("endMsg", "/assets/score_final.png");
-    this.load.image("btnRestart", "/assets/btnRestart.png");
+    this.load.image("bgEndScene", "assets/backgrounds/bgEndScene.png");
+    this.load.image("endMsg", "assets/score_final.png");
+    this.load.image("btnRestart", "assets/btnRestart.png");
   }
 
   create() {

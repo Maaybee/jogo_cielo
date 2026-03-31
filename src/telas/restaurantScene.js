@@ -41,15 +41,15 @@ export class RestaurantScene extends Phaser.Scene {
   // Carrega todos os assets da fase
   preload() {
     // Elementos visuais da fase
-    this.load.image("bgRestaurant", "/assets/backgrounds/bgRestaurant.png");
-    this.load.image("dialogBoxLevel", "/assets/levels/dialogBoxLevels.png");
-    this.load.image("btnExit", "/assets/levels/btnExit.png");
-    this.load.image("emphasis", "/assets/levels/light.png");
+    this.load.image("bgRestaurant", "assets/backgrounds/bgRestaurant.png");
+    this.load.image("dialogBoxLevel", "assets/levels/dialogBoxLevels.png");
+    this.load.image("btnExit", "assets/levels/btnExit.png");
+    this.load.image("emphasis", "assets/levels/light.png");
 
     // Sprites do NPC (TXORI)
-    this.load.image("restaurantowner", "/assets/characters/restaurantowner.png");
-    this.load.image("angryRestaurantOwner", "/assets/characters/angryrestaurantowner.png");
-    this.load.image("happyRestaurantOwner", "/assets/characters/happyrestaurantowner.png");
+    this.load.image("restaurantowner", "assets/characters/restaurantowner.png");
+    this.load.image("angryRestaurantOwner", "assets/characters/angryrestaurantowner.png");
+    this.load.image("happyRestaurantOwner", "assets/characters/happyrestaurantowner.png");
 
     // UI e sons
     this.load.image("optionBox", "assets/levels/optionBox.png");

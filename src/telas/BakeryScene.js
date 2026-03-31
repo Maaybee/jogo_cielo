@@ -40,10 +40,10 @@ export class BakeryScene extends Phaser.Scene {
 
   // Carrega todos os assets utilizados na cena
   preload() {
-    this.load.image("bgBaker", "/assets/backgrounds/bgBakery.png");
-    this.load.image("dialogBoxLevel", "/assets/levels/dialogBoxLevels.png");
-    this.load.image("btnExit", "/assets/levels/btnExit.png");
-    this.load.image("emphasis", "/assets/levels/light.png");
+    this.load.image("bgBaker", "assets/backgrounds/bgBakery.png");
+    this.load.image("dialogBoxLevel", "assets/levels/dialogBoxLevels.png");
+    this.load.image("btnExit", "assets/levels/btnExit.png");
+    this.load.image("emphasis", "assets/levels/light.png");
     this.load.image("optionBox", "assets/levels/optionBox.png");
 
     this.load.image("baker", "assets/characters/baker.png");

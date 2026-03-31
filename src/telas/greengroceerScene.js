@@ -41,15 +41,15 @@ export class GreengrocerScene extends Phaser.Scene {
   // Carrega todos os assets da fase
   preload() {
     // Elementos visuais
-    this.load.image("bgGreengrocer", "/assets/backgrounds/quitanda.png");
-    this.load.image("dialogBoxLevel", "/assets/levels/dialogBoxLevels.png");
-    this.load.image("btnExit", "/assets/levels/btnExit.png");
-    this.load.image("emphasis", "/assets/levels/light.png");
+    this.load.image("bgGreengrocer", "assets/backgrounds/quitanda.png");
+    this.load.image("dialogBoxLevel", "assets/levels/dialogBoxLevels.png");
+    this.load.image("btnExit", "assets/levels/btnExit.png");
+    this.load.image("emphasis", "assets/levels/light.png");
 
     // Sprites da NPC (Julie)
-    this.load.image("greengrocer", "/assets/characters/greengrocer.png");
-    this.load.image("angryGreengrocer", "/assets/characters/angryGreengrocer.png");
-    this.load.image("happyGreengrocerManager", "/assets/characters/happyGreengrocer.png");
+    this.load.image("greengrocer", "assets/characters/greengrocer.png");
+    this.load.image("angryGreengrocer", "assets/characters/angryGreengrocer.png");
+    this.load.image("happyGreengrocerManager", "assets/characters/happyGreengrocer.png");
 
     // UI e sons
     this.load.image("optionBox", "assets/levels/optionBox.png");

@@ -17,25 +17,25 @@ export class MapScene extends Phaser.Scene {
   preload() {
     this.load.image("mapBackground", "assets/backgrounds/bgMapa.png");
     this.load.image("cieloLogo", "assets/logos/cieloLogo.png");
-    this.load.image("reputationScore", "/assets/reputationScore.png");
+    this.load.image("reputationScore", "assets/reputationScore.png");
 
-    this.load.image("cieloLeader", "/assets/characters/liderCielo.png");
-    this.load.image("baker", "/assets/characters/baker.png");
-    this.load.image("gasStationManager", "/assets/characters/gasmanager.png");
+    this.load.image("cieloLeader", "assets/characters/liderCielo.png");
+    this.load.image("baker", "assets/characters/baker.png");
+    this.load.image("gasStationManager", "assets/characters/gasmanager.png");
     this.load.image(
       "restaurantOwner",
       "/assets/characters/restaurantOwner.png",
     );
 
-    this.load.image("introBalloon", "/assets/baloonIntro.png");
-    this.load.image("btnStart", "/assets/btnStart.png");
-    this.load.image("dialogBox", "/assets/dialogBox.png");
-    this.load.image("btnNext", "/assets/btnAvancar.png");
+    this.load.image("introBalloon", "assets/baloonIntro.png");
+    this.load.image("btnStart", "assets/btnStart.png");
+    this.load.image("dialogBox", "assets/dialogBox.png");
+    this.load.image("btnNext", "assets/btnAvancar.png");
     this.load.image("btnHelp", "assets/btnHelp.png");
 
-    this.load.image("lockedGreengrocer", "/assets/lockedGreengrocer.png");
-    this.load.image("lockedRestaurant", "/assets/lockedRestaurant.png");
-    this.load.image("lockedGasStation", "/assets/lockedGasStation.png");
+    this.load.image("lockedGreengrocer", "assets/lockedGreengrocer.png");
+    this.load.image("lockedRestaurant", "assets/lockedRestaurant.png");
+    this.load.image("lockedGasStation", "assets/lockedGasStation.png");
     this.load.audio("mainMusic", "assets/sounds/mainMusicLoopVersion.mp3");
     this.load.audio("blockedMapSound", "assets/sounds/blockedMapSound.mp3");
     this.load.audio("buttonSelectMap", "assets/sounds/buttonSelectMap.mp3");

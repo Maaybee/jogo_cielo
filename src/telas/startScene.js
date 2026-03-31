@@ -14,8 +14,8 @@ export class StartScene extends Phaser.Scene {
   preload() {
     this.load.image("btnStart", "assets/btnStart.png");
     this.load.image("logoStart", "assets/logos/logoInicio.png");
-    this.load.image("bgStart", "/assets/backgrounds/bgInicio.png");
-    this.load.image("airship", "/assets/airship.png");
+    this.load.image("bgStart", "assets/backgrounds/bgInicio.png");
+    this.load.image("airship", "assets/airship.png");
     this.load.audio("btnStartSound", "assets/sounds/buttonStart.mp3");
   }
 
