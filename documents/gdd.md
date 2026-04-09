@@ -1,4 +1,4 @@
-![Logo da Inteli ](./other/logointeli.png)
+![Logo da Inteli ](./assets/logointeli.png)
 
 
 # GDD - Game Design Document - Módulo 1 - Inteli
@@ -22,26 +22,25 @@
 
 <br>
 
+# <a name="c1"></a>1. Introdução
 
-# <a name="c1"></a>1. Introdução (sprints 1 a 4)
-
-Esta seção contextualiza o projeto desenvolvido para a Cielo no âmbito do Módulo 1 do Inteli. O projeto consiste na criação de um jogo educacional voltado à capacitação de Gerentes de Negócios (GNs), utilizando mecânicas de simulação e narrativa interativa para fixar conhecimentos sobre o portfólio de produtos e técnicas de atendimento da companhia.
-
-O documento a seguir detalha desde a análise estratégica do setor de pagamentos até as especificações técnicas de funcionamento do jogo, servindo como guia para o desenvolvimento e futura manutenção do software.
+Desenvolvido para a Cielo durante o Módulo 1 do Inteli, este projeto consiste em um jogo educacional que utiliza simulação e narrativa interativa para capacitar Gerentes de Negócios (GNs) sobre o portfólio e as técnicas de atendimento da companhia. Para estruturar essa iniciativa, este documento detalha desde a análise estratégica do setor de pagamentos até as especificações técnicas de funcionamento do jogo, servindo como guia fundamental para o desenvolvimento e a futura manutenção do software.
 
 ## 1.1. Plano Estratégico do Projeto
-O Plano Estratégico estabelece a fundação do projeto, alinhando as necessidades da Cielo com as mecânicas de jogo propostas. Ele analisa o cenário competitivo através do modelo de Porter e da matriz SWOT, garantindo que o jogo não seja apenas divertido, mas uma ferramenta de negócio eficiente para a integração e treinamento de novos colaboradores.
 
-### 1.1.1. Contexto da indústria (sprint 2)
+O Plano Estratégico estabelece a fundação do projeto, alinhando as necessidades de negócio da Cielo com a solução gamificada proposta. Esta seção abrange desde a análise do cenário competitivo — por meio do modelo de Porter e da matriz SWOT — até a definição da identidade do projeto (Missão, Visão e Valores) e da sua Proposta de Valor. Além disso, o plano detalha a solução desenvolvida, mapeia os riscos e oportunidades e estabelece metas e indicadores (KPIs) claros, garantindo que o jogo seja não apenas imersivo, mas uma ferramenta de negócios mensurável e eficiente para o treinamento de novos colaboradores.
 
-A Cielo atua no altamente competitivo setor de adquirência brasileiro, mercado marcado pela rápida digitalização. Seu modelo de negócio evoluiu da simples captura em terminais físicos para um ecossistema financeiro multicanal, englobando e-commerce, APIs e soluções antifraude (Cielo, s.d.). Enfrentando fortes concorrentes como Stone, PagSeguro, Rede e Getnet (Instituto Propague, 2023), o setor lida com a comoditização das taxas transacionais. Assim, a tendência do mercado é focar na expansão do Pix, Open Finance e na monetização via serviços de valor agregado, como softwares de gestão e crédito (Febraban, 2025).
+### 1.1.1. Contexto da indústria
 
-#### 1.1.1.1. Modelo de 5 Forças de Porter (sprint 2)
-As 5 Forças de Porter são uma ferramenta clássica de estratégia de negócios utilizada para analisar o cenário competitivo de uma empresa. Criado por Michael Porter, o modelo ajuda a entender o nível de atratividade de um setor ao avaliar cinco fatores fundamentais que determinam a lucratividade e a posição de mercado de um negócio. Abaixo, apresento a aplicação prática desse framework para o cenário da nossa empresa:
+A Cielo atua no altamente competitivo setor de adquirência brasileiro, mercado marcado pela rápida digitalização. Seu modelo de negócio evoluiu da simples captura em terminais físicos para um ecossistema financeiro multicanal, englobando e-commerce, APIs e soluções antifraude (Cielo, s.d.). Enfrentando fortes concorrentes como Stone, PagSeguro, Rede e Getnet (Instituto Propague, 2023; Finsiders Brasil, 2023; InvestNews, 2023), o setor lida com a comoditização das taxas transacionais, conforme indicam dados recentes do mercado (Abecs, 2024). Assim, a tendência do mercado é focar na expansão do Pix, Open Finance e na monetização via serviços de valor agregado, como softwares de gestão e crédito (Febraban, 2025; G1, 2025; Edrone, 2024). Para mapear a fundo essa dinâmica competitiva e entender a posição da empresa nesse cenário, a subseção a seguir detalha o mercado através do Modelo de 5 Forças de Porter.
+
+#### 1.1.1.1. Modelo de 5 Forças de Porter
+
+As 5 Forças de Porter são uma ferramenta clássica de estratégia de negócios utilizada para analisar o cenário competitivo de uma empresa. Conforme proposto por Porter (1980), o modelo ajuda a entender o nível de atratividade de um setor ao avaliar cinco fatores fundamentais que determinam a lucratividade e a posição de mercado de um negócio. Abaixo, apresento a aplicação prática desse framework para o cenário da nossa empresa:
 
 <p align = 'center'><b>Figura 1.1.1.1 </b> - 5 Forças de Porter</p>
 
-![template_5_forcas_de_porter](./other/template_5_forcas_de_porter.png)
+![template_5_forcas_de_porter](./assets/template_5_forcas_de_porter.png)
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
@@ -49,7 +48,7 @@ As 5 Forças de Porter são uma ferramenta clássica de estratégia de negócios
 1. Principais Obstáculos para Novos Entrantes
 Regulamentação rigorosa do Banco Central: O setor no Brasil apresenta um elevado nível de supervisão. Para operar formalmente, novas instituições precisam de autorização prévia, o que exige o cumprimento de requisitos legais, operacionais e financeiros, demandando tempo e elevados investimentos iniciais.
 
-Proteção de dados e exigências da LGPD: A conformidade com a Lei Geral de Proteção de Dados exige que as instituições garantam a segurança e integridade das informações. Isso demanda altos investimentos em tecnologia, infraestrutura de segurança e governança de dados.
+Proteção de dados e exigências da LGPD: A conformidade com a Lei Geral de Proteção de Dados exige que as instituições garantam a segurança e integridade das informações (Sebrae, s.d.; Zoop, s.d.). Isso demanda altos investimentos em tecnologia, infraestrutura de segurança e governança de dados.
 
 2. Impacto Potencial na Indústria
 Aumento da concorrência pelas Fintechs: O crescimento de empresas como Nubank e Banco Inter impactou diretamente as instituições tradicionais, especialmente no processamento de pagamentos instantâneos (Pix), resultando em maior velocidade e redução de taxas para o consumidor.
@@ -63,7 +62,7 @@ Digitalização e Meios de Pagamento: A análise revela um cenário de risco ele
 Desintermediação Financeira: As criptomoedas utilizam a tecnologia blockchain para eliminar a necessidade de adquirentes tradicionais, enquanto as carteiras digitais permitem que o fluxo financeiro ocorra fora do ecossistema das credenciadoras convencionais.
 
 2. Avaliação de Impacto e Barreiras Culturais
-Classificação de Risco: A ameaça é classificada como Alta, dado o baixíssimo custo de troca (switching cost) para usuários e lojistas. O Pix, especificamente, apresenta taxas de aceitação próximas a zero, desafiando a rentabilidade das transações de débito.
+Classificação de Risco: A ameaça é classificada como Alta, dado o baixíssimo custo de troca (switching cost) para usuários e lojistas. O Pix, especificamente, apresenta taxas de aceitação próximas a zero (IDinheiro, 2024), desafiando a rentabilidade das transações de débito.
 
 Resiliência de Métodos Tradicionais: Apesar da inovação, boletos bancários (para grandes transações) e o uso de cédulas físicas (em ambientes menos urbanizados) ainda coexistem como forças resilientes devido a barreiras culturais e de infraestrutura física.
 
@@ -106,15 +105,15 @@ Ambiente Competitivo: A rivalidade é intensa, marcada por pressão sobre preço
 
 ### 1.1.2. Análise SWOT (sprint 2)
 
-A análise SWOT (acrônimo para Strengths, Weaknesses, Opportunities and Threats) constitui uma ferramenta fundamental para o planejamento estratégico da Cielo S.A., permitindo uma avaliação integrada entre suas competências internas e as variáveis do ambiente macroeconômico. Este diagnóstico é essencial para compreender como a organização pode alavancar suas forças operacionais para mitigar fraquezas e se posicionar frente aos desafios de um mercado em constante disrupção tecnológica (Cielo, 2025).
+A análise SWOT (acrônimo para Strengths, Weaknesses, Opportunities and Threats) constitui uma ferramenta fundamental para o planejamento estratégico da Cielo S.A., permitindo uma avaliação integrada entre suas competências internas e as variáveis do ambiente macroeconômico. Este diagnóstico é essencial para compreender como a organização pode alavancar suas forças operacionais para mitigar fraquezas e se posicionar frente aos desafios de um mercado em constante disrupção tecnológica (Cielo, 2025; Mazzoco, 2022).
 
 No âmbito interno, a análise foca nos recursos e capacidades que conferem à Cielo sua posição de liderança, bem como nas limitações que podem comprometer sua eficiência. Externamente, o mapeamento identifica as tendências do setor de pagamentos que representam oportunidades de expansão ou ameaças à sustentabilidade do modelo de negócio tradicional de adquirência. A seguir, apresenta-se a matriz detalhada, sintetizando os pilares que orientam a tomada de decisão estratégica da companhia.
 
 <p align = 'center'><b>Figura 1.1.2 </b> - Análise SWOT Cielo</p>
 
-![analise-swot](other/analiseSwot.png)
+![analise-swot](assets/analiseSwot.png)
 
-<p align = "center">Fonte: Modelo criado por Albert S. Humphrey (1960). Adaptação feita pelos autores (2026).</p>
+<p align = "center">Fonte: Modelo adaptado de Humphrey (1960). Adaptação feita pelos autores (2026).</p>
 
 ## Strengths:
 A seção de forças identifica os pontos positivos internos de uma organização que oferecem vantagem competitiva frente ao mercado. No caso da Cielo, nota-se que a empresa possui uma sólida liderança de mercado, sendo a maior adquirente do país, o que é reforçado por sua boa reputação consolidada junto aos consumidores brasileiros. Além disso, a companhia se destaca por oferecer diversas soluções de pagamento e gestão aos compradores, contando com o suporte de vendedores altamente treinados e motivados, o que garante uma abordagem comercial eficaz e um atendimento qualificado.
@@ -132,7 +131,7 @@ A seção de fraquezas identifica os pontos falhos internos que podem compromete
 * Alto valor de taxas.
 
 ## Opportunities:
-A seção de oportunidades analisa os fatores externos positivos que podem ser explorados para o crescimento e a vantagem competitiva de uma organização. No caso da Cielo, nota-se que a empresa possui à sua disposição o grande mercado brasileiro, que oferece uma base massiva de clientes em potencial para suas soluções de pagamento. Além disso, o crescimento da digitalização dos negócios abre portas para a oferta de novos serviços tecnológicos, tendência que é reforçada pela expansão contínua do e-commerce brasileiro, exigindo da companhia soluções cada vez mais integradas e eficientes para o comércio eletrônico.
+A seção de oportunidades analisa os fatores externos positivos que podem ser explorados para o crescimento e a vantagem competitiva de uma organização. No caso da Cielo, nota-se que a empresa possui à sua disposição o grande mercado brasileiro, que oferece uma base massiva de clientes em potencial para suas soluções de pagamento (Fenacon, 2025). Além disso, o crescimento da digitalização dos negócios abre portas para a oferta de novos serviços tecnológicos, tendência que é reforçada pela expansão contínua do e-commerce brasileiro (CNN Brasil, 2023; Edrone, 2024), exigindo da companhia soluções cada vez mais integradas e eficientes para o comércio eletrônico.
 
 * Grande mercado brasileiro;
 * Crescimento da digitalização dos negócios;
@@ -145,15 +144,17 @@ A seção de ameaças identifica os fatores externos que podem representar risco
 * Competição já alta em crescimento;
 * Mudanças tecnológicas de mercado.
 
-### 1.1.3. Missão / Visão / Valores (sprint 2)
+### 1.1.3. Missão / Visão / Valores 
 
 A base estratégica da Blue Codes é consolidada pelo tripé Missão, Visão e Valores, que atua como o alicerce fundamental para todas as nossas operações e decisões tecnológicas. A Missão define o nosso propósito imediato e a razão de existir da empresa no mercado atual, enquanto a Visão estabelece as nossas aspirações de longo prazo e o patamar de inovação que pretendemos alcançar no futuro. Complementando essa estrutura, os Valores representam os princípios éticos e os comportamentos inegociáveis que moldam a nossa cultura interna e o padrão de entrega aos nossos clientes. Juntos, esses pilares garantem que a Blue Codes mantenha uma direção clara, promovendo a coerência entre a excelência técnica e o impacto positivo que desejamos gerar no ecossistema digital.
 
 * **Missão:** Levar equidade no ensino aos vendedores da Cielo, promovendo uma forma de aprendizagem simples, autônoma e igualitária para todos.
+<br>
 * **Visão:** Ser a principal plataforma gamificada de capacitação para vendedores da Cielo, tornando o aprendizado acessível, contínuo e transformador em todo o Brasil.
+<br>
 * **Valores:** Inclusão e equidade no acesso ao conhecimento, simplicidade e autonomia no aprendizado, inovação, colaboração e desenvolvimento contínuo das pessoas.
 
-### 1.1.4. Proposta de Valor (sprint 4)
+### 1.1.4. Proposta de Valor 
 
 Segundo Osterwalder et al. (2014), o Canvas de Proposta de Valor é uma ferramenta visual estruturada para garantir o alinhamento perfeito entre as necessidades do cliente e a solução desenvolvida. Aplicando esse modelo ao escopo do projeto, o Perfil do Cliente detalha as tarefas diárias dos Gerentes de Negócios (GNs), que consistem em realizar o atendimento, conhecer profundamente os produtos da Cielo e efetuar vendas. Durante essas atividades, as principais dores enfrentadas são a insegurança no momento da venda, a falta de prática e o fato de os treinamentos tradicionais serem cansativos. Como contrapartida, os ganhos esperados pelos GNs são o aumento do engajamento, a melhoria no desempenho comercial e o desenvolvimento de habilidades de negociação.
 
@@ -161,20 +162,20 @@ Do lado da Proposta de Valor, o produto oferecido é um jogo de simulação de v
 
 <p align = 'center'><b>Figura 1.1.4 </b> - Canvas Da Proposta de Valor</p>
 
-![canvas_proposta_de_valor](./other/canvas_proposta_de_valor.png)
+![canvas_proposta_de_valor](./assets/canvas_proposta_de_valor.png)
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-### 1.1.5. Descrição da Solução Desenvolvida (sprint 4)
+### 1.1.5. Descrição da Solução Desenvolvida 
 
 O cenário atual de capacitação dos novos Gerentes de Negócios (GNs) da Cielo consiste em uma etapa de onboarding teórico online (focada em produtos e técnicas de vendas), seguida por sessões presenciais de dinâmicas e jogos educativos de tabuleiro. O grande desafio desse modelo reside na capilaridade da própria empresa: como a Cielo está presente em 99% dos municípios brasileiros (Cielo, 2023), existe uma imensa dispersão geográfica de sua força de vendas. Devido a barreiras logísticas e financeiras de deslocamento, muitos futuros vendedores não conseguem participar dessas dinâmicas presenciais, gerando uma desigualdade na qualidade e na fixação do treinamento prático entre as diferentes regiões do país.
 
-Para resolver esse gargalo de escalabilidade, a equipe Blue Codes desenvolveu um Simulador Digital de Vendas. Trata-se de um jogo virtual web-based, acessível diretamente por navegadores comuns (como Chrome, Safari e Edge), dispensando instalações complexas. Com mecânicas de mapa urbano e narrativa no estilo Visual Novel, o jogador assume o papel de um GN da Cielo e precisa visitar diferentes estabelecimentos comerciais. O núcleo da solução baseia-se na interação imersiva com personagens (donos de negócios), onde o jogador deve conduzir diálogos, contornar objeções reais e utilizar o portfólio da empresa para convencer o cliente a fechar negócio.
+Para resolver esse gargalo de escalabilidade, a equipe Blue Codes desenvolveu um Simulador Digital de Vendas. Trata-se de um jogo virtual jogável na web, acessível diretamente por navegadores comuns (como Chrome, Safari e Edge), dispensando instalações complexas. Com mecânicas de mapa urbano e narrativa no estilo Visual Novel, o jogador assume o papel de um GN (Gerenciador de Negócios) da Cielo e precisa visitar diferentes estabelecimentos comerciais. O núcleo da solução baseia-se na interação imersiva com personagens (donos de negócios), em que o jogador deve conduzir diálogos, contornar objeções reais e utilizar o portfólio da empresa para convencer o cliente a fechar negócio.
 
 O jogo será implementado como a etapa prática e final do onboarding. Após concluírem o curso teórico e adquirirem a bagagem técnica sobre os produtos, os GNs acessarão a plataforma de forma autônoma para testar seus conhecimentos em diversas fases e cenários narrativos exclusivos. A literatura especializada reforça a eficácia dessa abordagem: segundo Boller e Kapp (2018), o design de jogos de aprendizagem é ideal para o ambiente corporativo por fornecer aos colaboradores um "ambiente seguro" para explorar regras, testar hipóteses, falhar sem consequências reais e tentar novamente, transformando a teoria em prática de maneira muito mais retentiva.
 
 Dessa forma, a implementação do simulador garante uma série de benefícios estratégicos e operacionais para a Cielo. O principal deles é a equidade e a democratização do ensino, assegurando que todos os GNs, independentemente de estarem em grandes capitais ou no interior, tenham acesso à mesma experiência de alta qualidade. Além disso, a solução viabiliza a escalabilidade logística ao eliminar os custos de envio de materiais físicos e de locomoção de turmas. Por fim, ao vivenciar simulações realistas, o colaborador desenvolve o pensamento crítico, treinando a inteligência emocional, a leitura de perfil de cliente e a tomada de decisão sob pressão de forma totalmente engajadora.
 
-### 1.1.6. Matriz de Riscos e Oportunidades (sprint 4)
+### 1.1.6. Matriz de Riscos e Oportunidades 
 
 A Matriz de Riscos apresentada a seguir, fundamentada nas diretrizes de gestão de projetos de Carvalho (2018), tem como objetivo mapear, avaliar e propor planos de ação para os eventos incertos que podem impactar o desenvolvimento do simulador educacional. Em gerenciamento de projetos, o conceito de risco abrange tanto eventos negativos (ameaças) quanto eventos positivos (oportunidades).
 
@@ -182,7 +183,7 @@ Para essa análise, adotou-se uma metodologia de priorização que cruza a Proba
 
 <p align = 'center'><b>Figura 1.1.6.1 </b> - Matriz de riscos e oportunidades </p>
 
-![matriz_de_risco](./other/matrizDeRisco.png)
+![matriz_de_risco](./assets/matrizDeRisco.png)
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 Conforme ilustrado na matriz e detalhado na Tabela 1.1.6.1 a seguir, os eventos do projeto foram divididos em duas categorias estratégicas: os riscos/ameaças (identificados de R01 a R10), com foco em neutralizar impactos negativos, e as oportunidades (identificadas de R11 a R13), com foco em maximizar o engajamento, a acessibilidade e a qualidade do código.
@@ -208,15 +209,15 @@ Conforme ilustrado na matriz e detalhado na Tabela 1.1.6.1 a seguir, os eventos 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
-### 1.1.7. Objetivos, Metas e Indicadores (sprint 4)
+### 1.1.7. Objetivos, Metas e Indicadores
 
 A definição de objetivos, metas e indicadores é essencial para mensurar a efetividade da solução gamificada desenvolvida para a Cielo, garantindo o alinhamento com as estratégias de capacitação e desempenho comercial da companhia. O objetivo geral do projeto é aprimorar a qualificação técnica dos Gerentes de Negócios (GNs), elevando a eficiência nas negociações e o engajamento nos treinamentos corporativos sobre o portfólio de produtos. Para que os resultados sejam específicos, mensuráveis, atingíveis, relevantes e temporais, estabeleceram-se metas SMART focadas em três pilares: capacitação, eficiência e engajamento, seguindo a metodologia de gestão de desempenho proposta por Doran (1981).
 
 No pilar de capacitação técnica, a meta é aumentar a taxa de sucesso nas simulações de vendas de 60% para 80% em até 3 meses após a implementação. Quanto à eficiência operacional, busca-se reduzir o tempo médio de treinamento de 20 horas para 14 horas em até 6 meses, utilizando metodologias de microlearning para combater a complexidade do setor de adquirência. Já para o engajamento, a meta é alcançar 80% de adesão voluntária dos vendedores ativos à plataforma no primeiro semestre de operação, visando mitigar os desafios de retenção e atualização destacados nos relatórios de governança da Cielo (2023).
 
-A mensuração desses resultados será feita através de indicadores-chave de desempenho (KPIs), como a taxa de conclusão de módulos, o score médio nas simulações de acertos, o nível de satisfação interno (NPS de capacitação) e o tempo de rampa dos novos gerentes registrado no CRM. Essas métricas permitem avaliar se a solução contribui para a performance comercial e o fortalecimento competitivo da empresa frente à crescente concorrência no mercado de pagamentos. As definições desta seção baseiam-se no modelo SMART proposto por Doran (1981), em princípios de gamificação aplicados à aprendizagem corporativa, conforme discutido por Karl M. Kapp, e em boas práticas de treinamento e desenvolvimento amplamente adotadas por organizações como Deloitte e McKinsey & Company.
+A mensuração desses resultados será feita através de indicadores-chave de desempenho (KPIs), como a taxa de conclusão de módulos, o score médio nas simulações de acertos, o nível de satisfação interno (NPS de capacitação) e o tempo de rampa dos novos gerentes registrado no CRM. Essas métricas permitem avaliar se a solução contribui para a performance comercial e o fortalecimento competitivo da empresa frente à crescente concorrência no mercado de pagamentos. As definições desta seção baseiam-se no modelo SMART proposto por Doran (1981), em princípios de gamificação aplicados à aprendizagem corporativa, conforme discutido por Boller e Kapp (2018), e em boas práticas de treinamento e desenvolvimento amplamente adotadas por organizações como Deloitte (2020) e McKinsey & Company (2019).
 
-## 1.2. Requisitos do Projeto (sprints 1 e 2)
+## 1.2. Requisitos do Projeto
 
 Esta seção apresenta os requisitos funcionais (Tabela 1.2.1) e os requisitos não funcionais (Tabela 1.2.2) definidos nas Sprints 1 e 2 do projeto, contemplando as principais funcionalidades implementadas e as diretrizes técnicas que orientam o desenvolvimento do jogo.
 
@@ -226,20 +227,18 @@ Esta seção apresenta os requisitos funcionais (Tabela 1.2.1) e os requisitos n
 |----|------------------------|
 | RF01 | O sistema deve direcionar o usuário para o cenário de navegação (mapa) e permitir a escolha de fases por meio de clique. |
 | RF02 | O sistema deve possuir um botão para confirmar a escolha da fase, apresentando feedback visual da ação ao usuário. |
-| RF03 | O sistema deve iniciar cada fase com um diálogo de boas-vindas e um tutorial introdutório sobre os produtos da Cielo. |
+| RF03 | O sistema deve iniciar o jogo com um diálogo convidativo de boas-vindas. |
 | RF04 | O sistema deve apresentar um diálogo de conduta de vendas específico para cada fase. |
 | RF05 | O sistema deve apresentar múltiplas opções de resposta em momentos estratégicos do diálogo, sendo que cada escolha deve alterar o rumo da conversa e impactar diretamente a métrica de satisfação do cliente. |
 | RF06 | O sistema deve disponibilizar diferentes produtos da Cielo como alternativas de venda, sendo que a escolha correta deve aumentar a satisfação do cliente e a escolha inadequada deve reduzi-la. |
-| RF07 | O sistema deve possuir uma métrica visível de “Satisfação do Cliente”, representada por uma barra ou indicador numérico, que aumente ou diminua de acordo com as escolhas realizadas pelo usuário durante a fase. |
-| RF08 | Na fase do posto, o sistema não deve exibir a métrica de “Satisfação do Cliente”.|
+| RF07 | O sistema deve possuir uma métrica visível de “Satisfação do Cliente” nas fases de dificuldade fácil e média, representada por uma barra ou indicador numérico, que aumente ou diminua de acordo com as escolhas realizadas pelo usuário durante a fase. |
+| RF08 | Nas fases de nível díficil, o sistema não deve exibir a métrica de “Satisfação do Cliente”, representada por uma barra ou indicador numérico, que aumente ou diminua de acordo com as escolhas realizadas pelo usuário durante a fase.|
 | RF09 | O sistema deve associar cada fase a um perfil de cliente com nível inicial de satisfação e comportamento específico, influenciando a variação da métrica de satisfação conforme as decisões tomadas pelo usuário. |
-| RF010 | O sistema deve calcular uma pontuação final com base na satisfação do cliente, nas escolhas realizadas e no tempo de conclusão da fase, fornecendo feedback educativo ao jogador ao término da fase. |
+| RF10 | O sistema deve atribuir diferentes pontuações (reputação) para cada fase concluída com base na sua dificuldade. |
 | RF11 | O sistema deve possuir uma métrica de reputação geral do jogador, que aumente conforme fases sejam concluídas com sucesso. |
 | RF12 | O sistema deve desbloquear novas fases ou desafios com base no nível de reputação acumulado pelo jogador. |
-| RF13 | O sistema deve possuir um botão “Voltar ao menu principal”, permitindo o retorno ao menu durante a fase. |
-| RF14 | O sistema deve possuir um menu de configurações que permita ao usuário ajustar o volume do som, ativar ou desativar música e efeitos sonoros e retornar ao menu principal. |
-| RF15 | O sistema deve possuir uma segunda opção durante o diálogo para "Sondar" o cliente, obtendo novas informações para auxiliar durante a simulação de vendas. |
-| RF16 | O sistema deve possuir diversas fases com diferentes modalidades, abordando diversas situações reais dos GNs da Cielo. |
+| RF13 | O sistema deve possuir um botão “Voltar ao menu principal”, permitindo o retorno ao mapa durante a fase. |
+| RF14 | O sistema deve possuir diversas fases com diferentes modalidades, abordando diversas situações reais dos GNs da Cielo. |
 
 <p align = "center">Fonte: Tabela criada pelos autores.</p>
 <br>
@@ -251,14 +250,12 @@ Esta seção apresenta os requisitos funcionais (Tabela 1.2.1) e os requisitos n
 | RNF01 | O sistema deve apresentar interface intuitiva, com organização visual clara e elementos de fácil compreensão para o usuário. |
 | RNF02 | O sistema deve ser responsivo, garantindo funcionamento adequado em navegadores de diferentes dispositivos e resoluções de tela. |
 | RNF03 | O sistema deve possuir design gráfico em 2D (pixel art), com layout limpo, animações fluidas e boa legibilidade dos elementos visuais. |
-| RNF04 | O sistema deve permitir a personalização da cor do personagem pelo usuário. |
-| RNF05 | O sistema deve disponibilizar opções de personagens representando diferentes gêneros para escolha do usuário. |
-| RNF06 | O sistema deve possuir design diversificado e representativo em relação aos NPCs (clientes). |
-| RNF07 | O sistema deve utilizar tipografia adequada e em alto contraste (ou relevo) para facilitar a leitura e o entendimento do público-alvo. |
+| RNF04 | O sistema deve possuir design diversificado e representativo em relação aos NPCs (clientes). |
+| RNF05 | O sistema deve utilizar tipografia adequada e em alto contraste (ou relevo) para facilitar a leitura e o entendimento do público-alvo. |
 
 <p align = "center">Fonte: Tabela criada pelos autores.</p>
 
-## 1.3. Público-alvo do Projeto (sprint 2)
+## 1.3. Público-alvo do Projeto 
 
 O público-alvo do projeto é composto pelos futuros Gerentes de Negócios (GNs) que participam do programa de treinamento da Cielo e já foram aprovados no processo seletivo, o que demonstra engajamento e predisposição para o aprendizado de técnicas de vendas. Trata-se de um grupo com média de 44 anos de idade, formado por homens e mulheres distribuídos por todo o Brasil, atuando predominantemente fora dos grandes centros urbanos no modelo de vendas porta a porta. Em relação à escolaridade, a maioria possui ensino médio completo, havendo também um percentual significativo com graduação incompleta e uma minoria com ensino superior completo.
 
@@ -266,11 +263,11 @@ A escolha desse público como foco do jogo justifica-se, principalmente, pela ba
 
 Considerando o perfil etário e a rotina de trabalho externa, esse público não possui, em sua maioria, experiência prévia significativa com jogos digitais. Suas preferências digitais tendem a ser mais utilitárias ou voltadas ao entretenimento casual, como jogos simples de celular, especialmente puzzles, além do uso frequente de redes sociais. Diante desse contexto e da diversidade de níveis de escolaridade, o jogo deve apresentar uma curva de aprendizado suave, sem exigir reflexos rápidos ou comandos complexos. Por esse motivo, optou-se pelo gênero Visual Novel (simulador de conversas), que se aproxima da dinâmica de leitura e interação presente em aplicativos de mensagens já familiares ao público, concentrando o desafio na tomada de decisões estratégicas de vendas, e não na habilidade motora do jogador.
 
-# <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
+# <a name="c2"></a>2. Visão Geral do Jogo 
 
 Nesta seção, apresentamos como o jogo funciona e o que ele pretende entregar. O projeto foi criado para ser uma ferramenta de aprendizado prática, que mistura diversão com o treinamento do dia a dia. A ideia é oferecer um espaço onde o usuário possa treinar suas habilidades de venda através de situações reais, transformando o conteúdo teórico em uma experiência interativa e envolvente.
 
-## 2.1. Objetivos do Jogo (sprint 2)
+## 2.1. Objetivos do Jogo
 
 O jogo tem como objetivo padronizar, fortalecer e aprimorar as habilidades de vendas dos Gerentes de Negócios (GN), com foco especial nos profissionais que não possuem acesso ao treinamento presencial da Cielo. Por meio de simulações de negociação com comerciantes, o jogador tem a oportunidade de praticar técnicas de abordagem, identificação de necessidades do cliente e apresentação das soluções de pagamento oferecidas pela empresa.
 
@@ -278,56 +275,65 @@ A vitória em cada fase ocorre quando o jogador consegue conduzir a conversa de 
 
 O jogo é composto por fases principais, cada uma representando um tipo de estabelecimento comercial encontrado no cotidiano dos Gerentes de Negócios da Cielo: padaria, quitanda, restaurante, posto de gasolina, entre outros. Cada fase apresenta um perfil de cliente diferente e desafios específicos de negociação.
 
-O sistema de progresso ocorre de forma linear entre as fases. Inicialmente, o jogador tem acesso apenas à fase da padaria. Após concluir essa etapa com sucesso, novas fases são desbloqueadas gradualmente, permitindo que o jogador enfrente situações de venda cada vez mais complexas.
+O sistema de progresso ocorre de forma linear entre as fases. Inicialmente, o jogador tem acesso apenas à fase da Padaria. Após concluir essa etapa com sucesso, novas fases são desbloqueadas gradualmente, permitindo que o jogador enfrente situações de venda cada vez mais complexas.
 
 A reputação do jogador é representada dentro de cada fase pela barra de satisfação do cliente. Esse indicador reflete o desempenho do jogador durante a conversa e determina o sucesso ou fracasso da negociação. Dessa forma, o jogo incentiva o aprendizado progressivo, estimulando o jogador a melhorar suas decisões de venda para avançar no treinamento.
 
-## 2.2. Características do Jogo (sprint 2)
+## 2.2. Características do Jogo 
 
-### 2.2.1. Gênero do Jogo (sprint 2)
+### 2.2.1. Gênero do Jogo 
 
 O jogo se enquadra no gênero Visual Novel, caracterizado pela condução da narrativa por meio de diálogos interativos e escolhas realizadas pelo jogador. Nesse tipo de jogo, a progressão ocorre principalmente através da leitura de textos e da tomada de decisões que influenciam o desenvolvimento da história e o resultado das interações com os personagens. Diferentemente de jogos focados em reflexos ou ações rápidas, as Visual Novels priorizam a narrativa, o desenvolvimento de personagens e a tomada de decisões estratégicas durante conversas.
 
 A escolha desse gênero está diretamente relacionada ao objetivo educacional do projeto. Como o jogo simula situações reais de negociação enfrentadas por Gerentes de Negócios da Cielo, o formato de diálogos interativos permite representar conversas de venda de forma realista. Assim, o jogador pode analisar o comportamento do cliente, escolher diferentes abordagens e observar as consequências de suas decisões, transformando o processo de aprendizagem em uma experiência prática e interativa.
 
-### 2.2.2. Plataforma do Jogo (sprint 2)
+### 2.2.2. Plataforma do Jogo
 
-* **Dispositivos:** Desktop (PC/Mac), smartphones (Android/iOS) e tablets, otimizado para telas touch e mouse/teclado.
+* **Dispositivos:** Desktop (PC/Mac), smartphones (Android/iOS) e tablets, otimizados para telas touch e para uso com mouse e teclado.
 * **Sistemas:** Navegadores web compatíveis como Chrome, Firefox, Safari e Edge (HTML5/WebGL para jogabilidade fluida sem downloads).
 
-### 2.2.3. Número de jogadores (sprint 2)
+### 2.2.3. Número de jogadores
 
 O jogo possui mecânica *single player*, sendo projetado para a participação de apenas um jogador por vez. Nesse contexto, o jogador assume o papel de um Gerente de Negócios (GN) da Cielo em primeira pessoa, tomando decisões durante as simulações de vendas e conduzindo os diálogos com os clientes.
 
-### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
+### 2.2.4. Títulos semelhantes e inspirações
 
 O desenvolvimento do jogo foi inspirado principalmente em títulos do gênero Visual Novel, como *Coffee Talk* e *Amor Doce*, que utilizam diálogos interativos como principal mecânica de progressão. Em *Coffee Talk*, o jogador interage com diferentes personagens em um ambiente fixo, ouvindo suas histórias e tomando decisões que influenciam o rumo das conversas. Essa dinâmica influenciou diretamente a proposta do projeto, que também utiliza interações baseadas em diálogo para conduzir a experiência do jogador. Assim como nesse jogo, a narrativa e as escolhas realizadas durante as conversas possuem impacto no resultado final da interação.
 
 Outra inspiração foi *Amor Doce*, conhecido por seu sistema de escolhas durante diálogos que alteram o desenvolvimento da história e a relação entre os personagens. Esse elemento foi adaptado para o contexto do projeto, no qual as decisões do jogador influenciam o nível de satisfação do cliente durante as negociações. Apesar dessas semelhanças estruturais, o jogo desenvolvido possui um propósito distinto: enquanto os títulos citados possuem foco narrativo e de entretenimento, o projeto busca aplicar essas mecânicas em um contexto educacional, simulando situações reais de vendas enfrentadas pelos Gerentes de Negócios da Cielo.
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
-*Pendente para a próxima sprint.*
+O tempo estimado de jogo para um jogador concluir a experiência de forma linear e bem-sucedida (sem falhas) é de aproximadamente 6 a 10 minutos. Esse período compreende a transição pelo mapa navegável e a conclusão interativa das 4 fases de negociação estipuladas.
 
-# <a name="c3"></a>3. Game Design (sprints 2 e 3)
-Esta seção apresenta a estrutura completa do Game Design do projeto, desenvolvida na Sprint 2. São descritos os elementos narrativos, mecânicos e estruturais que compõem a experiência do jogador, incluindo enredo, personagens, mundo do jogo, progressão entre fases, regras e mecânicas.
+No entanto, por se tratar de uma Visual Novel com viés educacional e simulador de vendas, a duração real das sessões é flexível e pode variar consideravelmente de acordo com o perfil do usuário. Fatores como a velocidade de leitura, o tempo dedicado à análise e reflexão antes da escolha das abordagens de diálogo, e o nível de conhecimento prévio do jogador sobre os produtos da Cielo influenciam diretamente o ritmo da progressão.
 
-## 3.1. Enredo do Jogo (sprints 2 e 3)
+Além disso, o tempo total de interação pode ser estendido devido à mecânica de acertos e erros. Caso o jogador tome decisões inadequadas que reduzam a satisfação do cliente e culminem na perda da venda, será necessário repetir a respectiva fase. Essa abordagem de repetição incentiva a fixação do conteúdo educacional, mas adiciona minutos adicionais ao tempo total necessário para finalizar o jogo (conquistar todos os clientes no mapa).
+
+# <a name="c3"></a>3. Game Design 
+Esta seção apresenta a estrutura completa do Game Design do projeto. São descritos os elementos narrativos, mecânicos e estruturais que compõem a experiência do jogador, incluindo enredo, personagens, mundo do jogo, progressão entre fases, regras, mecânicas e trilha sonora.
+
+## 3.1. Enredo do Jogo 
+**Conexão Cielo** se passa em um ambiente urbano em constante movimento, onde diversos estabelecimentos de diferentes tamanho formam este ambiente. O jogador assume o papel de um novo Gerente de Negócios da Cielo guiado pela Cielita, uma agente virtual que conhece cada rua, cada lojista e cada obstáculo dessa cidade. A cada missão, o GN é enviado a um estabelecimento diferente: uma padaria, restaurante, quitanda e posto de gasolina. Em cada visita, ele precisa ouvir, identificar necessidades e propor soluções e cada palavra importa. Uma barra de satisfação e a mudança facial dos NPCs reflete em tempo real o humor deles, subindo a cada abordagem certeira e caindo a cada erro de leitura. Aqui, errar não é fracasso: é o começo do aprendizado. O verdadeiro objetivo não é vender e entender. É e através dessa jornada pelas ruas e história da cidade que o GN descobre o que significa, de verdade, conectar pessoas e negócios.
 
 ### 3.1.1 Contexto
-O jogo se passa em uma cidade grande e moderna, composta por diversos estabelecimentos comerciais, como padarias, restaurantes, farmácias, quitandas, supermercados e postos de combustível. Nesse cenário, o jogador assume o papel de um novo Gerente de Negócios (GN) da Cielo.
 
-Ao iniciar sua jornada, o personagem recebe orientações da Cielita, assistente virtual da empresa, que apresenta o funcionamento básico do jogo e os objetivos principais. O jogador é responsável por visitar comerciantes locais e oferecer soluções de pagamento adequadas às necessidades de cada negócio.
+O jogo se passa em uma cidade urbana, composta por diversos estabelecimentos comerciais, como padarias, restaurantes, farmácias, quitandas, supermercados e um posto de combustível. Nesse cenário, o jogador assume o papel de um Gerente de Negócios (GN) da Cielo.
+
+Ao iniciar sua jornada, o jogador recebe orientações da Cielita, assistente virtual da empresa, que apresenta o funcionamento básico do jogo e os objetivos principais. O jogador é responsável por visitar comerciantes locais e oferecer soluções de pagamento adequadas às necessidades de cada negócio.
 
 ### 3.1.2 Desenvolvimento
+
 Ao explorar o mapa da cidade, o jogador interage com diferentes NPCs (descritos na seção 3.2), cada um representando um tipo de empreendimento e possuindo características, desafios e perfis específicos. Durante as negociações, o jogador deve analisar as necessidades de cada cliente e escolher as melhores respostas em diálogos estratégicos. Cada decisão impacta diretamente no interesse do cliente e no sucesso da venda. Conforme realiza vendas bem-sucedidas, o jogador aumenta sua reputação na cidade, desbloqueando novos estabelecimentos e enfrentando desafios mais complexos.
 
 ### 3.1.3 Conflito
-O principal conflito do jogo está na dificuldade de convencer os empreendedores a adotarem as soluções da Cielo. Alguns clientes apresentam resistência, dúvidas ou experiências negativas com empresas concorrentes. Escolhas inadequadas durante as negociações podem resultar na perda da venda, redução da reputação e maior dificuldade em futuras interações.
+
+O principal conflito do jogo está na dificuldade de convencer os empreendedores a adotarem as soluções da Cielo, além de enfrentar diversos desafios que simulam cenários reais. Alguns clientes apresentam resistência, dúvidas ou experiências negativas com empresas concorrentes. Escolhas inadequadas durante as negociações podem resultar na perda da venda e aumentar o tempo para desbloquear outros estabelecimentos.
 
 ### 3.1.4 Resolução
+
 A progressão narrativa culmina quando o jogador se torna um Gerente de Negócios experiente, conquistando a confiança dos comerciantes e expandindo a presença da Cielo na cidade. Nesse estágio, o jogador demonstra domínio das mecânicas de negociação, tomada de decisão estratégica e gestão de relacionamento com clientes.
 
-## 3.2. Personagens (sprints 2 e 3)
+## 3.2. Personagens
 
 ### 3.2.1. Controláveis
 Como o projeto segue a premissa de uma Visual Novel, optou-se por não utilizar um personagem visível em tela. Essa escolha permite que o jogador assuma diretamente o papel do protagonista (em primeira pessoa), promovendo uma imersão total onde ele se sente o verdadeiro centro da narrativa e das decisões.
@@ -338,7 +344,7 @@ Os NPCs (Non-Playable Characters) representam os estabelecimentos comerciais e o
 #### 3.2.2.1 Padeiro
 <p align = 'center'><b>Figura 3.2.2.1 </b> - Ficha do personagem NPC Padeiro</p>
 
-![Ficha-padeiro](other/ficha-padeiro.png)
+![Ficha-padeiro](assets/ficha-padeiro.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 **Descrição visual:** Personagem masculino, 44 anos, com bigode e expressão facial simpática. Utiliza chapéu tradicional de padeiro e avental branco, segurando um pão como elemento simbólico de sua atividade comercial.
@@ -346,7 +352,7 @@ Os NPCs (Non-Playable Characters) representam os estabelecimentos comerciais e o
 #### 3.2.2.2 Chef de Cozinha
 <p align = 'center'><b>Figura 3.2.2.2 </b> - Ficha do personagem NPC Chef de Cozinha</p>
 
-![Ficha-chef](other/ficha-chef.png)
+![Ficha-chef](assets/ficha-chef.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 **Descrição visual:** Personagem masculino, 22 anos, trajando uniforme branco de chef e chapéu de cozinha. Segura um prato de comida, simbolizando sua função dentro do sistema econômico do jogo.
@@ -354,23 +360,15 @@ Os NPCs (Non-Playable Characters) representam os estabelecimentos comerciais e o
 #### 3.2.2.3 Quitandeira
 <p align = 'center'><b>Figura 3.2.2.3 </b> - Ficha do personagem NPC Quitandeira</p>
 
-![Ficha-quitandeira](other/ficha-quitandeira.png)
+![Ficha-quitandeira](assets/ficha-quitandeira.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 **Descrição visual:** Personagem feminina, 29 anos, com cabelo em tons vibrantes e coloridos. Utiliza jaqueta escura e avental, segurando frutas e legumes que reforçam sua identidade comercial.
 
-#### 3.2.2.4 Farmacêutica
-<p align = 'center'><b>Figura 3.2.2.4 </b> - Ficha do personagem NPC Farmacêutica</p>
+#### 3.2.2.4 Dono do Posto
+<p align = 'center'><b>Figura 3.2.2.4 </b> - Ficha do personagem NPC Dono do Posto</p>
 
-![Ficha-farmaceutica](other/ficha-farmaceutica.png)
-<p align = "center">Fonte: Figura criada pelos autores.</p>
-
-**Descrição visual:** Personagem feminina, 30 anos, com cabelos ruivos longos e volumosos. Utiliza jaleco branco e segura um frasco de medicamento, representando sua função no sistema comercial do jogo.
-
-#### 3.2.2.5 Dono do Posto
-<p align = 'center'><b>Figura 3.2.2.5 </b> - Ficha do personagem NPC Dono do Posto</p>
-
-![Ficha-dono-posto](other/ficha-dono-posto.png)
+![Ficha-dono-posto](assets/ficha-dono-posto.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 **Descrição visual:** Personagem masculino, 48 anos, com barba cheia e utilizando boné. Traja uniforme azul de posto de combustível e utiliza cadeira de rodas. Segura uma bomba de combustível como elemento representativo de sua atividade comercial.
@@ -378,34 +376,38 @@ Os NPCs (Non-Playable Characters) representam os estabelecimentos comerciais e o
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 O jogo foi desenvolvido no formato de visual novel, em que o usuário assume o papel de Gerente de Negócios (GN) da Cielo. A ausência de um protagonista com identidade fixa amplia a identificação do público-alvo, permitindo que qualquer vendedor possa se enxergar na narrativa.
 
-As demais personagens representam os clientes com os quais o jogador deve interagir durante suas tentativas de venda, como: chefe de cozinha indígena, farmacêutica ruiva, dona de quitanda negra, dono de posto de gasolina cadeirante e uma mulher de idade, dona de banco. Essa construção de personagens traz consigo a diversidade étnica, de gênero e de condições físicas, com o intuito de representar a realidade brasileira, que possui forte diversidade cultural e racial. Portanto, os perfis apresentados refletem, ainda que de forma representativa, a pluralidade existente no ambiente econômico brasileiro.
+As demais personagens representam os clientes com os quais o jogador deve interagir durante suas tentativas de venda, como: chefe de cozinha indígena, dona de quitanda negra, dono de posto de gasolina cadeirante e uma mulher de idade, dona de banco. Essa construção de personagens traz consigo a diversidade étnica, de gênero e de condições físicas, com o intuito de representar a realidade brasileira, que possui forte diversidade cultural e racial. Portanto, os perfis apresentados refletem, ainda que de forma representativa, a pluralidade existente no ambiente econômico brasileiro.
 
-O impacto esperado dessa escolha é positivo em três dimensões principais: promove identificação e realismo, já que os vendedores reconhecem perfis semelhantes aos que encontram em sua rotina profissional; amplia a inclusão e a representatividade ao apresentar diferentes grupos sociais em posições de protagonismo econômico; e fortalece a proposta comercial ao transmitir que os produtos da Cielo atendem a negócios diversos, independentemente do perfil do empreendedor.
+O impacto esperado dessa escolha é positivo em três dimensões principais: promove identificação e realismo, já que os vendedores reconhecem perfis semelhantes aos que encontram em sua rotina profissional; amplia a inclusão e a representatividade ao apresentar diferentes grupos sociais em posições de protagonismo econômico; e fortalece a proposta comercial ao transmitir que os produtos da Cielo atendem a negócios diversos, independentemente do perfil de cada empreendedor.
 
-## 3.3. Mundo do jogo (sprints 2 e 3)
+## 3.3. Mundo do jogo 
 
-### 3.3.1. Locações Principais e/ou Mapas (sprints 2 e 3)
+O mundo de **Conexão Cielo** é representado por um mapa urbano em pixel art, retratando uma metrópole brasileira viva e densa, repleta de estabelecimentos comerciais espalhados por suas ruas. A navegação é intuitiva e tátil: o jogador segura e arrasta o mapa como se estivesse explorando uma cidade em um tablet, tendo liberdade para percorrer os diferentes bairros e pontos comerciais. Para entrar em um estabelecimento, basta clicar sobre ele e a missão tem início. Nem todos os locais estão disponíveis desde o começo: o mapa se expande conforme o GN evolui, desbloqueando novos estabelecimentos à medida que conclui as missões anteriores com sucesso. Essa progressão reflete a jornada natural de um Gerente de Negócios que vai conquistando território, ganhando experiência e ampliando sua carteira um estabelecimento de cada vez
+
+### 3.3.1. Locações Principais e/ou Mapas 
 Todo o design visual do jogo é desenvolvido em pixel art. O mapa principal (Figura 3.3.3.1) apresenta uma estética urbana, caracterizada por elementos como ruas e veículos, sendo a navegação realizada sob uma perspectiva top-down (visão superior). Cada estabelecimento comercial possui uma identidade visual única, alinhada à sua temática. Além disso, ao acessar um comércio, a câmera transita do mapa externo para uma visão interna do respectivo ambiente.
 
 <p align = 'center'><b>Figura 3.3.1.1 </b> - Mapa Principal do jogo</p>
 
-![Mapa principal do jogo](other/mapa-jogo.png)
+![Mapa principal do jogo](assets/mapa-jogo.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 <p align = 'center'><b>Tabela 3.3.3.1 </b> - Descrição das cenas/fases do jogo</p>
 
 | Fase | Descrição do Ambiente Interno | Imagem do Ambiente |
 | :---- | :---- | :---- |
-| Padaria | Ambiente interno e acolhedor de uma padaria em pixel art. O local exibe prateleiras repletas de pães e sacos de farinha, um balcão com expositor de vidro refrigerado para bolos e doces, e um forno de tijolos com fogo aceso ao fundo. | <img src="other/ambiente-padaria.png">|
-| Quitanda | Interior de uma loja de produtos frescos em pixel art. Apresenta um balcão de atendimento à esquerda e diversas prateleiras de madeira à direita, exibindo cestos organizados com frutas, hortaliças, legumes e potes de vidro. | <img src="other/ambiente-quitanda.png"> |
-| Restaurante | Cenário aconchegante de um restaurante rústico em pixel art. O ambiente conta com paredes de tijolos aparentes, mesas de madeira fartas com alimentos (peixes, milho, grãos e pães) e uma cozinha aberta com um forno a lenha aceso. | <img src="other/ambiente-restaurante.png">|
-| Posto de gasolina | Cenário em pixel art retratando um posto de combustível no período noturno, com destaque para duas bombas de abastecimento em primeiro plano, carros estacionados na pista e uma loja de conveniência iluminada ao fundo. | <img src="other/ambiente-posto_de_gasolina.png"> |
-| Farmácia | Interior de uma farmácia em pixel art com iluminação clara. O ambiente possui um longo balcão de madeira com um computador de caixa, além de prateleiras organizadas no fundo repletas de frascos e caixas de medicamentos. | <img src="other/ambiente-farmacia.png"> |
+| Padaria | Ambiente interno e acolhedor de uma padaria em pixel art. O local exibe prateleiras repletas de pães e sacos de farinha, um balcão com expositor de vidro refrigerado para bolos e doces, e um forno de tijolos com fogo aceso ao fundo. | <img src="assets/ambiente-padaria.png">|
+| Quitanda | Interior de uma loja de produtos frescos em pixel art. Apresenta um balcão de atendimento à esquerda e diversas prateleiras de madeira à direita, exibindo cestos organizados com frutas, hortaliças, legumes e potes de vidro. | <img src="assets/ambiente-quitanda.png"> |
+| Restaurante | Cenário aconchegante de um restaurante rústico em pixel art. O ambiente conta com paredes de tijolos aparentes, mesas de madeira fartas com alimentos (peixes, milho, grãos e pães) e uma cozinha aberta com um forno a lenha aceso. | <img src="assets/ambiente-restaurante.png">|
+| Posto de gasolina | Cenário em pixel art retratando um posto de combustível no período noturno, com destaque para duas bombas de abastecimento em primeiro plano, carros estacionados na pista e uma loja de conveniência iluminada ao fundo. | <img src="assets/ambiente-posto_de_gasolina.png"> |
+
 
 <p align = "center">Fonte: Tabela criada pelos autores.</p>
 
-### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
-O jogo apresenta um sistema de navegação por mapa por meio do qual o usuário pode selecionar uma fase para jogar. A navegação entre as fases obedece a um sistema de progressão condicional, de modo que cada fase só é desbloqueada após a conclusão de uma etapa anterior. 
+Cada uma dessas locações foi projetada para ir além da estética, pois o ambiente interno de cada estabelecimento comunica, visualmente, a personalidade e a rotina do lojista que o jogador vai encontrar. A padaria, a quitanda, o restaurante e o posto de gasolina não são apenas cenários: são contextos que preparam o GN para adaptar sua abordagem antes mesmo de a conversa começar. Essa variedade de ambientes garante que o treinamento cubra perfis comerciais distintos, ampliando o repertório do vendedor e tornando a simulação fiel à diversidade real da carteira de clientes da Cielo.
+### 3.3.2. Navegação pelo mundo
+
+O jogo apresenta um sistema de navegação do qual o usuário pode selecionar uma fase para jogar, representada pelo comércio no mapa. A navegação entre as fases obedece a um sistema de progressão condicional, de modo que cada fase só é desbloqueada após a conclusão de uma etapa anterior. 
 
 <p align = 'center'><b>Tabela 3.3.2.1 </b> - Fluxo de desbloqueio/dificuldade do jogo</p>
 
@@ -414,27 +416,30 @@ O jogo apresenta um sistema de navegação por mapa por meio do qual o usuário 
 | Padaria  | Fase Inicial. |
 | Quitanda | Concluir a fase da Padaria. |
 | Restaurante | Concluir a fase da Padaria. |
-| Farmácia | Concluir a fase da Padaria. |
-| Posto de gasolina | Concluir as fases da Quitanda, Farmácia e Restaurante. |
+| Posto de gasolina | Concluir as fases da Quitanda e Restaurante. |
 
 <p align = "center">Fonte: Tabela criada pelos autores.</p>
 
-### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
+Essa estrutura de progressão foi pensada para respeitar a curva de aprendizado do jogador, introduzindo gradualmente cenários de maior complexidade. A padaria, por ser a fase inicial, funciona como ponto de entrada acessível, onde o GN se familiariza com as mecânicas do jogo. A partir dela, quitanda e restaurante se abrem em paralelo, oferecendo caminhos distintos de evolução. O posto de gasolina, por sua vez, representa o desafio mais avançado, exigindo que o jogador tenha consolidado as habilidades desenvolvidas nas etapas anteriores antes de enfrentá-lo. Dessa forma, a navegação pelo mundo não é apenas funcional, mas também pedagógica, conduzindo o GN por uma jornada de aprendizado progressivo e consistente.
+
+### 3.3.3. Condições climáticas e temporais 
 *Não aplicável ao escopo atual do projeto.*
 
-### 3.3.4. Concept Art (sprint 2)
-Como parte do desenvolvimento da Concept Art, a Figura 3.3.4.1 ilustra a paleta de cores oficial. Este guia serve como referência fundamental para a criação de todos os assets gráficos, assegurando uma unidade visual em todo o universo do jogo.
+### 3.3.4. Concept Art
+No Conexão Cielo, a concept art foi pensada para definir a identidade visual do jogo antes da criação final dos assets. Ela ajuda a guiar como os cenários, objetos e outros elementos visuais devem ser produzidos, mantendo um mesmo estilo em todo o projeto. Como o jogo foi desenvolvido em pixel art, essa etapa é importante para garantir que os ambientes tenham unidade visual e façam sentido dentro da proposta do jogo.
+
+A figura abaixo mostra a paleta de cores oficial utilizada no projeto. Essa paleta serve como base para a criação dos elementos gráficos e foi escolhida para combinar com a proposta de cada ambiente, como padaria, quitanda, restaurante e posto de gasolina. Além de deixar o jogo mais organizado visualmente, ela também ajuda a destacar elementos importantes da cena e a reforçar a identidade do jogo como um todo. Assim, a concept art contribui para que a experiência visual fique mais clara, agradável e coerente para o jogador.
 
 <p align = 'center'><b>Figura 3.3.4.1 </b> - Paleta de cores do jogo</p>
 
-![Paleta de cores do jogo](other/paletaCores.png)
+![Paleta de cores do jogo](assets/paletaCores.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
-### 3.3.5. Trilha sonora (sprint 4)
+### 3.3.5. Trilha sonora
 
 No design de jogos, o áudio desempenha um papel muito além do mero apelo estético. Segundo Santos (2021), a sonoplastia e a trilha musical são pilares fundamentais para garantir a imersão do jogador, estabelecer a atmosfera adequada e fornecer feedback imediato sobre as ações realizadas na interface. No contexto do simulador educacional Conexão Cielo, a trilha sonora e os efeitos sonoros (SFX) foram projetados estrategicamente para guiar a atenção do Gerente de Negócios (GN), reforçar cognitivamente o resultado de suas escolhas (como os sons de sucesso ou falha na venda) e conferir uma identidade única a cada estabelecimento comercial visitado (padaria, quitanda, etc.).
 
-A seguir, na tabela (3.3.5.1), estão elencados os elementos sonoros e as músicas de fundo implementadas no jogo, escolhidos e produzidos sob medida para atender às necessidades interativas e narrativas do projeto.
+A seguir, na Tabela 3.3.5.1, estão elencados os elementos sonoros e as músicas de fundo implementados no jogo, escolhidos e produzidos sob medida para atender às necessidades interativas e narrativas do projeto.
 
 <p align = 'center'>Tabela 3.3.5.1 - Trilha sonora</p>
 
@@ -452,56 +457,76 @@ A seguir, na tabela (3.3.5.1), estão elencados os elementos sonoros e as músic
 10 | Música do restaurante | Ocorre quando o jogador entra no restaurante | Autoral | <a href = "https://drive.google.com/file/d/15S0J_IlEH6S06KQ3Eedj5P8I_oKybIrY/view?usp=sharing">Ouça a música clicando aqui!</a>
 11 | Música do posto | Ocorre quando o jogador entra no posto | Autoral | <a href = "https://drive.google.com/file/d/1rdI_gudatzL0FeVhH1d9GTnBKqfMZBTG/view?usp=sharing">Ouça a música clicando aqui!</a>
 
-<p align = 'center'>Fonte: Tabela produzido pelos autores do projeto Conexão Cielo (2026), com base em áudios de Pixabay e gerações de tracks do Gemini.</p> <br>
+<p align = 'center'>Fonte: Tabela produzida pelos autores, com base em áudios do Pixabay e em gerações de faixas no Gemini.</p> <br>
 
 ## 3.4. Inventário e Bestiário (sprint 3)
-*Não aplicável ao modelo de jogo (Visual Novel educacional).*
+Não aplicável ao modelo de jogo (Visual Novel educacional).
 
-## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
+## 3.5. Gameflow (Diagrama de cenas) 
 O diagrama de cenas (Figura 3.5.1) é uma ferramenta técnica essencial para o planejamento narrativo, atuando como um mapeamento visual da sequência, lógica e interconexões de uma obra.
 
 <p align = 'center'><b> Figura 3.5.1 </b> - Diagrama de cenas</p>
 
-![diagrama-de-cenas](other/diagramaCenasSprint2.png)
+![diagrama-de-cenas](assets/sceneDiagram.png)
 <p align = "center">Fonte: Diagrama criado pelos autores.</p>
 
 **Explicação sobre o gameflow:**
-* **Tela de início:** A tela de início é simples, contando apenas com um botão de jogar, o nome do jogo e uma cidade em formato pixel art de fundo.
-* **Tela de introdução:** A tela de introdução conta com a personagem Cielita explicando ao jogador como jogar o jogo, o jogador pode clicar em qualquer lugar para trocar de tela e começar o jogo.
-* **Mapa:** O mapa do jogo é um mapa grande que pode ser navegado com o jogador clicando e arrastando sobre ele, contém vários ambientes onde o jogador pode clicar em cima e ser transportado para a "fase" correspondente.
-* **Fase Base (ex: Padaria):** A primeira fase do jogo é introdutória, ensinando como completar uma venda e sobre o sistema de satisfação do comprador. Todos os diálogos são adaptativos à resposta do jogador e ao seu nível de satisfação.
+* **Tela de início:** A tela de início é simples, contando apenas o botão de jogar, botão de tutorial, o nome do jogo e uma cidade em formato pixel art de fundo.
+* **Tela de tutorial:** A tela de tutorial conta com uma tela branca com elementos do jogo e textos explicando ao jogador como jogar.
+* **Introdução Cielita:** A tela de introdução conta com a Cielita explicando ao jogador como se mover pelo mapa, dizendo seu objetivo e falando onde ele deve ir.
+* **Mapa:** O mapa do jogo é um mapa grande que pode ser navegado com o jogador clicando e arrastando sobre ele, contém setas amarelas indicando ao jogador onde ele deve ir, um botão de ajuda que mostra a Cielita orientando onde o jogador deve ir, um indicador de reputação e inicialmente apenas a padaria desbloqueada.
+* **Fase da padaria:** É a primeira fase do jogo e é a fase mais fácil do jogo, serve para o jogador se adaptar ao modelo do game. O padeiro é mais propício a ouvir a proposta do player então seus diálogos são mais brandos e a punição por errar não é tão grande na barra de satisfação. Todos os diálogos são adaptativos à resposta do jogador.
+* **Fase da quitanda:** A fase da quitanda é uma fase intermediária do jogo e exige mais do jogador, exige que o jogador use técnicas de sondagem para entender o problema da Julie e escolha os diálogos corretos baseado no problema dela. Julie não é tão propícia a ouvir as propostas do jogador quanto o Osvaldo.
+* **Fase do restaurante:** A fase do restaurante é uma fase intermediária do jogo e exige que o jogador use técnicas de sondagem para entender o problema do Txori e escolha os diálogos corretos baseado no problema dele. Txori já não é tão propício a ouvir as propostas do jogador quanto o Osvaldo.
+* **Fase do posto:** A fase do posto é a última fase do jogo e não possui uma barra de satisfação igual as outras o jogador deve se basear apenas no feedback visual de sprites do José. O dono do posto não tem paciência para vendedores e está muito estressado com o seu negócio. É a fase que mais exige do jogador, é necessário um grande conhecimento de técnicas de sondagem para entender o problema e conhecimento sobre os produtos da Cielo para dar uma solução viável ao dono do posto.
 
-## 3.6. Regras do jogo (sprint 3)
+## 3.6. Regras do jogo 
 As regras do jogo definem como o jogador interage com o sistema: o que pode ou não fazer, quais são as condições de vitória e derrota e como ocorre a progressão. 
 
 * **Seleção de fase no mapa:** O jogador navega pelo mapa e escolhe um estabelecimento disponível para iniciar uma interação.
+<br>
 * **Interação por diálogo:** Em cada etapa da conversa com o cliente, o jogador escolhe 1 entre 3 respostas possíveis.
+<br>
 * **Barra de satisfação:** Cada escolha altera a satisfação do cliente (respostas adequadas aumentam; inadequadas diminuem).
+<br>
 * **Condição de vitória:** Se o jogador atingir o nível necessário de satisfação no final da conversa, a venda é concluída com sucesso.
+<br>
 * **Condição de derrota:** Se a satisfação cair demais, a negociação falha e o cliente recusa a proposta.
+<br>
 * **Retorno ao mapa:** Ao final da negociação (com sucesso ou falha), o jogador volta para o mapa.
+<br>
 * **Progressão por reputação:** Vendas bem-sucedidas geram pontos de reputação, que são utilizados para desbloquear novos estabelecimentos e desafios mais complexos no mapa.
 
-## 3.7. Mecânicas do jogo (sprint 3)
+## 3.7. Mecânicas do jogo 
 
 Esta seção detalha as formas de controle e interação do jogador com o sistema, descrevendo os comandos disponíveis (inputs) e o fluxo da experiência do usuário em cada etapa do jogo.
 
 **Comandos Disponíveis e Interações:**
 * **Mouse - Movimento (Hover):** Ao passar o cursor do mouse sobre botões interagíveis (ex: botão "Start") ou sobre opções de diálogo, o elemento sofre uma animação visual (leve aumento/diminuição de escala ou *highlight*). Isso fornece *feedback* visual imediato de que a área é clicável.
+<br>
 * **Mouse - Clique Esquerdo:**
     * **Telas de Menu (StartScene / Encerramento):** Aciona botões de navegação, como iniciar o jogo ("Start") ou retornar ao cenário urbano ("Voltar ao Mapa").
+
     * **Tela de Introdução (IntroScene) e Diálogos:** O jogador pode clicar em qualquer lugar da tela livre para avançar a leitura do texto dos NPCs.
     * **Seleção de Opções:** Nas fases de negociação (ex: BakeryScene), o clique é utilizado para passar os diálogos e escolher uma resposta das que são apresentadas na tela. O sistema de diálogo é dividido em três etapas principais, cada uma oferecendo três opções de resposta. Se o jogador fizer a escolha correta, ele avança para a próxima etapa. Caso erre, ele é direcionado para uma subetapa com apenas duas opções: uma permite recuperar uma parte da barra de satisfação, enquanto a outra resulta em uma perda ainda maior de pontos.
     * **Acesso a Cenas:** No mapa, o clique sobre a ilustração de um estabelecimento (ex: prédio da Padaria) funciona como um gatilho para carregar o respectivo cenário interno.
+    <br>
 * **Mouse - Clique e Arraste (Pan / Drag):** No cenário do mapa (MapScene), o jogador clica em uma área neutra e mantém o botão pressionado enquanto move o mouse. Isso movimenta a câmera do jogo, permitindo explorar a extensão da cidade e visualizar todos os estabelecimentos disponíveis.
 
 **Combinações e Fluxo de Jogo (Core Loop):**
 1.  **Navegação Inicial:** O jogador clica em "Start" $\rightarrow$ Avança as falas da introdução com cliques simples na tela $\rightarrow$ Chega à MapScene.
+<br>
 2.  **Exploração:** O jogador utiliza o *clique e arraste* para explorar a cidade $\rightarrow$ Localiza a primeira fase desbloqueada (Padaria) e clica para entrar.
+<br>
 3.  **Negociação:** O ciclo principal ocorre dentro do estabelecimento. O jogador lê o contexto $\rightarrow$ Clica para avançar a fala $\rightarrow$ Analisa as 3 respostas $\rightarrow$ Posiciona o mouse sobre a escolha desejada (verificando o *hover*) $\rightarrow$ Clica na resposta $\rightarrow$ O sistema calcula a ação e atualiza visualmente a **Barra de Satisfação** (canto superior direito) exibindo um *feedback* textual de acerto ou erro.
+<br>
 4.  **Encerramento e Loop:** Após o fim do diálogo, o jogo exibe o resultado final (Vitória ou Derrota). O jogador clica em "Voltar ao Mapa" $\rightarrow$ Retorna ao mapa com sua **Reputação** atualizada. Atingindo o limite necessário, um novo estabelecimento no mapa se torna clicável. Em qualquer momento da negociação, é possível clicar no botão de "Voltar" para abortar a missão e regressar ao mapa.
 
-## 3.8. Implementação Matemática de Animação/Movimento (sprint 4)
+5. **Responsividade e Acesso Mobile:**
+O sistema foi desenvolvido com foco em responsividade, permitindo que a experiência seja adaptada para diferentes tamanhos de tela, incluindo dispositivos móveis. Em smartphones e tablets, as interações são convertidas para o toque (touch), mantendo a mesma lógica dos comandos com mouse. A navegação, seleção de opções e progressão dos diálogos são realizadas por toques simples na tela, enquanto a exploração do mapa utiliza gestos de arraste. Dessa forma, o jogador pode acessar e jogar a aplicação de forma fluida tanto em desktop quanto em dispositivos móveis, ampliando o alcance e a acessibilidade do treinamento.
+
+## 3.8. Implementação Matemática de Animação/Movimento 
+
 Para a atribuição de uma movimentação bidimensional, foi decidido realizar a movimentação de um elemento gráfico. O elemento escolhido foi o balão que realiza o movimento de uma parábola na tela inicial do jogo, no arquivo startScene.js. Para a realização do movimento parabólico, foi definido que o Movimento Uniforme (MU), sem aceleração, ocorre no eixo X, enquanto o Movimento Uniformemente Variado (MUV), com aceleração, ocorre no eixo Y. Para efetuar os cálculos matemáticos, o movimento do eixo Y foi dividido em duas fases: fase de subida e fase de descida do balão. Vale ressaltar que, no Phaser, o eixo Y é invertido, ou seja, Y = 0 corresponde ao topo da tela, portanto, na fase de subida a aceleração é negativa e na fase de descida é positiva.
 
 ---
@@ -579,14 +604,16 @@ A função `movimentoDoBalao` está implementada no arquivo `startScene.js`
 
 Nesta seção, é detalhado o processo de construção técnica e criativa do simulador, dividindo-o pelas etapas de desenvolvimento do projeto (sprints). Aqui, é apresentada a evolução do código, a implementação das interfaces e as funcionalidades que transformam o conceito em um artefato jogável. Cada subseção reflete o progresso da equipe em direção ao MVP (Produto Mínimo Viável).
 
-## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
+## 4.1. Desenvolvimento preliminar do jogo 
+Esta seção documenta o desenvolvimento preliminar do Conexão Cielo, registrando as decisões técnicas e de design tomadas ao longo da primeira etapa do projeto. O relato está organizado de forma a apresentar o conceito central do jogo, os objetivos definidos para a versão inicial, o escopo efetivamente entregue tanto em termos de interface quanto de implementação técnica, e as evidências visuais que comprovam o progresso alcançado. Também são apresentadas as telas planejadas para as próximas etapas, oferecendo uma visão do caminho que o desenvolvimento irá percorrer. O conjunto dessas informações permite acompanhar a evolução do projeto de maneira transparente e estruturada, conectando as decisões de produto com os resultados concretos obtidos em cada ciclo de desenvolvimento.
 ### 4.1.1 O que é o jogo
-O jogo é um simulador de vendas em ambiente urbano, inspirado no formato de visual novel, no qual o jogador assume o papel de um Gerente de Negócios (GN) da Cielo. O objetivo principal é percorrer um mapa interativo, visitar estabelecimentos comerciais e converter potenciais clientes por meio de técnicas de negociação, gestão de objeções e conhecimento dos produtos da empresa.
+O jogo é um simulador de vendas em ambiente urbano, inspirado no formato de visual novel, no qual o jogador assume o papel de um Gerente de Negócios (GN) da Cielo. O objetivo principal é percorrer um mapa interativo, visitar estabelecimentos comerciais e converter potenciais clientes por meio de técnicas de negociação, gestão de objeções e conhecimento dos produtos da empresa. Este projeto foi desenvolvido com base em análise estratégica da empresa (Cielo, 2024; Cielo, 2026) e no contexto do mercado brasileiro de negócios.
 
 ### 4.1.2 Objetivo da Versão 1
 A primeira versão do projeto teve como foco o desenvolvimento da estrutura base do jogo, contemplando: Tela de início, Tela explicativa (tutorial), Mapa interativo e Sistema básico de navegação entre telas. Essa etapa priorizou a construção do fluxo principal da aplicação.
 
 ### 4.1.3 Escopo Entregue – Interface
+
 Na Sprint 1, foram implementadas as seguintes telas:
 * **Tela 1 — Tela Inicial:** Interface contendo o botão Start, responsável por iniciar o jogo.
 * **Tela 2 — Tutorial:** Tela explicativa apresentando as principais mecânicas e objetivos do jogo.
@@ -594,6 +621,7 @@ Na Sprint 1, foram implementadas as seguintes telas:
 * **Tela 4 — Tela de Encerramento:** Tela final indicando o término da versão atual do jogo.
 
 ### 4.1.4 Escopo Técnico Entregue
+
 Em termos de implementação, foram desenvolvidas as seguintes funcionalidades:
 * Menu inicial com botão Start
 * Sistema de navegação simples entre telas
@@ -604,60 +632,60 @@ Em termos de implementação, foram desenvolvidas as seguintes funcionalidades:
 
 <p align = 'center'><b>Figura 4.1.5.1 </b> - Configurações do jogo</p>
 
-![Configurações do jogo](other/config-jogo.png)
+![Configurações do jogo](assets/config-jogo.png)
 Descrição: Tela contendo definições gerais do sistema, incluindo parâmetros, ajustes e estrutura de layout.
 
 <p align = 'center'><b>Figura 4.1.5.2 </b> - Tela Inicial (Layout)</p>
 
-![Tela Inicial](other/tela-de-inicio.png)
+![Tela Inicial](assets/tela-de-inicio.png)
 
 <p align = 'center'><b>Figura 4.1.5.3 </b> - Tela Inicial (Execução)</p>
 
-![Tela Inicial em execução](other/tela-inicial-pratica.png)
+![Tela Inicial em execução](assets/tela-inicial-pratica.png)
 
 <p align = 'center'><b>Figura 4.1.5.4 </b> - Tela de Introdução (Layout)</p>
 
-![Tela de Introdução](other/tela-intro.png)
+![Tela de Introdução](assets/tela-intro.png)
 
 <p align = 'center'><b>Figura 4.1.5.5 </b> - Tela de Introdução (Execução)</p>
 
-![Tela de Introdução em execução](other/tela-intro-pratica.png)
+![Tela de Introdução em execução](assets/tela-intro-pratica.png)
 
 <p align = 'center'><b>Figura 4.1.5.6 </b> - Tela do Mapa (Layout)</p>
 
-![Tela do Mapa](other/tela-mapa.png)
+![Tela do Mapa](assets/tela-mapa.png)
 
 <p align = 'center'><b>Figura 4.1.5.7 </b> - Tela do Mapa (Execução)</p>
 
-![Tela do Mapa em execução](other/tela-mapa-pratica-.png)
+![Tela do Mapa em execução](assets/tela-mapa-pratica-.png)
 
 <p align = 'center'><b>Figura 4.1.5.8 </b> - Tela de Encerramento (Layout)</p>
 
-![Tela de Encerramento](other/tela-encerramento.jpeg)
+![Tela de Encerramento](assets/tela-encerramento.jpeg)
 
 <p align = 'center'><b>Figura 4.1.5.9 </b> - Tela de Encerramento (Execução)</p>
 
-![Tela de Encerramento em execução](other/tela-encerramento-pratica.jpg)
+![Tela de Encerramento em execução](assets/tela-encerramento-pratica.jpg)
 
 ### 4.1.6 Telas Futuras 
 
 <p align = 'center'><b>Figura 4.1.6.1 </b> - Cena Interna da Padaria (Layout)</p>
 
-![Cena Interna da Padaria](other/tela-padaria.png)
+![Cena Interna da Padaria](assets/tela-padaria.png)
 
 <p align = 'center'><b>Figura 4.1.6.2 </b> - Cena Interna da Padaria (Execução)</p>
 
-![Cena da Padaria com Diálogo](other/tela-padeiro-dialogo.png)
+![Cena da Padaria com Diálogo](assets/tela-padeiro-dialogo.png)
 
 <p align = 'center'><b>Figura 4.1.6.3 </b> - Estrutura dos Arquivos de Diálogo</p>
 
-![Arquivos de Diálogo](other/dialogos.png)
+![Arquivos de Diálogo](assets/dialogos.png)
 
 <p align = 'center'><b>Figura 4.1.6.4 </b> - Código de Conexão entre Cenas</p>
 
-![Conexão entre Cenas](other/tela-conexao-entre-telas.png)
+![Conexão entre Cenas](assets/tela-conexao-entre-telas.png)
 
-## 4.2. Desenvolvimento básico do jogo (sprint 2)
+## 4.2. Desenvolvimento básico do jogo 
 
 ### 4.2.1 Objetivo da Versão 2
 A segunda versão do projeto teve como foco a implementação das primeiras mecânicas jogáveis do sistema, transformando a estrutura inicial em uma experiência funcional. Nesta etapa foram integradas as principais telas do jogo, além da introdução do primeiro cenário jogável e do sistema inicial de diálogo com NPCs. Também foi iniciada a implementação da lógica da Barra de Satisfação do cliente.
@@ -685,23 +713,23 @@ O sistema de diálogo foi estruturado em três etapas progressivas. Em cada etap
 
 <p align = 'center'><b>Figura 4.2.4.1 </b> - Código da Tela Inicial</p>
 
-![Código tela de início](other/codeStartScene.jpg)
+![Código tela de início](assets/codeStartScene.jpg)
 
 <p align = 'center'><b>Figura 4.2.4.2 </b> - Código da Tela de Introdução</p>
 
-![Código tela de introdução](other/codeIntroScene.jpg)
+![Código tela de introdução](assets/codeIntroScene.jpg)
 
 <p align = 'center'><b>Figura 4.2.4.3 </b> - Código da Tela de Mapa</p>
 
-![Código tela de mapa](other/codeMapScene.jpg)
+![Código tela de mapa](assets/codeMapScene.jpg)
 
 <p align = 'center'><b>Figura 4.2.4.4 </b> - Códigos do Cenário da Padaria</p>
 
-![Código padaria 1](other/codePadaria1.jpg)
+![Código padaria 1](assets/codePadaria1.jpg)
 
 <p align = 'center'><b>Figura 4.2.4.5 </b> - Códigos do Sistema de Diálogo</p>
 
-![Código diálogo 1](other/codeDialog1.jpg)
+![Código diálogo 1](assets/codeDialog1.jpg)
 
 ### 4.2.5 Limitações Atuais
 Nesta versão, algumas funcionalidades ainda não foram completamente implementadas:
@@ -710,7 +738,7 @@ Nesta versão, algumas funcionalidades ainda não foram completamente implementa
 * Implementação de novos cenários jogáveis
 * Sistema de progressão baseado em reputação do jogador
 
-## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
+## 4.3. Desenvolvimento intermediário do jogo 
 
 ### 4.3.1 Objetivo da Versão 3
 A terceira versão do projeto teve como foco a implementação da fase da Quitanda e da fase final do Posto de Gasolina. Além disso, foi desenvolvida a lógica da Barra de Satisfação do Cliente, responsável por medir o desempenho do jogador durante as interações de venda. Também foram realizadas correções no sistema de diálogos do jogo.
@@ -736,22 +764,22 @@ A Barra de Satisfação do cliente foi implementada para representar visualmente
 
 <p align = 'center'><b>Figura 4.3.4.1 </b> - Códigos do Cenário da Quitanda</p>
 
-![Códigos do Cenário da Quitanda](other/quitandaCodigo1.png) 
+![Códigos do Cenário da Quitanda](assets/quitandaCodigo1.png) 
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 <p align = 'center'><b>Figura 4.3.4.2 </b> - Tela da Quitanda</p>
 
-![Tela da Quitanda](other/cenaQuitanda.png) 
+![Tela da Quitanda](assets/cenaQuitanda.png) 
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 <p align = 'center'><b>Figura 4.3.4.3 </b> - Códigos do Cenário do Posto</p>
 
-![Códigos do Cenário do Posto](other/postoCodigo1.png)
+![Códigos do Cenário do Posto](assets/postoCodigo1.png)
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 <p align = 'center'><b>Figura 4.3.4.4 </b> - Tela do Posto</p>
 
-![Tela da Quitanda](other/cenaPosto.png) 
+![Tela da Quitanda](assets/cenaPosto.png) 
 <p align = "center">Fonte: Figura criada pelos autores.</p>
 
 ### 4.3.5 Limitações Atuais
@@ -760,142 +788,324 @@ Nesta versão, algumas funcionalidades ainda não foram completamente implementa
 * Implementação completa dos cenários jogáveis pendentes.
 * Sistema final de progressão baseado na reputação geral do jogador.
 
-## 4.4. Desenvolvimento final do MVP (sprint 4)
+## 4.4. Desenvolvimento final do MVP
 
-Na Sprint 4, foi finalizada a versão MVP do jogo, consolidando as principais funcionalidades propostas ao longo do projeto. O foco principal foi garantir uma experiência simples, funcional e alinhada à realidade dos vendedores da Cielo, permitindo que o jogador pratique negociações por meio de simulações interativas.
+Na Sprint 4, foi finalizada a versão MVP do jogo, consolidando as principais funcionalidades propostas ao longo do projeto. O foco principal foi garantir uma experiência simples, funcional e alinhada à realidade dos vendedores da Cielo, permitindo que o jogador praticasse negociações por meio de simulações interativas.
 
-O MVP conta com quatro fases distintas padaria, quitanda, restaurante e posto de gasolina, cada uma representando diferentes contextos reais de venda enfrentados pelos Gerentes de Negócios. Cada fase possui um perfil de cliente específico, exigindo que o jogador adapte sua abordagem durante os diálogos para obter melhores resultados.
+O MVP conta com quatro fases distintas: padaria, quitanda, restaurante e posto de gasolina, cada uma representando diferentes contextos reais de venda enfrentados pelos Gerentes de Negócios. Cada fase possui um perfil de cliente específico, exigindo que o jogador adapte sua abordagem durante os diálogos para obter melhores resultados.
 
-Como pode ser observado na Figura 4.4.1, o jogo apresenta uma interface inicial que permite ao usuário iniciar o jogo por meio de um botão interativo
+Como pode ser observado na Figura 4.4.1, o jogo apresenta uma interface inicial que permite ao usuário começar a jogar por meio de um botão interativo.
 
 <p align = 'center'><b>Figura 4.4.1</b> - Tela inicial do jogo</p>
 
-![Tela Inicial do jogo](other/telaInicial.png)
+![Tela Inicial do jogo](assets/telaInicial.png)
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
-Ao iniciar o jogo, o usuário é recepcionado pela lider Cielita (Figura 4.4.2), a guia do GN pelo jogo, onde oferece as primeiras informações necessárias sobre as mecânicas e o instigando a explorar o mapa.
+Ao iniciar o jogo, o usuário é recepcionado pela líder Cielita (Figura 4.4.2), que guia o GN pelo jogo, oferecendo as primeiras informações necessárias sobre as mecânicas e instigando-o a explorar o mapa.
 
 <p align = 'center'><b>Figura 4.4.2</b> - Tela inicial do jogo</p>
 
-![Introdução da Cielita](other/telaIntroducao.png)
+![Introdução da Cielita](assets/telaIntroducao.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-Após a introdução da cielita, o jogador é liberado para explorar o mapa (Figura 4.4.3), onde encontra algumas fases/estabelecimentos bloqueados por falta de reputação (mensagem que é exibida ao tentar acessar a fase) (Figura 4.4.4).
+Após a introdução da Cielita, o jogador é liberado para explorar o mapa (Figura 4.4.3), onde encontra algumas fases ou estabelecimentos bloqueados por falta de reputação, mensagem que é exibida ao tentar acessar a fase (Figura 4.4.4).
 
-<p align = 'center'><b>Figura 4.4.3</b> - Mapa do jogo (posiçao inicial)</p>
+<p align = 'center'><b>Figura 4.4.3</b> - Mapa do jogo (posição inicial)</p>
 
-![Mapa na posição inicial do jogo](other/mapaJogo.png)
+![Mapa na posição inicial do jogo](assets/mapaJogo.png)
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 <p align = 'center'><b>Figura 4.4.4</b> - Fase bloqueada</p>
 
-![Fase bloqueada e mensagem de reputação](other/fasebloqueada.png)
+![Fase bloqueada e mensagem de reputação](assets/fasebloqueada.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
-O usuário é orientado pela Cielita a explorar o mapa em busca da primeira e única fase desbloqueada, a Padaria. Então, ao selecionar a padaria no mapa, começa-se o fluxo de diálogos com perguntas (Figura 4.4.5 e Figura 4.4.6), respostas e interação do gerente de negócios com o Oswaldo (padeiro) até que ele chegue ao final do fluxo, onde caso finalize a fase com 50% ou mais de barra de satisfação ele recebe uma frase de vitória (Figura 4.4.6) e soma-se 100 de reputação ao seu score. Caso contrário, é exibida uma de derrota (Figura 4.4.7) e ele pode voltar ao mapa e tentar novamente. 
+O usuário é orientado pela Cielita a explorar o mapa em busca da primeira e única fase desbloqueada, a Padaria. Ao selecionar a padaria no mapa, inicia-se o fluxo de diálogos com perguntas (Figuras 4.4.5 e 4.4.6), respostas e interações do gerente de negócios com Oswaldo, o padeiro, até que ele chegue ao final do fluxo. Caso finalize a fase com 50% ou mais na barra de satisfação, ele recebe uma mensagem de vitória (Figura 4.4.7) e soma 100 pontos de reputação ao seu placar. Caso contrário, é exibida uma mensagem de derrota (Figura 4.4.8), e ele pode voltar ao mapa e tentar novamente.
 
 <p align = 'center'><b>Figura 4.4.5</b> - Fase da Padaria (diálogo)</p>
 
-![Exemplo de díalogo (Padaria)](other/telaPadariadialogo.png)
+![Exemplo de díalogo (Padaria)](assets/telaPadariadialogo.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-<p align = 'center'><b>Figura 4.4.5</b> - Fase da Padaria (opções)</p>
+<p align = 'center'><b>Figura 4.4.6</b> - Fase da Padaria (opções)</p>
 
-![Exemplo de opç~poes (Padaria)](other/telaPadariaopcoes.png)
+![Exemplo de opções (Padaria)](assets/telaPadariaopcoes.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 <p align = 'center'><b>Figura 4.4.7</b> - Tela de vitória das fases </p>
 
-![Tela de vitória da fase](other/telapadariavitoria.png)
+![Tela de vitória da fase](assets/telapadariavitoria.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
 <p align = 'center'><b>Figura 4.4.8</b> - Tela de derrota das fases </p>
 
-![Tela de derrota da fase](other/telapadariaderrota.png)
+![Tela de derrota da fase](assets/telapadariaderrota.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 
-Em seguida, o jogador acessa as fases que são desbloqueadas com a vitória da padaria, o restaurante (Figura 4.4.9) e a quitanda (Figura 4.4.10). Ele fica livre para escolher qual fase quer jogar, além disso, não é permitido rejogar uma fase após a vitória, para evitar "acumulo de score indevido" (Figura 4.4.11). 
-Todas as fases seguem a mesma estrutura (exceto a fase do posto de gasolina) de diálogo, barra de reputação e telas de vitória e derrotas, como as duas fases são de nível médio, é necessário uma satisfação de 65% ou mais.
+Em seguida, o jogador acessa as fases desbloqueadas com a vitória na padaria: o restaurante (Figura 4.4.9) e a quitanda (Figura 4.4.10). Ele fica livre para escolher qual fase deseja jogar. Além disso, não é permitido rejogar uma fase após a vitória, para evitar acúmulo indevido de pontuação (Figura 4.4.11).
+Todas as fases seguem a mesma estrutura, com exceção da fase do posto de gasolina: diálogos, barra de reputação e telas de vitória e derrota. Como as duas fases intermediárias são de nível médio, é necessária uma satisfação de 65% ou mais.
 
 
 <p align = 'center'><b>Figura 4.4.9</b> - Fase do Restaurante</p>
 
-![Fase do Restaurante](other/faseRestaurante.png)
+![Fase do Restaurante](assets/faseRestaurante.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
 <p align = 'center'><b>Figura 4.4.10</b> - Fase da Quitanda</p>
 
-![Fase da Quitanda](other/faseQuitanda.png)
+![Fase da Quitanda](assets/faseQuitanda.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-<p align = 'center'><b>Figura 4.4.11</b> - Bloqueio de fase já concluida
+<p align = 'center'><b>Figura 4.4.11</b> - Bloqueio de fase já concluída</p>
 
-![Mensagem de bloqueio de fase concluída](other/faseconcluida.png)
-
-<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
-
-Com a conclusão das duas fases, o usuário acumula 400 de reputação, o suficiente para desbloquear a fase final, o posto de gasolina (Figura 4.4.12). O posto é a fase final, a mais dificil, para sua conclusão é necessário uma satisfação de 75% ou mais, além disso, o jogador só sabe se acertou a resposta por meio das expressões do José (o npc do posto), onde fica feliz com uma resposta certa (Figura 4.4.13) e bravo para respostas incorretas (Figura 4.4.14). A mecânica de expressões acontece em todas as fases, entretanto, apenas a do posto é usada como uma das mecânicas principais.
-
-<p align = 'center'><b>Figura 4.4.12</b> - Fase do Posto de Gasolina
-
-![Fase do Posto de Gasolina](other/faseposto.png)
+![Mensagem de bloqueio de fase concluída](assets/faseconcluida.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-<p align = 'center'><b>Figura 4.4.13</b> - NPC do posto feliz como feedback
+Com a conclusão das duas fases, o usuário acumula 400 pontos de reputação, o suficiente para desbloquear a fase final, o posto de gasolina (Figura 4.4.12). O posto é a fase final e também a mais difícil; para concluí-la, é necessária uma satisfação de 75% ou mais. Além disso, o jogador só sabe se acertou a resposta por meio das expressões de José, o NPC do posto, que fica feliz com uma resposta correta (Figura 4.4.13) e bravo diante de respostas incorretas (Figura 4.4.14). A mecânica de expressões acontece em todas as fases; entretanto, apenas na fase do posto ela é usada como uma das mecânicas principais.
 
-![NPC do posto feliz como feedback](other/postofeliz.png)
+<p align = 'center'><b>Figura 4.4.12</b> - Fase do Posto de Gasolina</p>
 
-<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
-
-<p align = 'center'><b>Figura 4.4.14</b> - NPC do posto bravo como feedback
-
-![NPC do posto bravo como feedback](other/postobravo.png)
+![Fase do Posto de Gasolina](assets/faseposto.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-Por fim, ao finalizar a fase do posto, o jogador é encaminhado para a tela final, onde a cielita aparece mais uma vez parabenizando o usuário por ter concluído o jogo e entrega um certificado a ele (figura 4.4.15), além disso, ela reforça a ideia que os npcs viraram parceiros do jogador. Depois de um tempo ela some e aparecem todos os npcs juntos comemorando e a opção de jogar novamente (apagando o progresso feito e salvo) (Figura 4.4.16).
+<p align = 'center'><b>Figura 4.4.13</b> - NPC do posto feliz como feedback</p>
 
-<p align = 'center'><b>Figura 4.4.15</b> - Cielita parabenizando pela conclusão do jogo
-
-![Cielita parabenizando pela conclusão do jogo](other/parabenscieltia.png)
+![NPC do posto feliz como feedback](assets/postofeliz.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-<p align = 'center'><b>Figura 4.4.16</b> - Cena final do jogo 
+<p align = 'center'><b>Figura 4.4.14</b> - NPC do posto bravo como feedback</p>
 
-![Cena final do jogo](other/fimdejogo.png)
+![NPC do posto bravo como feedback](assets/postobravo.png)
 
 <p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
 
-Ao longo dessa etapa, foram realizados testes para garantir o funcionamento adequado do jogo em diferentes situações, incluindo a validação de entradas do usuário e o tratamento de possíveis erros, como interações inválidas. Após os testes, o projeto foi organizado e disponibilizado em repositório Git, com commits descritivos, e preparado para deploy na plataforma indicada.
+Por fim, ao finalizar a fase do posto, o jogador é encaminhado para a tela final, em que a Cielita aparece mais uma vez parabenizando o usuário por ter concluído o jogo e lhe entrega um certificado (Figura 4.4.15). Além disso, ela reforça a ideia de que os NPCs se tornaram parceiros do jogador. Depois de um tempo, ela desaparece e aparecem todos os NPCs juntos, comemorando, além da opção de jogar novamente, apagando o progresso feito e salvo (Figura 4.4.16).
 
-As principais dificuldades encontradas estiveram relacionadas à implementação da lógica de diálogos ramificados, exigindo atenção para manter a coerência das interações e dos impactos das escolhas. Como próximos passos, pretende-se aprimorar os elementos visuais, adicionar novos cenários e perfis de clientes, além de incluir trilha sonora e expandir as mecânicas de progressão, tornando a experiência mais completa e imersiva.
+<p align = 'center'><b>Figura 4.4.15</b> - Cielita parabenizando pela conclusão do jogo</p>
 
-## 4.5. Revisão do MVP (sprint 5)
-*Pendente para a próxima sprint.*
+![Cielita parabenizando pela conclusão do jogo](assets/parabenscieltia.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<p align = 'center'><b>Figura 4.4.16</b> - Cena final do jogo</p>
+
+![Cena final do jogo](assets/fimdejogo.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+Ao longo dessa etapa, foram realizados testes para garantir o funcionamento adequado do jogo em diferentes situações, incluindo a validação das entradas do usuário e o tratamento de possíveis erros, como interações inválidas. Após os testes, o projeto foi organizado e disponibilizado em repositório Git, com commits descritivos, e preparado para implantação na plataforma indicada.
+
+As principais dificuldades encontradas estiveram relacionadas à implementação da lógica de diálogos ramificados, o que exigiu atenção para manter a coerência das interações e dos impactos das escolhas. Como próximos passos, pretende-se aprimorar os elementos visuais, adicionar novos cenários e perfis de clientes, além de incluir trilha sonora e expandir as mecânicas de progressão, tornando a experiência mais completa e imersiva.
+
+## 4.5. Revisão do MVP 
+
+Após a realização dos playtests com usuários reais (detalhados na seção 5.2), foram identificados pontos de melhoria essenciais para o refinamento do jogo com base nos feedbacks coletados. O foco principal desta revisão foi aprimorar a clareza das instruções, a usabilidade da navegação no mapa e o fluxo de interação, solucionando as principais dificuldades apontadas pelos testadores.
+
+Para sanar esses problemas, foram implementadas as seguintes mudanças na interface e no gameflow:
+
+- <b> Adição do Botão e Tela "Como Jogar": </b> Para mitigar a dificuldade na compreensão das mecânicas iniciais, foi adicionado um botão "Como jogar" (Figura 4.5.1) diretamente na tela inicial. Ele direciona o jogador a uma tela explicativa (Figura 4.5.2) que detalha como explorar o mapa (clicando e arrastando), a progressão e desbloqueio das fases (níveis fácil, médio e difícil) e o funcionamento da barra de satisfação dos NPCs durante os diálogos.
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.1</b> - Nova tela inicial com botão "Como jogar"</p>
+
+![Nova tela inicial com o botão de como jogar](assets/topic%204.5/startScene.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+<p align = 'center'><b>Figura 4.5.2</b> - Tela de instruções "Como Jogar"</p>
+
+![Tela de instruções](assets/topic%204.5/howToPlayScene.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+<br> 
+
+- <b> Confirmações de Entrada e Saída: </b> Para evitar cliques acidentais e melhorar o controle da navegação, foram incluídos modais de confirmação claros ao tentar acessar um estabelecimento ("Deseja entrar em Padaria?") (Figura 4.5.3) e ao tentar sair de uma fase em andamento ("Deseja mesmo sair da Fase?") (Figura 4.5.4).
+<br>
+
+<p align = 'center'><b>Figura 4.5.3</b> - Telas de confirmação de acesso das fases </p>
+
+![Tela de entrada na fase](assets/topic%204.5/confirmLevel.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+<br>
+
+<p align = 'center'><b>Figura 4.5.4</b> - Telas de confirmação de saída das fases </p>
+
+![Tela de saída na fase](assets/topic%204.5/confirmExit.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+- <b> Feedback Final de Venda Refinado: </b> As telas de conclusão de fase foram ajustadas visualmente para apresentar mensagens mais diretas de "VENDA NÃO REALIZADA" (Figura 4.5.6)ou "VENDA CONCLUÍDA!" (Figura 4.5.5), instruindo o jogador a tentar novamente ou parabenizando-o pela conquista do cliente (como o padeiro Oswaldo), mantendo o padrão do botão de retornar ao mapa.
+
+<br>
+<p align = 'center'><b>Figura 4.5.5</b> - Feedbacks de conclusão de venda</p>
+
+![Tela de venda realizada](assets/topic%204.5/winScene.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.6</b> - Feedbacks de derrota de venda</p>
+
+![Tela de venda não realizada](assets/topic%204.5/defeatScene.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+Para aprimorar o engajamento e a imersão logo nos primeiros momentos de jogo, a fala introdutória da assistente virtual Cielita (Figura 4.5.7 e figura 4.5.8) foi completamente reformulada. Agora, ela não apenas dá as boas-vindas ao usuário, mas atua como um verdadeiro tutorial narrativo integrado. Em sua nova introdução, Cielita contextualiza de forma mais clara o papel do jogador como um novo Gerente de Negócios da Cielo, explica a mecânica de satisfação dos clientes e o orienta explicitamente a interagir com o primeiro objetivo disponível no mapa (a Padaria). Essa mudança no roteiro inicial foi implementada para sanar a dificuldade de compreensão das regras apontada nos playtests, garantindo que o jogador inicie sua jornada com total domínio sobre suas metas e se sinta acompanhado durante toda a experiência de aprendizagem.
+<br>
+
+<p align = 'center'><b>Figura 4.5.7</b> - Primeira parte do diálogo de introdução da Cielita</p>
+
+![Primeira parte do diálogo de introdução da Cielita](assets/topic%204.5/oneCielita.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.8</b> - Seguunda parte do diálogo de introdução da Cielita </p>
+
+![Segunda parte do diálogo de introdução da Cielita](assets/topic%204.5/twoCielita.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+<br> 
+
+- <b> Aprimoramento do Tutorial e Navegação no Mapa: </b> O guia interativo com a personagem Cielita foi expandido. Agora, ela acompanha o progresso do GN diretamente na tela do mapa com balões de diálogo mais explicativos. Além disso, ela indica qual é o próximo objetivo (ex: "Agora você pode ir para o Posto de Gasolina. TOque na área do Posto do mapa" (Figura 4.5.9)) - ao clicar no botão de "ajuda" - e avisa com clareza quando novos estabelecimentos (Quitanda, Restaurante, Posto de Gasolina) são liberados (Figura 4.5.10) conforme o jogador acumula reputação. 
+
+<p align = 'center'><b>Figura 4.5.9</b> - Cielita guiando o jogador pelo mapa</p>
+
+![Cielita guiando o jogador pelo mapa](assets/topic%204.5/sixHelp.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+<br> 
+
+<p align = 'center'><b>Figura 4.5.10</b> - Cielita ao desbloquear novas fases</p>
+
+![Cielita ao desbloquear novas fases](assets/topic%204.5/fiveHelp.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+<br> 
+
+## 4.5.1. Evidências Técnicas das Implementações
+
+Para garantir que as propostas de melhoria listadas no plano de ação (seção 5.2.3) fossem aplicadas de forma robusta e livre de bugs, a equipe de desenvolvimento aplicou lógicas específicas no código (salvaguardas e lógicas de estado). A seguir, estão detalhadas as implementações técnicas:
+
+- <b> Menu Inicial e Cena de Tutorial:</b> O botão "Como Jogar" foi implementado na StartScene com gatilhos de interação visual (aumento de escala no hover) e efeitos sonoros, redirecionando o jogador para uma nova cena dedicada (HowToPlay) (Figura 4.5.1.1). Essa cena carrega o asset gráfico com as instruções e gerencia o retorno seguro ao menu inicial (Figura 4.5.1.2).
+
+<p align = 'center'><b>Figura 4.5.1.1</b> - Código do botão de integração da cena "Como Jogar"</p>
+
+![Código do botão da cena "Como Jogar"](assets/topic%204.5/technicalEvidence/howToPlayImplementation.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.1.2</b> - Código do tela "Como Jogar"</p>
+
+![Código do tela "Como Jogar"](assets/topic%204.5/technicalEvidence/cenaHowToPlay.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+- <b>Prevenção de Cliques Acidentais e Avanço Rápido (Salvaguardas): </b> Um dos maiores problemas observados foi o avanço acidental de diálogos (jogadores clicando muito rápido). Para corrigir isso, foi implementado um sistema de cooldown (delay mínimo de 700ms entre cliques) na função canClickDialog() (Figura 4.5.1.3). Além disso, salvaguardas simples, como o bloqueio da interação com o mapa enquanto a introdução está ativa (if (introActive) return;), foram adicionadas (Figura 4.5.1.4).
+
+<p align = 'center'><b>Figura 4.5.1.3</b> - Implementação de Delay nos diálogos</p>
+
+![Implementação de Delay nos diálogos](assets/topic%204.5/technicalEvidence/delay.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.1.4</b> - Implementação de Salvaguardas</p>
+
+![Código do tela "Como Jogar"](assets/topic%204.5/technicalEvidence/safeguards.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+- <b> Modais de Confirmação (Entrada e Saída):</b> Para evitar que os jogadores entrem ou saiam de fases acidentalmente, foram criadas caixas de diálogo sobrepostas (overlays). As funções showConfirmationDialog (para entrada) (Figura 4.5.1.5) e showExitConfirmation (para saída) (Figura 4.5.1.6) geram retângulos interativos com botões de "Sim/Entrar" e "Cancelar", impedindo cliques nos elementos do cenário enquanto o modal estiver ativo.
+
+<p align = 'center'><b>Figura 4.5.1.5</b> - Lógica de renderização das caixas de entrada nas fases </p>
+
+![Lógica de renderização das caixas de entrada nas fases](assets/topic%204.5/technicalEvidence/confirmLevel.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.1.6</b> - Lógica de renderização das caixas de entrada nas fases </p>
+
+![Lógica de renderização das caixas de saída das fases](assets/topic%204.5/technicalEvidence/confirmExit.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+- <b> Feedback Visual e Progressão na Tela de Fim de Fase: </b> A função showEndScreen centralizou o gerenciamento do resultado da negociação. Com base na variável isSuccess, o código define a cor de fundo (verde para sucesso, vermelho para falha), adiciona um botão de voltar e um retangulo branco de fundo (Figura 4.5.1.7).
+
+<p align = 'center'><b>Figura 4.5.1.7</b> - Lógica da tela de Vitória/Derrota </p>
+
+![Lógica da tela de Vitória/Derrota](assets/topic%204.5/technicalEvidence/winDefeatScene.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+- <b> Guias Visuais no Mapa (Setas e Textos Dinâmicos):</b> Para mitigar a dificuldade de navegação e localização de objetivos, o sistema do mapa foi aprimorado. O código agora possui uma função dinâmica para os balões de fala da Cielita (Figura 4.5.1.9) (getHelpMessage e getCompletionMessage), que avalia as fases já concluídas no GAME_STATE e orienta o jogador para o próximo passo correto. Além disso, foi implementado um sistema de renderização gráfica de setas indicativas no mapa (Figura 4.5.1.8), apontando sempre para os estabelecimentos recomendados ou recém-desbloqueados, calculando o ângulo e a posição em relação à câmera do jogador.
+
+<p align = 'center'><b>Figura 4.5.1.8</b> - Lógica da renderização de setas-guia </p>
+
+![Lógica da renderização de setas-guia ](assets/topic%204.5/technicalEvidence/arrows.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+<p align = 'center'><b>Figura 4.5.1.9</b> - Lógica de textos dinâmicos da Cielita </p>
+
+![Lógica de textos dinâmicos da Cielita](assets/topic%204.5/technicalEvidence/helpAndCielita.png)
+
+<p align = 'center'>Fonte: Material produzido pelos autores (2026)</p>
+
+<br>
+
+Em suma, as alterações visuais e mecânicas detalhadas nesta seção, aliadas às suas respectivas implementações e salvaguardas técnicas, resolveram com sucesso as principais dores de usabilidade levantadas durante os testes de jogabilidade. Com essas melhorias, o Produto Mínimo Viável (MVP) atinge o nível de estabilidade necessário, mitigando frustrações técnicas e garantindo uma curva de aprendizado suave. Dessa forma, o simulador entrega uma experiência fluida, intuitiva e engajadora, cumprindo seu objetivo de capacitar os Gerentes de Negócios da Cielo de maneira eficiente e consolidando a entrega final desta etapa de desenvolvimento.
 
 # <a name="c5"></a>5. Testes
 
 Nesta seção, são apresentados os processos de validação e verificação realizados para atestar o correto funcionamento do simulador educacional. O objetivo dessas validações é garantir a Qualidade de Software (QA - Quality Assurance), certificando-se de que o jogo está em total alinhamento estrutural e lógico com os requisitos funcionais e não funcionais previamente mapeados no escopo do projeto.
 
-## 5.1. Casos de Teste (sprints 2 a 4)
 
-Em Engenharia de Software, segundo Pressman e Maxim (2016), um Caso de Teste (Test Case) é um cenário documentado e estruturado que define um conjunto de condições prévias, ações a serem executadas e os resultados esperados para validar se uma funcionalidade específica do sistema está operando da maneira correta.
 
-De acordo com Sommerville (2019), o uso de casos de teste é fundamental para padronizar as avaliações do software, permitindo que qualquer desenvolvedor ou testador replique o mesmo cenário em busca de falhas (bugs), gargalos de usabilidade ou quebras lógicas no código. Eles funcionam como um roteiro de aprovação: se o resultado obtido após a ação (pós-condição) for idêntico ao resultado esperado, a funcionalidade é considerada validada.
+## 5.1. Casos de Teste 
+
+Em Engenharia de Software, segundo Pressman (2016), um Caso de Teste (Test Case) é um cenário documentado e estruturado que define um conjunto de condições prévias, ações a serem executadas e os resultados esperados para validar se uma funcionalidade específica do sistema está operando da maneira correta.
+
+De acordo com Sommerville (2018), o uso de casos de teste é fundamental para padronizar as avaliações do software, permitindo que qualquer desenvolvedor ou testador replique o mesmo cenário em busca de falhas (bugs), gargalos de usabilidade ou quebras lógicas no código. Eles funcionam como um roteiro de aprovação: se o resultado obtido após a ação (pós-condição) for idêntico ao resultado esperado, a funcionalidade é considerada validada.
 
 Os casos de teste listados na Tabela 5.1.1 abaixo foram projetados para serem executados de forma iterativa em diferentes momentos do desenvolvimento. Eles têm como foco principal verificar o funcionamento isolado e a integração coesa entre as mecânicas essenciais do jogo: navegação de interfaces, renderização do mapa, sistema interativo de diálogo, lógica de cálculo da barra de satisfação e o sistema de progressão por reputação.
 <p align = 'center'><b>Tabela 5.1.1 </b> - Casos de teste do jogo</p>
@@ -903,110 +1113,763 @@ Os casos de teste listados na Tabela 5.1.1 abaixo foram projetados para serem ex
 | ID | Pré-condição | Descrição do teste (Ação) | Pós-condição (Resultado Esperado) |
 |:---|:---|:---|:---|
 | 1 | Jogo executado no navegador. | Verificar a proporção da tela durante a navegação entre menus e o mapa. | Imagens, diálogos e textos são renderizados corretamente, sem distorções, mantendo a proporção visual. |
-| 2 | Jogo aberto na tela inicial (StartScene). | Clicar no botão "Start". | O sistema transiciona para a tela de introdução do tutorial (IntroScene). |
-| 3 | Tela de introdução (IntroScene) ativa na tela. | Clicar em qualquer área livre da tela. | O sistema transiciona para a tela do mapa urbano (MapScene). |
-| 4 | Tela do mapa (MapScene) ativa na tela. | Clicar em um estabelecimento visualmente disponível no mapa (ex: Padaria). | O sistema carrega e exibe o respectivo cenário interno do local selecionado. |
-| 5 | Interação de diálogo ativa no cenário do lojista. | Escolher e clicar em uma das opções de diálogo apresentadas. | A barra de satisfação visual na UI do cliente aumenta ou diminui de acordo com a precisão da resposta. |
-| 6 | Diálogo de vendas chega ao fim com a tela de encerramento ativa. | Verificar o cálculo do sistema baseado na barra de satisfação. | Se o nível final da barra for maior que o mínimo exigido, a venda é concluída. Se menor, a venda falha e o ciclo repete. |
-| 7 | Tela de encerramento ativada indicando que a Venda foi Concluída (Sucesso). | Clicar no botão "Voltar ao Mapa". | O jogador retorna ao mapa principal, recebe feedback positivo, ganha reputação e visualiza novos locais desbloqueados. |
-| 8 | Tela de encerramento ativada indicando que a Venda Não foi Concluída (Falha). | Clicar em "Tentar Novamente" ou "Voltar ao Mapa". | O jogador não ganha reputação, recebe o feedback educativo sobre as escolhas e deve reiniciar a negociação com o cliente. |
+| 2 | Jogo aberto na tela inicial (StartScene). | Clicar no botão "Como jogar". | O sistema transiciona para a tela de introdução do tutorial (howToPlay). |
+| 3 | Jogo aberto na tela de tutorial (howToPlay). | Clicar no botão "Voltar". | O sistema transiciona para a tela inicial (StartScene). |
+| 4 | Jogo aberto na tela inicial (StartScene). | Clicar no botão "Jogar". | O sistema transiciona para o overlay da Cielita (mapScene). |
+| 5 | Overlay da Cielita ativo na tela. | Clicar no botão "Avançar". | O sistema avança para o próximo diálogo da Cielita. |
+| 6 | Overlay da Cielita ativo na tela. | Clicar no botão "Avançar". | O sistema transiciona para a tela do mapa urbano (MapScene). |
+| 7 | Tela do mapa (MapScene) ativa na tela. | Clicar no botão "Ajuda" disponível na interface. | O sistema exibe o overlay da Cielita com instruções ou diálogos de ajuda. |
+| 8 | Tela do mapa (MapScene) ativa na tela. | Clicar sobre o local da padaria no mapa do jogo. | O sistema exibe um overlay de confirmação com a mensagem "Deseja entrar em Padaria?" e os botões "Entrar" e "Cancelar". |
+| 9 | Overlay de confirmação da padaria ativo na tela. | Clicar no botão "Entrar". | O sistema carrega e exibe o cenário da padaria (bakeryScene). |
+| 10 | Overlay de confirmação da padaria ativo na tela. | Clicar no botão "Cancelar". | O sistema fecha o overlay e retorna para a tela do mapa (MapScene), sem iniciar a fase. |
+| 11 | Cena da padaria (bakeryScene) ativa durante a fase. | Clicar no botão "Sair" disponível na interface. | O sistema exibe um overlay de confirmação com a mensagem "Deseja mesmo sair da fase?" e os botões "Sim" e "Cancelar". |
+| 12 | Overlay de confirmação de saída ativo na tela. | Clicar no botão "Sim". | O sistema encerra a fase atual e retorna para a tela do mapa (MapScene). |
+| 13 | Overlay de confirmação de saída ativo na tela. | Clicar no botão "Cancelar". | O sistema fecha o overlay e retorna para a cena da padaria (bakeryScene), mantendo o estado atual da fase. |
+| 14 | Cena da padaria (bakeryScene) ativa com cliente em atendimento e opções de diálogo visíveis. | Clicar em uma das opções de diálogo apresentadas ao jogador. | A barra de satisfação do cliente é atualizada na interface, aumentando em caso de resposta correta ou diminuindo em caso de resposta incorreta. |
+| 15 | Cena da padaria (bakeryScene) com diálogo finalizado e barra de satisfação definida. | Aguardar o encerramento do diálogo de vendas. | O sistema exibe um overlay de resultado (vitória ou derrota), de acordo com o valor final da barra de satisfação. |
+| 16 | Overlay de resultado (vitória ou derrota) ativo na tela. | Clicar no botão "Sair". | O sistema fecha o overlay e retorna para a tela do mapa (MapScene). |
+| 17 | Fase da padaria concluída com vitória. | Retornar ao mapa após sair da fase. | O sistema libera o acesso às fases do restaurante (restaurantScene) e da quitanda (greengrocerScene). |
+| 18 | Tela do mapa (MapScene) com fases liberadas. | Clicar sobre o local do restaurante no mapa. | O sistema exibe um overlay de confirmação com os botões "Entrar" e "Cancelar". |
+| 19 | Overlay de confirmação do restaurante ativo na tela. | Clicar no botão "Entrar". | O sistema carrega e exibe o cenário do restaurante (restaurantScene). |
+| 20 | Tela do mapa (MapScene) com fases liberadas. | Clicar sobre o local da quitanda no mapa. | O sistema exibe um overlay de confirmação com os botões "Entrar" e "Cancelar". |
+| 21 | Overlay de confirmação da quitanda ativo na tela. | Clicar no botão "Entrar". | O sistema carrega e exibe o cenário da quitanda (greengrocerScene). |
+| 22 | Fases da padaria, restaurante e quitanda concluídas com vitória. | Retornar ao mapa após concluir a última fase. | O sistema libera o acesso à fase do posto (gasStationScene) no mapa. |
+| 23 | Tela do mapa (MapScene) com a fase do posto liberada. | Clicar sobre o local do posto no mapa. | O sistema exibe um overlay de confirmação com os botões "Entrar" e "Cancelar". |
+| 24 | Overlay de confirmação do posto ativo na tela. | Clicar no botão "Entrar". | O sistema carrega e exibe o cenário do posto (gasStationScene). |
+| 25 | Overlay de confirmação do posto ativo na tela. | Clicar no botão "Cancelar". | O sistema fecha o overlay e retorna para a tela do mapa (MapScene), sem iniciar a fase. |
+| 26 | Nem todas as fases anteriores concluídas. | Verificar o acesso ao posto no mapa. | A fase do posto permanece bloqueada e não interativa. |
+| 27 | Tela do mapa (MapScene) com fases ainda bloqueadas. | Clicar sobre um comércio que ainda não foi liberado. | O sistema exibe uma mensagem informando "Reputação insuficiente" e não permite o acesso à fase. |
+| 28 | Mensagem de bloqueio exibida na tela. | Aguardar ou fechar a mensagem. | A mensagem desaparece e o jogador permanece na tela do mapa (MapScene), sem iniciar a fase. |
+| 29 | Fase do posto (gasStationScene) concluída com vitória. | Clicar no botão "Sair" no overlay de resultado. | O sistema transiciona para a tela de vitória final (endScene). |
+| 30 | Tela de vitória final (endScene) ativa na tela. | Verificar os elementos da interface. | A tela exibe mensagem de vitória final e um botão "Jogar novamente". |
+| 31 | Tela de vitória final (endScene) ativa na tela. | Clicar no botão "Jogar novamente". | O sistema retorna para a tela inicial (StartScene) e reinicia o progresso do jogo. |
+
+**Observação:**  
+As fases bakeryScene, restaurantScene, greengrocerScene e gasStationScene utilizam as mesmas mecânicas, incluindo:
+- Sistema de diálogo com cliente  
+- Barra de satisfação  
+- Overlay de resultado (vitória/derrota)  
+- Botão de saída com confirmação  
+
+Portanto, os casos de teste 11 a 16 se aplicam igualmente a todas essas fases.
+
+
+O botão "Ajuda" está disponível em qualquer momento na tela do mapa (MapScene), permitindo ao jogador reabrir o overlay da Cielita sempre que necessário.
+
 
 <p align = "center">Fonte: Tabela criada pelos autores.</p>
 
+Os casos de teste descritos acima cobrem os principais fluxos do jogo, desde a navegação entre telas até a lógica de progressão por reputação, garantindo que cada camada da experiência do jogador funcione de forma isolada e integrada. A execução iterativa desses testes ao longo do desenvolvimento permite identificar e corrigir falhas com antecedência, assegurando que o produto final entregue uma experiência estável, coerente e alinhada aos objetivos pedagógicos do Conexão Cielo. À medida que novas funcionalidades forem incorporadas ao jogo, novos casos de teste deverão ser documentados e adicionados a esta tabela, mantendo o processo de validação atualizado e consistente com o crescimento do sistema.
+
 ## 5.2. Testes de jogabilidade (playtests) (sprint 5)
+
+Os testes de jogabilidade (playtests) são métodos de avaliação nos quais usuários reais interagem diretamente com o jogo, com o objetivo de identificar problemas de usabilidade, compreender a experiência do jogador e avaliar a eficácia das mecânicas propostas.
+
+De acordo com Fullerton (2018), os playtests constituem uma etapa essencial no desenvolvimento de jogos, pois permitem avaliar a experiência do jogador a partir de sua interação direta com o sistema. A autora destaca que a observação do comportamento real dos jogadores possibilita identificar problemas de usabilidade, compreender como as mecânicas são interpretadas e ajustar decisões de design com base em evidências empíricas, em vez de suposições da equipe de desenvolvimento.
+
+No contexto deste projeto, os testes de jogabilidade são especialmente importantes, pois permitem verificar se o jogo está alinhado ao público-alvo definido, identificar falhas na navegação, na comunicação de objetivos e na compreensão das mecânicas, além de orientar melhorias que tornem a experiência mais intuitiva, acessível e envolvente.
 
 ### 5.2.1 Registros de testes
 
-Nome | João Jonas (nome fictício)
---- | ---
-Já possuía experiência prévia com games? | Sim, é um jogador casual.
-Conseguiu iniciar o jogo? | Sim.
-Entendeu as regras e mecânicas do jogo? | Entendeu as regras; sobre as mecânicas, utilizou apenas as essenciais e não explorou comandos complexos.
-Conseguiu progredir no jogo? | Sim, sem dificuldades.
-Apresentou dificuldades? | Não, conseguiu jogar com facilidade e afirmou ser um sistema bem intuitivo.
-Que nota deu ao jogo? | 9.0
-O que gostou no jogo? | Gostou de como o jogo eleva a dificuldade ao longo do tempo sem deixar de ser divertido.
-O que poderia melhorar no jogo? | A responsividade do personagem aos controles (relatou pequeno *delay* de *input*).
+Para a realização dos testes de jogabilidade, foi adotada a metodologia de testes de guerrilha, caracterizada pela aplicação rápida e prática com usuários reais, sem a necessidade de um ambiente altamente controlado ou de instruções detalhadas.
+
+Os testes ocorreram em ambiente controlado (sala de aula), durante a Sprint 5 do desenvolvimento do projeto, correspondente à etapa final de validação da experiência do usuário. Todas as sessões foram realizadas em computadores do tipo notebook, com o uso de fones de ouvido, garantindo maior imersão e padronização das condições de teste entre os participantes.
+
+Cada sessão foi conduzida em duplas, nas quais um integrante da equipe foi responsável por apresentar o jogo ao participante, enquanto o outro registrava observações sobre o comportamento, as dificuldades e as interações do jogador ao longo da experiência.
+
+Os participantes não receberam instruções detalhadas sobre como jogar, sendo apenas contextualizados quanto ao propósito geral do jogo. Essa abordagem permitiu observar como os usuários compreendiam as mecânicas de forma natural, evidenciando possíveis falhas de usabilidade e comunicação.
+
+Os testes foram realizados com um total de 11 participantes, incluindo estudantes universitários e professores, com diferentes níveis de experiência prévia com jogos digitais. Essa diversidade de perfis possibilitou avaliar tanto a experiência de jogadores casuais quanto de usuários sem familiaridade com jogos.
+
+Cada sessão teve duração média entre 10 e 20 minutos, incluindo o tempo de interação com o jogo e um breve momento de coleta de feedback após a experiência. Essa abordagem possibilitou a obtenção de dados qualitativos relevantes para a identificação de problemas e direcionamento de melhorias no jogo.
+
+
+
+
+#### 5.2.1.1. Registros Individuais 
+
+Nesta subseção, são apresentados os registros individuais dos testes de jogabilidade, organizados em formato de tabelas.
+
+As tabelas contemplam informações relacionadas à experiência prévia dos jogadores, à compreensão das mecânicas, à progressão no jogo, às dificuldades encontradas e à percepção geral da experiência. Durante os testes, também foram observados comportamentos específicos dos participantes, como hesitação, tentativa e erro, leitura (ou não) dos diálogos e formas de interação com o mapa e os elementos do jogo, permitindo uma análise mais aprofundada da experiência do usuário.
+
+<p align="center"><b>Tabela 5.2.1.1</b> - Registros dos testes de jogabilidade</p>
+
+---
+
+### Tester 1
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Arthur |
+| Gênero | Masculino |
+| Faixa etária | 18–21 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldade e foi direto para a primeira interação disponível |
+| Entendeu as regras e mecânicas do jogo? | Entendeu as mecânicas principais ao mexer nos diálogos e na movimentação, mas ficou mais no básico e não explorou muito além disso |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar nas etapas sem precisar de ajuda |
+| Apresentou dificuldades? | Ficou alguns segundos parado depois da fase da padaria porque pulou diálogos importantes e acabou não entendendo muito bem qual era o próximo objetivo |
+| Que nota deu ao jogo? | 7.0 |
+| O que gostou no jogo? | Gostou do visual do jogo e das interações com os personagens |
+| O que poderia melhorar no jogo? | Aumentar o tempo para ler os diálogos e melhorar a resposta dos comandos |
+
+---
+
+### Tester 2
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Bernando |
+| Gênero | Masculino |
+| Faixa etária | 18–21 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades aparentes |
+| Entendeu as regras e mecânicas do jogo? | Teve dificuldade no começo para entender a movimentação, clicando em lugares que não eram interativos antes de perceber que precisava arrastar |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar depois de um tempo se adaptando na base da tentativa e erro |
+| Apresentou dificuldades? | Demorou para identificar os pontos interativos do mapa e acabou explorando caminhos errados antes de seguir em frente |
+| Que nota deu ao jogo? | 8.0 |
+| O que gostou no jogo? | Achou o jogo simples, acessível e fácil de entender no geral |
+| O que poderia melhorar no jogo? | Deixar as instruções iniciais mais claras e reduzir a necessidade de tentativa e erro para entender as ações |
+
+---
+
+### Tester 3
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Carlos |
+| Gênero | Masculino |
+| Faixa etária | 18–21 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades e explorou o mapa com iniciativa |
+| Entendeu as regras e mecânicas do jogo? | Entendeu bem todas as mecânicas e usou os recursos do jogo de forma natural, sem precisar ficar testando várias vezes |
+| Conseguiu progredir no jogo? | Sim, conseguiu concluir o jogo com fluidez |
+| Apresentou dificuldades? | Não teve dificuldades relevantes e se adaptou bem à proposta do jogo |
+| Que nota deu ao jogo? | 9.0 |
+| O que gostou no jogo? | Gostou da fluidez da jogabilidade e de como a interação parece intuitiva |
+| O que poderia melhorar no jogo? | Melhorar a visibilidade e a identificação das fases no mapa |
+
+---
+
+### Tester 4
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Davi |
+| Gênero | Masculino |
+| Faixa etária | 40-50 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo normalmente |
+| Entendeu as regras e mecânicas do jogo? | Entendeu as mecânicas testando as interações até descobrir como tudo funcionava |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar nas etapas propostas |
+| Apresentou dificuldades? | Voltou para áreas que já tinha visitado antes de achar o caminho certo, mostrando certa dificuldade para se orientar no mapa |
+| Que nota deu ao jogo? | 8.0 |
+| O que gostou no jogo? | Gostou do sistema de diálogos no estilo point-and-click |
+| O que poderia melhorar no jogo? | Melhorar a navegação e a orientação dentro do mapa |
+
+---
+
+### Tester 5
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Elena |
+| Gênero | Feminino |
+| Faixa etária | 40-50 anos |
+| Já possuía experiência prévia com jogos? | Não possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades técnicas |
+| Entendeu as regras e mecânicas do jogo? | Teve dificuldade no começo para entender como explorar o mapa, mostrando hesitação e precisando testar algumas vezes |
+| Conseguiu progredir no jogo? | Não conseguiu concluir o jogo |
+| Apresentou dificuldades? | Teve dificuldade para identificar os objetivos e os caminhos disponíveis, o que atrapalhou bastante sua progressão |
+| Que nota deu ao jogo? | 9.0 |
+| O que gostou no jogo? | Gostou da interação com o ambiente e da dinâmica dos diálogos |
+| O que poderia melhorar no jogo? | Melhorar a explicação inicial das mecânicas e da navegação |
+
+---
+
+### Tester 6
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Fernando |
+| Gênero | Masculino |
+| Faixa etária | 18–21 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo normalmente |
+| Entendeu as regras e mecânicas do jogo? | Entendeu rápido as mecânicas e mostrou domínio da interação desde o começo |
+| Conseguiu progredir no jogo? | Sim, conseguiu concluir o jogo de forma fluida |
+| Apresentou dificuldades? | Não apresentou dificuldades relevantes e manteve consistência na navegação e nas interações |
+| Que nota deu ao jogo? | 9.0 |
+| O que gostou no jogo? | Gostou da fluidez da jogabilidade e da progressão entre as fases |
+| O que poderia melhorar no jogo? | Melhorar a indicação dos objetivos e dos caminhos a seguir |
+
+---
+
+### Tester 7
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Gabriel |
+| Gênero | Masculino |
+| Faixa etária | 18–21 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades |
+| Entendeu as regras e mecânicas do jogo? | Entendeu as mecânicas depois de um curto período inicial de exploração |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar no jogo |
+| Apresentou dificuldades? | Passou por áreas desnecessárias antes de encontrar o caminho certo, mostrando uma leve dificuldade de orientação |
+| Que nota deu ao jogo? | 8.0 |
+| O que gostou no jogo? | Gostou da movimentação e da estrutura do mapa |
+| O que poderia melhorar no jogo? | Melhorar o destaque das fases disponíveis no mapa |
+
+---
+
+### Tester 8
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Heitor |
+| Gênero | Masculino |
+| Faixa etária | 40-50 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo normalmente |
+| Entendeu as regras e mecânicas do jogo? | Entendeu o funcionamento geral logo nas primeiras interações |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar nas etapas propostas |
+| Apresentou dificuldades? | Não apresentou dificuldades relevantes e teve uma experiência estável |
+| Que nota deu ao jogo? | 8.0 |
+| O que gostou no jogo? | Gostou do feedback sonoro durante as interações |
+| O que poderia melhorar no jogo? | Melhorar as instruções iniciais para facilitar a adaptação |
+
+---
+
+### Tester 9
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Igor |
+| Gênero | Masculino |
+| Faixa etária | 40-50 anos |
+| Já possuía experiência prévia com jogos? | Sim, possui experiência com diferentes gêneros, incluindo RPG |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades |
+| Entendeu as regras e mecânicas do jogo? | Entendeu rapidamente todas as mecânicas propostas |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar e concluir o jogo |
+| Apresentou dificuldades? | Precisou de várias tentativas na fase final, o que mostra um aumento de dificuldade nessa parte |
+| Que nota deu ao jogo? | 9.0 |
+| O que gostou no jogo? | Gostou da interatividade e do nível de engajamento |
+| O que poderia melhorar no jogo? | Não apontou melhorias relevantes |
+
+---
+
+### Tester 10
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Joana |
+| Gênero | Feminino |
+| Faixa etária | 40–50 anos |
+| Já possuía experiência prévia com jogos? | Possui pouca experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades técnicas |
+| Entendeu as regras e mecânicas do jogo? | Não entendeu bem a navegação no mapa e teve dificuldade para interpretar as ações disponíveis |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar nas etapas |
+| Apresentou dificuldades? | Clicou muito rápido, ignorou diálogos importantes e teve dificuldade para localizar pontos do mapa, o que atrapalhou o entendimento da progressão |
+| Que nota deu ao jogo? | 8.0 |
+| O que gostou no jogo? | Gostou da gamificação e da variedade de desafios |
+| O que poderia melhorar no jogo? | Melhorar a navegação no mapa e a clareza das instruções |
+
+---
+
+### Tester 11
+
+| Campo | Resposta |
+|------|--------|
+| Nome | Kassio |
+| Gênero | Masculino |
+| Faixa etária | 40–50 anos |
+| Já possuía experiência prévia com jogos? | Não possui experiência com jogos digitais |
+| Conseguiu iniciar o jogo? | Sim, começou o jogo sem dificuldades técnicas |
+| Entendeu as regras e mecânicas do jogo? | Entendeu só parte das mecânicas e teve dificuldade para explorar o mapa e entender os objetivos |
+| Conseguiu progredir no jogo? | Sim, conseguiu avançar no jogo |
+| Apresentou dificuldades? | Pulou diálogos, quase saiu do jogo sem querer e não entendeu direito qual era a condição de vitória, mostrando falha na comunicação dos objetivos |
+| Que nota deu ao jogo? | 7.0 |
+| O que gostou no jogo? | Gostou do visual e da organização do jogo |
+| O que poderia melhorar no jogo? | Reduzir a quantidade de texto e melhorar a navegação e a identificação das fases |
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+**Analise qualitativa:** 
+
+
+Tester 1 : mostrou um perfil de jogador que aprende rápido e consegue avançar sem precisar de ajuda, o que indica que as mecânicas principais do jogo funcionam bem para quem já tem experiência com jogos digitais. Ao mesmo tempo, o fato de ele ter pulado diálogos importantes e depois ficado sem saber exatamente qual era o próximo objetivo revela que boa parte da compreensão da experiência depende da atenção aos diálogos. A nota 7 mostra esse equilíbrio entre uma experiência positiva e alguns momentos de dúvida. Ele também destacou o visual e os personagens, o que mostra que esses elementos chamaram sua atenção durante a partida.
+
+Tester 2 : teve uma experiência positiva, mas o começo foi mais travado por causa da dificuldade para entender a movimentação. O fato de ele ter precisado testar bastante antes de compreender a lógica da interação mostra que seu processo de adaptação foi mais baseado em tentativa e erro. Como ele já tinha experiência com jogos, esse caso mostra que a primeira impressão do jogo não foi totalmente imediata. Mesmo assim, a nota 8 indica que, depois dessa adaptação inicial, ele conseguiu aproveitar bem a experiência e entender a proposta geral.
+
+Tester 3 : foi um dos casos mais positivos de toda a rodada de testes. Ele iniciou o jogo sem dificuldade, entendeu rapidamente as mecânicas, explorou o mapa com segurança e concluiu a experiência de forma fluida. Isso mostra que, para jogadores com familiaridade com jogos digitais, o projeto já consegue entregar uma experiência bem estruturada, com boa lógica de progressão e interação. A nota 9 combina com esse desempenho, já que a vivência dele foi majoritariamente positiva e sem travas relevantes.
+
+Tester 4 : representa um caso interessante porque, mesmo tendo experiência com jogos, ele apresentou uma navegação mais cautelosa e com mais voltas pelo mapa. Isso sugere que a orientação espacial foi um fator marcante na experiência dele. O fato de ter retornado para áreas já visitadas antes de achar o caminho certo mostra que sua leitura do mapa foi mais lenta. Ainda assim, ele conseguiu avançar bem e gostou do sistema de diálogos, então sua percepção geral continuou positiva, o que também aparece na nota 8.
+
+Tester 5 : foi um dos testes mais importantes porque mostra como o jogo se comporta com uma pessoa sem experiência prévia com jogos digitais. Ela conseguiu começar sem problema técnico e deu nota 9, o que mostra que a proposta, o ambiente e os diálogos foram percebidos de forma positiva. Ao mesmo tempo, não conseguiu concluir o jogo, o que evidencia uma diferença entre gostar da experiência e conseguir acompanhar sua lógica até o fim. Esse caso é relevante porque mostra que o jogo desperta interesse mesmo quando a progressão não acontece de forma completa.
+
+Tester 6 : teve um desempenho muito consistente e mostrou que o jogo já está bem montado para quem possui repertório com jogos digitais. Ele entendeu rápido as mecânicas, navegou de forma segura e concluiu a experiência sem obstáculos relevantes. Isso é um sinal forte de que a estrutura central do jogo funciona e consegue sustentar uma experiência fluida. A nota 9 reforça essa leitura, já que o tester demonstrou segurança, constância e entendimento desde o começo.
+
+Tester 7 : conseguiu se adaptar bem ao jogo e avançou sem grandes travas, mas passou por áreas desnecessárias antes de identificar o caminho correto. Isso mostra que sua experiência teve uma pequena fase de exploração até ele entrar no ritmo da progressão. O caso dele ajuda a confirmar um padrão que apareceu em vários testers: boa parte da experiência está ligada à forma como o jogador lê o mapa e entende o fluxo das fases. A nota 8 combina com uma vivência positiva, mas com alguns momentos de hesitação.
+
+Tester 8 : teve uma experiência estável e sem grandes dificuldades, o que ajuda a mostrar que o jogo mantém uma consistência básica entre perfis diferentes. Um ponto interessante do teste dele foi destacar o feedback sonoro, porque isso mostra que o áudio teve participação real na experiência e não ficou só como detalhe de fundo. A nota 8 acompanha essa leitura de uma experiência sólida, agradável e funcional.
+
+Tester 9 : teve um dos melhores desempenhos entre todos os participantes. Ele entendeu rapidamente as mecânicas, avançou com segurança e concluiu o jogo, o que mostra que, para jogadores com repertório mais amplo, a experiência é sólida e envolvente. O dado mais interessante do caso dele é que a principal dificuldade apareceu só na fase final, com várias tentativas até conseguir avançar. Isso mostra que a experiência dele foi marcada por um bom domínio geral, mas com um momento final de maior desafio. A nota 9 e a ausência de críticas mais fortes mostram que o jogo manteve seu engajamento de forma muito positiva.
+
+Tester 10 : mostra como o comportamento do jogador durante a sessão também influencia muito a experiência. Ela clicou rápido, ignorou partes importantes dos diálogos e, por isso, teve mais dificuldade para entender a navegação e a progressão. Esse teste é importante porque mostra que a experiência do jogador não depende só da estrutura do jogo, mas também da forma como ele interage com as informações apresentadas. Mesmo com essas dificuldades, a nota 8 e o elogio à gamificação e aos desafios mostram que ela ainda teve uma percepção positiva da proposta.
+
+Tester 11 : reforça de maneira muito clara as barreiras que aparecem para jogadores com pouca familiaridade com jogos digitais. Mesmo conseguindo avançar, ele teve dificuldade para entender os objetivos, explorar o mapa e perceber com clareza a condição de vitória. O fato de quase sair do jogo por engano mostra que sua experiência foi mais instável e com mais momentos de confusão do que a de outros participantes. A nota 7 acompanha essa sensação, mesmo ele reconhecendo pontos positivos no visual e na organização do jogo.
+
+Olhando todos os testers em conjunto, fica bem claro que existe uma diferença forte entre os participantes que já têm experiência com jogos e os que têm pouca ou nenhuma familiaridade com esse tipo de interação. Os jogadores mais experientes, em geral, entenderam rápido as mecânicas, avançaram com mais segurança e mantiveram um ritmo mais estável ao longo da experiência. Já os menos experientes tiveram mais momentos de hesitação, dúvidas durante a exploração e dificuldades para acompanhar o fluxo do jogo. Ainda assim, mesmo entre esses participantes, a percepção geral sobre a proposta continuou positiva em muitos casos.
+
+Outro ponto importante é que as notas, em vários casos, continuaram altas mesmo quando o tester relatou dificuldades. Isso sugere que o jogo conseguiu gerar engajamento, curiosidade e uma percepção positiva geral, mesmo quando a experiência não foi totalmente fluida. Em outras palavras, os participantes demonstraram interesse real pela proposta, pelo visual, pelas interações e pelo formato do jogo. Isso mostra que a experiência foi considerada envolvente por boa parte dos testers, mesmo quando apareceram momentos de dúvida ou instabilidade durante a partida.
+
+No geral, a análise qualitativa mostra que o jogo tem uma base forte em visual, proposta interativa e capacidade de engajar diferentes perfis de participante. Os padrões que mais se repetem envolvem a navegação pelo mapa, a forma como os objetivos são percebidos e a relação entre leitura de diálogos e compreensão da progressão. Com base nisso, dá para dizer que o jogo já funciona bem como ideia e como experiência para parte do público, além de demonstrar potencial para envolver tanto jogadores mais experientes quanto participantes com menos contato com jogos digitais.
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+
+
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+
+
+Os registros apresentados evidenciam padrões consistentes no comportamento dos participantes, especialmente em relação à navegação no mapa, à compreensão dos objetivos e à interação com os diálogos.
+
+Esses resultados qualitativos servem como base para a análise quantitativa apresentada na subseção seguinte, permitindo a consolidação dos principais problemas identificados durante os testes.
+
+ 
+#### 5.2.1.2. Análise Quantitativa 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+## Principais dificuldades
+>>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+
+Com base nos dados coletados durante os testes de jogabilidade, foi realizada uma análise quantitativa com o objetivo de identificar padrões recorrentes no comportamento dos participantes.
+
+Considerando o total de 11 jogadores avaliados, foram levantadas as principais dificuldades observadas durante a interação com o jogo, permitindo a quantificação dos problemas mais frequentes.
+
+Os resultados indicam que:
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+- 45% dos participantes, o equivalente a 5 de 11 jogadores, apresentaram dificuldades relacionadas à navegação no mapa;
+- 36% dos participantes, o equivalente a 4 de 11 jogadores, tiveram problemas na compreensão dos objetivos do jogo;
+- 36% dos participantes, o equivalente a 4 de 11 jogadores, ignoraram ou não leram completamente os diálogos;
+- 27% dos participantes, o equivalente a 3 de 11 jogadores, demonstraram dificuldades na identificação de caminhos ou fases disponíveis;
+- 18% dos participantes, o equivalente a 2 de 11 jogadores, apresentaram dificuldades relacionadas à compreensão das mecânicas;
+- 18% dos participantes, o equivalente a 2 de 11 jogadores, não apresentaram dificuldades relevantes durante a experiência.
+
+Olhando para os dados, dá para perceber que a dificuldade mais comum foi a navegação no mapa. Isso apareceu em 45% dos participantes, ou seja, quase metade das pessoas testadas teve algum problema para se localizar, entender para onde ir ou reconhecer o caminho certo. Esse número já mostra que a navegação teve um peso grande na experiência geral dos jogadores.
+
+Logo depois, aparecem dois pontos com a mesma porcentagem: a compreensão dos objetivos do jogo e a leitura incompleta dos diálogos, ambos com 36%, o equivalente a 4 de 11 participantes. Isso mostra que uma parte importante da experiência depende da forma como o jogador recebe e entende as informações durante a partida. Em outras palavras, não basta só o jogo ter objetivos definidos; essas informações precisam chegar ao jogador de um jeito claro.
+
+Outro dado importante é que 27% dos participantes tiveram dificuldade para identificar caminhos ou fases disponíveis. Mesmo sendo um número menor do que o da navegação geral, ele continua reforçando o mesmo padrão: muitos jogadores ainda tiveram dúvidas para interpretar visualmente o mapa e entender como a progressão estava organizada.
+
+Já a dificuldade na compreensão das mecânicas apareceu em 18% dos casos, o que equivale a 2 de 11 participantes. Esse resultado mostra que o problema principal dos testes não estava tanto nas mecânicas básicas do jogo, mas mais na forma como o jogador se orientava dentro da experiência. Isso é importante porque mostra que a estrutura central do jogo foi entendida por boa parte dos testers, enquanto as maiores dúvidas apareceram no fluxo da progressão.
+
+Também chama atenção o fato de apenas 18% dos participantes não terem apresentado dificuldades relevantes. Em números absolutos, isso significa que só 2 dos 11 jogadores passaram pela experiência sem registrar problemas mais marcantes. Esse dado é importante porque mostra que, no geral, a maioria dos testers teve pelo menos algum momento de hesitação, dúvida ou dificuldade durante a partida.
+
+Quando os números são analisados juntos, dá para organizar os resultados em três grupos principais. O primeiro grupo é o da navegação, que aparece com mais força nos dados e inclui a dificuldade para se localizar e encontrar o caminho certo. O segundo grupo é o da comunicação, que aparece na compreensão dos objetivos e na leitura dos diálogos. O terceiro grupo é o da progressão, que envolve reconhecer fases disponíveis, entender o fluxo do mapa e acompanhar o avanço dentro do jogo. Esses três grupos ajudam a entender melhor onde estão concentrados os comportamentos mais recorrentes observados nos testes.
+
+Outro ponto importante é que essas dificuldades não aparecem totalmente separadas. Muitas vezes, uma acaba puxando a outra. Por exemplo, quando o jogador não lê bem os diálogos, ele pode ter mais dificuldade para entender os objetivos. E quando ele não entende os objetivos, fica mais difícil saber para onde ir no mapa. Então, os dados quantitativos mostram não só quais problemas apareceram mais, mas também como eles se conectam ao longo da experiência.
+
+Se for colocar os resultados em ordem de frequência, a navegação no mapa aparece em primeiro lugar, com 45%. Depois vêm a compreensão dos objetivos e a leitura incompleta dos diálogos, ambos com 36%. Em seguida aparece a dificuldade na identificação de caminhos ou fases, com 27%. Por fim, aparecem a dificuldade na compreensão das mecânicas e o grupo sem dificuldades relevantes, os dois com 18%. Essa ordem ajuda a visualizar com mais clareza quais fatores tiveram maior impacto nos testes.
+
+No geral, os números mostram que os principais desafios encontrados pelos participantes estão menos ligados ao ato de jogar em si e mais à forma como o jogo orienta o jogador. Ou seja, a maior parte dos problemas observados não está só nas ações básicas, mas no entendimento do caminho, dos objetivos e da progressão. Isso deixa a análise quantitativa bem alinhada com o que já apareceu na análise qualitativa, porque ambas apontam para os mesmos padrões de comportamento.
+<<<<<<< HEAD
+=======
+=======
+- 45% dos participantes apresentaram dificuldades relacionadas à navegação no mapa;
+- 36% dos participantes tiveram problemas na compreensão dos objetivos do jogo;
+- 36% dos participantes ignoraram ou não leram completamente os diálogos;
+- 27% dos participantes demonstraram dificuldades na identificação de caminhos ou fases disponíveis;
+- 18% dos participantes apresentaram dificuldades relacionadas à compreensão das mecânicas;
+- 18% dos participantes não apresentaram dificuldades relevantes durante a experiência.
+
+Esses dados evidenciam que a navegação no mapa e a comunicação das informações (especialmente por meio de diálogos) são os principais pontos de atenção identificados nos testes.
+>>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+
+
+
+A Figura 5.2.1.2 apresenta a distribuição percentual das principais dificuldades observadas nos testes de jogabilidade.
+
+
+<p align="center"><b>Figura 5.2.1.2</b> - Principais dificuldades identificadas nos testes de jogabilidade</p>
+
+![Códigos do Cenário da Quitanda](assets/graficoPlaytest.png) 
+
+
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+
+<<<<<<< HEAD
+Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador. A leitura do gráfico reforça isso de forma bem clara, já que essas categorias aparecem com porcentagens maiores do que as dificuldades ligadas às mecânicas básicas. Dessa forma, o gráfico ajuda a visualizar rapidamente quais foram os pontos que mais impactaram a experiência dos participantes.
+=======
+<<<<<<< HEAD
+Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador. A leitura do gráfico reforça isso de forma bem clara, já que essas categorias aparecem com porcentagens maiores do que as dificuldades ligadas às mecânicas básicas. Dessa forma, o gráfico ajuda a visualizar rapidamente quais foram os pontos que mais impactaram a experiência dos participantes.
+=======
+Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador, indicando a necessidade de melhorias nesses aspectos para tornar a experiência mais intuitiva.
+
+
+---
+## Distribuição de Notas dos Playtests
+
+Com base nas avaliações atribuídas pelos participantes ao final dos testes de jogabilidade, foi realizada uma análise quantitativa das notas com o objetivo de mensurar o nível geral de satisfação com a experiência proposta pelo jogo.
+
+Considerando o total de 11 jogadores avaliados, os resultados indicam que:
+
+- 45% dos participantes atribuíram nota 8 ao jogo  
+- 36% dos participantes atribuíram nota 9  
+- 18% dos participantes atribuíram nota 7  
+
+Os dados demonstram uma predominância de avaliações positivas, com a maioria dos jogadores concentrando suas notas entre 8 e 9, indicando uma boa recepção geral do jogo. A ausência de notas mais baixas reforça que, apesar das dificuldades identificadas anteriormente, a experiência ainda foi considerada satisfatória pelos participantes.
+
+  
+<p align="center"><b>Figura 5.2.1.3</b> - Distribuição de notas nos testes de jogabilidade</p>
+
+![Gráfico de notas dos playtests](assets/graficoPlaytest3.png)
+
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+Observa-se que a avaliação geral do jogo é positiva, porém ainda há espaço para melhorias que possam elevar a experiência dos jogadores para níveis ainda mais altos de satisfação.
+
+---
+## Clareza na Experiência de Uso
+Com base nos dados coletados durante os testes, foi realizada uma análise comparativa entre jogadores com experiência prévia em jogos digitais e aqueles sem experiência, com o objetivo de avaliar a clareza da experiência de uso.
+
+Considerando o total de 11 participantes, sendo 8 com experiência e 3 sem experiência, os resultados indicam que:
+
+- **Entre os jogadores com experiência:**
+  - 50% (4 de 8) apresentaram dificuldades durante a interação  
+  - 50% (4 de 8) não apresentaram dificuldades relevantes  
+
+- **Entre os jogadores sem experiência:**
+  - 100% (3 de 3) apresentaram dificuldades durante a interação  
+  - 0% não apresentaram dificuldades relevantes  
+
+Os dados evidenciam que a falta de experiência prévia com jogos impacta diretamente na compreensão e interação com o sistema, tornando a experiência mais desafiadora para esse público. Mesmo entre jogadores experientes, a divisão equilibrada entre aqueles que tiveram dificuldades e os que não tiveram indica que ainda existem pontos de melhoria na clareza e usabilidade do jogo.
+
+
+<p align="center"><b>Figura 5.2.1.4</b> - Comparação da clareza da experiência de uso entre jogadores com e sem experiência </p> 
+
+![Gráfico de experiência de uso](assets/graficoPlaytest2.png)
+
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+Observa-se que a experiência de uso ainda não é totalmente intuitiva, especialmente para jogadores sem familiaridade com jogos digitais, indicando a necessidade de melhorias em tutoriais, feedbacks visuais e comunicação das mecânicas.
+
+
+>>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
+>>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
+
+#### 5.2.1.3. Síntese dos Resultados
+A partir da análise qualitativa e quantitativa dos testes de jogabilidade, foi possível identificar padrões consistentes no comportamento dos participantes, permitindo uma análise aprofundada e baseada em evidências do comportamento dos jogadores durante a interação com o sistema.
+
+De modo geral, o jogo apresenta boa acessibilidade inicial, uma vez que a maioria dos participantes conseguiu iniciar e progredir nas primeiras etapas sem dificuldades significativas. Além disso, jogadores com maior experiência prévia demonstraram rápida adaptação às mecânicas, interagindo de forma fluida e autônoma.
+
+Entretanto, foram identificados problemas recorrentes que impactam diretamente a experiência. O principal ponto crítico está relacionado à navegação no mapa, identificado em 45% dos participantes. Muitos jogadores demonstraram incerteza ao tentar identificar caminhos, localizar objetivos e compreender quais ações deveriam ser realizadas em cada etapa.
+
+Outro aspecto relevante refere-se à comunicação das informações. Observou-se que 36% dos participantes apresentaram dificuldades relacionadas à leitura de diálogos e à compreensão dos objetivos. Em diversos casos, os jogadores não leram ou não absorveram completamente as informações, comprometendo sua progressão.
+
+Além disso, 27% dos participantes tiveram dificuldade na identificação de caminhos no mapa, enquanto 18% apresentaram dificuldades na compreensão das mecânicas do jogo. Esse comportamento indica que parte da experiência ainda não está totalmente intuitiva, especialmente para jogadores com menor familiaridade com jogos digitais.
+
+Adicionalmente, apenas 18% dos participantes não apresentaram dificuldades relevantes, reforçando a necessidade de melhorias em aspectos fundamentais da interação.
+
+Por outro lado, o design visual, a proposta de gamificação e a estrutura geral do jogo foram bem avaliados, contribuindo positivamente para o engajamento dos participantes.
+
+Dessa forma, conclui-se que o jogo possui uma base sólida e boa aceitação inicial. No entanto, os dados evidenciam que problemas de navegação no mapa (45%), compreensão dos objetivos (36%) e leitura de diálogos (36%) impactam diretamente a experiência do usuário.
+
+O aprimoramento desses aspectos, aliado à melhoria na identificação de caminhos (27%) e na clareza das mecânicas (18%), tende a tornar a experiência mais intuitiva, acessível e alinhada ao público-alvo. Esses achados fundamentam diretamente as propostas de melhoria apresentadas na seção seguinte, orientando a evolução do jogo com base em evidências obtidas nos testes.
+
+
 
 ### 5.2.2 Melhorias
-*Pendente para a próxima sprint.*
-
-# <a name="c6"></a>6. Conclusões e trabalhos futuros (sprint 5)
-*Pendente para a próxima sprint.*
-
-# <a name="c7"></a>7. Referências (sprint 5)
-
-Abecs. (2024). Balanço do Setor de Meios Eletrônicos de Pagamento – 2023. Recuperado de https://abecs.org.br/storage/sector_balances/24/01KH6F7ASSZ4ST9T6R0515EC2E.pdf <br>
-
-BOLLER, Sharon; KAPP, Karl M., 1967-; TILELLI, Sally. Jogar para aprender: tudo o que você precisa saber sobre o design de jogos de aprendizagem eficazes. São Paulo: DVS, 2018. 207 p., il., 23 cm. ISBN 9788582891957. <br>
-
-CARVALHO, Marly Monteiro. Fundamentos em gestão de projetos: construindo competências para gerenciar projetos. 5. ed. São Paulo: Atlas, 2018. 1 recurso online. ISBN 9788597018950. Disponível em: https://integrada.minhabiblioteca.com.br/books/9788597018950. Acesso em: 27 mar. 2026. <br>
 
 
-Cielo. (s.d.). E-commerce: Nossas soluções. Recuperado de https://www.cielo.com.br/ <br>
+Com base nos resultados obtidos nos testes de jogabilidade, foram identificados problemas recorrentes que impactam diretamente a experiência do usuário. A análise qualitativa e quantitativa permitiu não apenas reconhecer essas falhas, mas também compreender suas causas e efeitos na interação dos jogadores com o jogo.
+
+A seguir, são apresentados os principais problemas identificados, acompanhados de suas respectivas propostas de melhoria.
 
 
-Cielo. (s.d.). Estratégia e vantagens competitivas. RI Cielo. Recuperado de https://ri.cielo.com.br/sobre-a-cielo/estrategia-e-vantagens-competitivas/ <br>
+
+#### Problema 1: Dificuldade na navegação do mapa (45%)
+
+**Descrição:**  
+Uma parcela significativa dos participantes apresentou dificuldades na navegação do mapa, demonstrando incerteza ao tentar identificar caminhos, localizar objetivos e compreender quais ações deveriam ser realizadas. Em diversos casos, os jogadores exploraram áreas desnecessárias, retornaram a locais já visitados ou ficaram parados sem saber como prosseguir.
+
+**Impacto na experiência:**  
+Esse problema compromete diretamente a progressão do jogador, gerando frustração, perda de fluidez e dependência de tentativa e erro.
+
+**Propostas de melhoria:**  
+ 
+- Destacar visualmente os pontos interativos do mapa;  
+- Implementar um sistema de orientação ou dica contextual;  
 
 
-Cielo. (2023). Demonstrações Financeiras 2022 [Relatório Financeiro]. Recuperado de https://filemanager-cdn.mziq.com.br/published/4d1ebe73-b068-4443-992a-3d72d573238c/696185c4-d779-4b63-bd45-dbad2f9c4dd9_df_ifrs_completa_ri.pdf <br>
+---
+
+#### Problema 2: Falhas na comunicação dos objetivos (36%)
+
+**Descrição:**  
+Parte dos jogadores apresentou dificuldade em compreender claramente os objetivos do jogo, especialmente após interações com diálogos. Em alguns casos, a falta de clareza resultou em indecisão ou ações aleatórias.
+
+**Impacto na experiência:**  
+A ausência de objetivos claros prejudica a tomada de decisão do jogador e reduz o engajamento com a proposta do jogo.
+
+**Propostas de melhoria:**  
+- Reforçar os objetivos após diálogos importantes;  
+- Inserir um sistema de missão ou objetivo visível na interface;  
+
+- Simplificar e tornar mais diretas as instruções apresentadas.
+
+---
+
+#### Problema 3: Baixa leitura ou assimilação dos diálogos (36%)
+
+**Descrição:**  
+Observou-se que diversos jogadores ignoraram ou não leram completamente os diálogos, clicando rapidamente e perdendo informações importantes para a progressão.
+
+**Impacto na experiência:**  
+Esse comportamento compromete a compreensão das mecânicas e dos objetivos, afetando diretamente a continuidade do jogo.
+
+**Propostas de melhoria:**  
+ 
+  
+- Inserir pausas ou limitações para avanço rápido de textos;  
+- Adicionar dublagem ao jogo 
+
+---
+
+#### Problema 4: Dificuldade na identificação de caminhos e fases (27%)
+
+**Descrição:**  
+Parte dos participantes apresentou dificuldade em identificar quais caminhos estavam disponíveis ou quais fases estavam liberadas, demonstrando incerteza durante a exploração.
+
+**Impacto na experiência:**  
+Esse problema gera confusão e contribui para uma navegação pouco eficiente, aumentando o tempo de adaptação do jogador.
+
+**Propostas de melhoria:**  
+- Indicar claramente quais fases estão desbloqueadas;  
+- Utilizar cores, ícones ou animações para diferenciar estados (bloqueado/desbloqueado);  
+- Melhorar a organização visual do mapa;  
 
 
-Cielo. (2024). Relatório de Resultados [Documento de RI]. Recuperado de https://api.mziq.com/mzfilemanager/v2/d/4d1ebe73-b068-4443-992a-3d72d573238c/5ab9a1ba-b7f2-64ab-4a37-ecd3ad8b6a6a?origin=2 <br>
+---
+
+#### Problema 5: Dificuldade na compreensão das mecânicas (18%)
+
+**Descrição:**  
+Alguns jogadores, principalmente os menos experientes, apresentaram dificuldade em compreender determinadas mecânicas do jogo, especialmente no início da experiência.
+
+**Impacto na experiência:**  
+A falta de entendimento inicial pode gerar insegurança e aumentar a dependência de tentativa e erro.
+
+**Propostas de melhoria:**  
+- Inserir um tutorial inicial na fase da padaria;  
 
 
-Cielo. (2025). Fatores de risco. Relacionamento com Investidores. Recuperado de https://ri.cielo.com.br/servicos-ri/fatores-de-risco/ <br>
+---
 
 
-Cielo. (2026). TAPI_2026 - Jogo Digital_Cielo [Documento de escopo de projeto interno]. Inteli. <br>
+
+As propostas apresentadas têm como foco principal melhorar a clareza da comunicação com o jogador, facilitar a navegação no mapa e tornar a experiência mais intuitiva, especialmente para usuários com menor familiaridade com jogos digitais.
+
+De modo geral, as melhorias concentram-se em três pilares principais:
+
+- **Orientação do jogador:** melhorias na navegação, identificação de caminhos e clareza de objetivos;  
+- **Comunicação das informações:** ajustes em diálogos, instruções e feedbacks;  
+- **Acessibilidade e usabilidade:** redução de complexidade inicial e melhor introdução às mecânicas.
+
+A implementação dessas melhorias tende a reduzir as dificuldades identificadas nos testes, aumentar o engajamento dos jogadores e tornar a experiência mais fluida e alinhada ao público-alvo do projeto.
 
 
-CNN Brasil. (2023). Cielo tem soluções digitais para todos os tamanhos e tipos de negócios. Recuperado de https://www.cnnbrasil.com.br/branded-content/nacional/cielo-tem-solucoes-digitais-para-todos-os-tamanhos-e-tipos-de-negocios/ <br>
+### 5.2.3. Plano de Implementação das Melhorias
+
+Com base nos problemas identificados durante os testes de jogabilidade, foi elaborado um plano de implementação contendo ajustes específicos no jogo. 
+
+As ações propostas foram organizadas por categoria, de acordo com seu impacto na experiência do usuário e nos aspectos de interface, navegação, comunicação e aprendizado.
 
 
-Edrone. (2024). Dados do e-commerce no Brasil. Recuperado de https://edrone.me/pt/blog/dados-ecommerce-brasil <br>
+
+#### Interface e Feedback Visual
+
+- Melhorar o design das telas de vitória e derrota;  
+- Ajustar o posicionamento dos elementos “clique para continuar” na fase do restaurante;  
+- Ajustar o posicionamento dos elementos “resposta certa/resposta errada” nas fases do restaurante e da quitanda;  
+- Ajustar o tamanho das sprites do personagem José;  
+- Adicionar indicação visual de que o jogador deve refazer a fase ao perder;  
 
 
-Febraban. (2025). Pesquisa Febraban de Tecnologia Bancária. Federação Brasileira de Bancos. Recuperado de https://portal.febraban.org.br/ <br>
+
+#### Navegação e Fluxo de Jogo
+
+- Adicionar botão de confirmação ao iniciar fases;  
+- Implementar tela de confirmação ao sair da fase;  
+- Garantir que a tela de vitória ou derrota só seja exibida após uma interação adicional do jogador;  
 
 
-Fenacon. (2025, 14 de janeiro). Digitalização recorde: Pequenos negócios no Brasil atingem nível histórico em 2025. Recuperado de https://fenacon.org.br/noticias/digitalizacao-recorde-pequenos-negocios-no-brasil-atingem-nivel-historico-em-2025/ <br>
+
+#### Comunicação e Diálogos
+
+- Inserir apresentação inicial da personagem Cielita, contextualizando o jogo;  
+- Garantir que a personagem Cielita apareça corretamente no início do jogo;  
+- Ajustar diálogos da Cielita, especialmente na liberação da fase da quitanda;  
+- Remover opções redundantes de diálogo (“apresentar solução final”, “finalizar negociação” e “continuar ouvindo”);  
+- Adicionar delay para impedir avanço acidental dos diálogos;  
+- Aumentar o tempo de exibição da cena final;  
 
 
-Finsiders Brasil. (2023, 22 de maio). Guerra das maquininhas de cartão já era; agora a briga é por tecnologia. Recuperado de https://finsidersbrasil.com.br/pagamentos/guerra-das-maquininhas-de-cartao-ja-era-agora-a-briga-e-por-tecnologia/ <br>
+
+#### Tutorial e Aprendizado
+
+- Inserir tutorial inicial com instruções claras de movimentação;  
+- Adicionar tela explicativa das dinâmicas básicas na fase da padaria;  
 
 
-G1. (2025, 1 de setembro). Como as fintechs mudaram o sistema financeiro no Brasil. Globo. Recuperado de https://g1.globo.com/economia/noticia/2025/09/01/como-as-fintechs-mudaram-o-sistema-financeiro-no-brasil.ghtml <br>
+
+#### Feedback Sonoro
+
+- Adicionar efeito sonoro ao clicar no botão de ajuda;  
 
 
-iDinheiro. (2024). Máquina de cartão com menor taxa no débito. Recuperado de https://www.idinheiro.com.br/negocios/maquina-cartao-menor-taxa-debito/ <br>
+
+As melhorias propostas focam principalmente na clareza das informações, na organização da interface e na prevenção de erros de interação por parte do jogador.
+
+Essas alterações visam reduzir as dificuldades identificadas nos testes, especialmente aquelas relacionadas à navegação no mapa, à compreensão dos objetivos e à leitura dos diálogos, contribuindo para uma experiência mais fluida, intuitiva e alinhada ao público-alvo.
+
+Além disso, a implementação dessas melhorias será fundamental para a validação futura do jogo em novos ciclos de testes, permitindo a evolução contínua da experiência com base no comportamento real dos usuários.
+
+# <a name="c6"></a>6. Conclusões e trabalhos futuros
+
+Esta seção encerra a documentação do projeto, sintetizando os resultados alcançados em relação aos objetivos iniciais da Cielo e projetando a escalabilidade da solução para ciclos de desenvolvimento posteriores.
+
+## 6.1. Conclusão 
+
+O desenvolvimento da **Conexão Cielo** atingiu o objetivo primordial: converter um treinamento teórico e geograficamente limitado em uma experiência prática, gamificada e acessível. Ao longo das sprints, a solução evoluiu de uma análise estratégica do setor de treinamento da Cielo para uma *Visual Novel* interativa, desenhada para ambientar o Gerente de Negócios (GN) em cenários reais de negociação.
+
+A implementação da **Barra de Satisfação**, dos **Feedbacks Visuais** e da mecânica de **Sondagem** permite que o jogador exercite não apenas o conhecimento técnico do portfólio (como a maquininha LIO ou soluções digitais oferecidas), mas também competências comportamentais, como a inteligência emocional e a escuta ativa. O projeto garante que colaboradores em qualquer um dos 99% dos municípios brasileiros cobertos pela companhia recebam a mesma qualidade de capacitação técnica, mitigando as dores de insegurança e falta de prática identificadas no Canvas de Proposta de Valor.
+
+## 6.2. Trabalhos futuros
+
+Apesar da solidez do MVP atual, o ecossistema de pagamentos é dinâmico e o projeto foi arquitetado para ser expansível. Para as próximas etapas de evolução do software, propõem-se os seguintes pontos:
+
+*   **Expansão da Biblioteca de Fases:** Aumentar a quantidade de cenários disponíveis, mapeando situações específicas enfrentadas pelos GNs no dia a dia (como clínicas médicas ou grandes redes de varejo). O objetivo é cobrir o máximo de casos reais e 100% do portfólio de produtos Cielo, servindo como uma ferramenta de consulta prática para o vendedor.
+*   **Imersão via Dublagem e Sonorização:** Adicionar vozes aos NPCs (clientes) e à Cielita para aumentar a imersão e o realismo das simulações. A dublagem permite que o GN treine a percepção da entonação e o "clima" da conversa, tornando o ambiente seguro de treinamento ainda mais próximo da realidade das ruas.
+*   **Aprimoramento do Sistema de Feedback:** Implementar um relatório detalhado ao final de cada fase. Em vez de apresentar apenas a pontuação geral, o sistema fornecerá feedbacks específicos para cada escolha feita, tornando mais prático e pedagógico o entendimento das decisões do usuário durante a jornada.
 
 
-INPI. (2024). Marcas de Alto Renome em vigência. Instituto Nacional da Propriedade Industrial. Recuperado de https://www.gov.br/inpi/pt-br/servicos/marcas/arquivos/guia-basico/inpi_marcas_marcasdealtorenomeemvigncia_2024_07_09.pdf <br>
+# <a name="c7"></a>7. Referências 
+As referências apresentadas neste documento reúnem os materiais que fundamentaram as decisões de design, narrativa, mecânicas e estética do Conexão Cielo. Jogos, artigos, documentações técnicas e recursos visuais foram consultados ao longo do desenvolvimento com o objetivo de embasar as escolhas criativas e garantir que o produto final fosse ao mesmo tempo inovador e coerente com boas práticas já consolidadas no mercado de jogos educacionais e de treinamento corporativo.
+## 7.1. Fundamentação Teórica e Acadêmica
 
+Boller, S., & Kapp, K. M. (2018). *Jogar para aprender: tudo o que você precisa saber sobre o design de jogos de aprendizagem eficazes*. DVS. <br>
 
-Instituto Propague. (2023). O mercado de adquirência no Brasil: concorrência e inovação. Recuperado de https://institutopropague.org/ <br>
+Carvalho, M. M. (2018). *Fundamentos em gestão de projetos: construindo competências para gerenciar projetos* (5. ed.). Atlas. https://integrada.minhabiblioteca.com.br/books/9788597018950 <br>
 
+Doran, G. T. (1981). There's a S.M.A.R.T. way to write management's goals and objectives. *Management Review, 70*(11), 35–36. <br>
 
-InvestNews. (2023). Destronada nas maquininhas, Cielo luta para se manter relevante na era do Pix. Recuperado de https://investnews.com.br/negocios/destronada-nas-maquininhas-cielo-luta-para-se-manter-relevante-na-era-do-pix/ <br>
+Fullerton, T. (2018). *Game design workshop: A playcentric approach to creating innovative games* (4. ed.). CRC Press. <br>
 
+Humphrey, A. S. (1960). *SWOT Analysis for management consulting*. Stanford Research Institute. <br>
 
-Mazzoco, P. (2022, 11 de fevereiro). Guerra das maquininhas cobra preço alto e ações da Cielo não param de cair. InfoMoney. Recuperado de https://www.infomoney.com.br/negocios/guerra-das-maquininhas-cobra-preco-alto-e-acoes-da-cielo-nao-param-de-cair/ <br>
+Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). *Value proposition design: Como construir propostas de valor inovadoras*. HSM Editora. <br>
 
-OSTERWALDER, Alexander; PIGNEUR, Yves; BERNARDA, Gregory; SMITH, Alan. Value proposition design: como construir propostas de valor inovadoras. São Paulo: HSM Editora, 2014. <br>
+Porter, M. E. (1980). *Competitive strategy: Techniques for analyzing industries and competitors*. Free Press. <br>
 
-PRESSMAN, Roger. Engenharia de software. 8. ed. Porto Alegre: AMGH, 2016. 1 recurso online. ISBN 9788580555349. Disponível em: https://integrada.minhabiblioteca.com.br/books/9788580555349. Acesso em: 27 mar. 2026. <br>
+Pressman, R. S. (2016). *Engenharia de software* (8. ed.). AMGH. https://integrada.minhabiblioteca.com.br/books/9788580555349 <br>
 
-SANTOS, Marcelo Henrique dos. Fundamentos de jogos digitais: game design, game engine e level design. São Paulo: Platos Soluções Educacionais, 2021. 1 recurso online. ISBN 9786589881919. Disponível em: https://integrada.minhabiblioteca.com.br/books/9786589881919. Acesso em: 27 mar. 2026. <br>
+Santos, M. H. dos. (2021). *Fundamentos de jogos digitais: Game design, game engine e level design*. Platos Soluções Educacionais. https://integrada.minhabiblioteca.com.br/books/9786589881919 <br>
 
-Sebrae. (s.d.). Lei Geral de Proteção de Dados (LGPD). Portal Sebrae. Recuperado de https://sebrae.com.br/sites/PortalSebrae/LGPD <br>
+Sommerville, I. (2018). *Engenharia de software* (9. ed.). Pearson Education do Brasil. <br>
 
-SOMMERVILLE, Ian, 1951-. Engenharia de software. São Paulo: Pearson Education do Brasil, 2018. 756p., il. ISBN 9788543024974. <br>
+## 7.2. Pesquisa e Contexto da Indústria de Pagamentos
 
-Zoop. (s.d.). Como adequar sua empresa à LGPD. Zoop Blog. Recuperado de https://www.zoop.com.br/blog/regulamentacao/como-adequar-lgpd <br>
+Abecs. (2024). *Balanço do Setor de Meios Eletrônicos de Pagamento – 2023*. Recuperado de https://abecs.org.br/storage/sector_balances/24/01KH6F7ASSZ4ST9T6R0515EC2E.pdf <br>
 
+CNN Brasil. (2023). *Cielo tem soluções digitais para todos os tamanhos e tipos de negócios*. Recuperado de https://www.cnnbrasil.com.br/branded-content/nacional/cielo-tem-solucoes-digitais-para-todos-os-tamanhos-e-tipos-de-negocios/ <br>
 
-Zoop. (s.d.). Panorama dos meios de pagamento no Brasil. Zoop Blog. Recuperado de https://www.zoop.com.br/blog/pagamento/meios-de-pagamento-no-brasil <br>
+Edrone. (2024). *Dados do e-commerce no Brasil*. Recuperado de https://edrone.me/pt/blog/dados-ecommerce-brasil <br>
+
+Febraban. (2025). *Pesquisa Febraban de Tecnologia Bancária*. Federação Brasileira de Bancos. Recuperado de https://portal.febraban.org.br/ <br>
+
+Fenacon. (2025, 14 de janeiro). *Digitalização recorde: Pequenos negócios no Brasil atingem nível histórico em 2025*. Recuperado de https://fenacon.org.br/noticias/digitalizacao-recorde-pequenos-negocios-no-brasil-atingem-nivel-historico-em-2025/ <br>
+
+Finsiders Brasil. (2023, 22 de maio). *Guerra das maquininhas de cartão já era; agora a briga é por tecnologia*. Recuperado de https://finsidersbrasil.com.br/pagamentos/guerra-das-maquininhas-de-cartao-ja-era-agora-a-briga-e-por-tecnologia/ <br>
+
+G1. (2025, 1 de setembro). *Como as fintechs mudaram o sistema financeiro no Brasil*. Globo. Recuperado de https://g1.globo.com/economia/noticia/2025/09/01/como-as-fintechs-mudaram-o-sistema-financeiro-no-brasil.ghtml <br>
+
+IDinheiro. (2024). *Máquina de cartão com menor taxa no débito*. Recuperado de https://www.idinheiro.com.br/negocios/maquina-cartao-menor-taxa-debito/ <br>
+
+Instituto Propague. (2023). *O mercado de adquirência no Brasil: Concorrência e inovação*. Recuperado de https://institutopropague.org/ <br>
+
+InvestNews. (2023). *Destronada nas maquininhas, Cielo luta para se manter relevante na era do Pix*. Recuperado de https://investnews.com.br/negocios/destronada-nas-maquininhas-cielo-luta-para-se-manter-relevante-na-era-do-pix/ <br>
+
+Mazzoco, P. (2022, 11 de fevereiro). *Guerra das maquininhas cobra preço alto e ações da Cielo não param de cair*. InfoMoney. Recuperado de https://www.infomoney.com.br/negocios/guerra-das-maquininhas-cobra-preco-alto-e-acoes-da-cielo-nao-param-de-cair/ <br>
+
+## 7.3. Conformidades Legais e Regulamentações
+
+Sebrae. (s.d.). *Lei Geral de Proteção de Dados (LGPD)*. Portal Sebrae. Recuperado de https://sebrae.com.br/sites/PortalSebrae/LGPD <br>
+
+Zoop. (s.d.). *Como adequar sua empresa à LGPD*. Zoop Blog. Recuperado de https://www.zoop.com.br/blog/regulamentacao/como-adequar-lgpd <br>
+
+Zoop. (s.d.). *Panorama dos meios de pagamento no Brasil*. Zoop Blog. Recuperado de https://www.zoop.com.br/blog/pagamento/meios-de-pagamento-no-brasil <br>
+
+## 7.4. Documentação Corporativa e Interna
+
+Cielo. (s.d.). *E-commerce: Nossas soluções*. Recuperado de https://www.cielo.com.br/ <br>
+
+Cielo. (s.d.). *Estratégia e vantagens competitivas*. Relacionamento com Investidores. Recuperado de https://ri.cielo.com.br/sobre-a-cielo/estrategia-e-vantagens-competitivas/ <br>
+
+Cielo. (2023). *Demonstrações Financeiras 2022* [Relatório Financeiro]. Recuperado de https://filemanager-cdn.mziq.com.br/published/4d1ebe73-b068-4443-992a-3d72d573238c/696185c4-d779-4b63-bd45-dbad2f9c4dd9_df_ifrs_completa_ri.pdf <br>
+
+Cielo. (2024). *Relatório de Resultados* [Documento de Relacionamento com Investidores]. Recuperado de https://api.mziq.com/mzfilemanager/v2/d/4d1ebe73-b068-4443-992a-3d72d573238c/5ab9a1ba-b7f2-64ab-4a37-ecd3ad8b6a6a?origin=2 <br>
+
+Cielo. (2025). *Fatores de risco*. Relacionamento com Investidores. Recuperado de https://ri.cielo.com.br/servicos-ri/fatores-de-risco/ <br>
+
+Cielo. (2026). *TAPI_2026 - Jogo Digital_Cielo* [Documento de escopo de projeto interno]. Inteli. <br>
+
+## 7.5. Referências Corporativas de Treinamento e Desenvolvimento
+
+Deloitte. (2020). *Treinamento e desenvolvimento corporativo: Melhores práticas globais*. Deloitte Consulting. <br>
+
+McKinsey & Company. (2019). *Os caminhos da aprendizagem corporativa no século XXI*. McKinsey & Company. <br>
+
+## 7.6. Ferramentas de Desenvolvimento
+
+Phaser. (s.d.). *Phaser - HTML5 Game Framework*. Recuperado de https://phaser.io/ <br>
+
+Figma. (s.d.). *Figma - Design Collaboration Platform*. Recuperado de https://www.figma.com/ <br>
+
+Google Gemini. (s.d.). *Gemini - AI-Powered Content Generation*. Recuperado de https://gemini.google.com/ <br>
+
+Google Drive. (s.d.). *Google Drive - Cloud Storage and File Hosting*. Recuperado de https://www.google.com/drive/ <br>
+
+Pixabay. (s.d.). *Pixabay - Royalty-Free Media Resources*. Recuperado de https://pixabay.com/ <br>
+
+## 7.7. Inspirações Artísticas e de Gameplay
+
+Coffee Talk. (2020). Desenvolvido por Toge Productions. *Coffee Talk*. [Game Digital]. Disponível em plataformas de distribuição digital. <br>
+
+Amor Doce. (2015). Desenvolvido por Beemoov. *Amor Doce*. [Game Digital]. Disponível em plataformas móveis e web. <br>
+
+## 7.8. Recursos e Assets de Terceiros
+
+Pixabay Audio Collection. (s.d.). *Royalty-Free Sound Effects and Music*. Repositório de efeitos sonoros licenciados para uso em projetos comerciais e educacionais. Utilizado em: botões interativos, feedback sonoro de vitória/derrota, sons de seleção e cenários bloqueados. <br>
+
+Música Autoral. (2026). *Trilhas Sonoras Originais do Projeto Conexão Cielo*. Composições originais criadas especificamente para o jogo, incluindo temáticas para padaria, quitanda, restaurante e posto de gasolina. Geradas com suporte de ferramentas de síntese de áudio (Gemini e DAWs variadas). <br>
+
+Pixel Art Assets. (2026). *Design Visual em Pixel Art do Projeto*. Todos os assets gráficos do projeto (personagens, ambientes, interface) foram desenvolvidos internamente pela equipe Blue Codes, seguindo a paleta de cores oficial (Figura 3.3.4.1) e mantendo coerência visual em pixel art 2D. <br>
 
 # <a name="c8"></a>Anexos
 

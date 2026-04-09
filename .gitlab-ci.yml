@@ -1,11 +1,15 @@
 pages:
   stage: deploy
   script:
-    - mkdir -p public
-    - cp index.html public/
-    - cp -r assets public/
-    - cp -r scripts public/  # Copia a pasta scripts, se o seu JS estiver aqui
-    - cp -r src public/      # Copia a pasta src, caso tenha imagens ou códigos aqui
+    - mkdir .site
+    
+    - cp index.html .site/
+    
+    - cp -r public .site/
+    
+    - rm -rf public
+    
+    - mv .site public
   artifacts:
     paths:
       - public
