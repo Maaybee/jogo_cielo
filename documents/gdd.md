@@ -1,26 +1,38 @@
 ![Logo da Inteli ](./assets/logointeli.png)
 
 
-# GDD - Game Design Document - Módulo 1 - Inteli
+# GDD - Game Design Document - Projeto Conexão Cielo - Módulo 1 - Inteli
 
 
-## Blue Codes
+## Blue Codes (Grupo 01)
 
-#### Bruno Calenda, Enzo Ferreira, Guilherme Fraga, Laura Tosar, Lucas Delmirio, Marco Tulio Vieira, Matteus Haikal, Stephany Marques.
-
+- <a href="https://www.linkedin.com/in/bruno-calenda-45607b3aa/">Bruno Calenda Abreu</a>
+- <a href="https://www.linkedin.com/in/enzo-ferreira-de-andrade-88566829a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Enzo Ferreira de Andrade</a>
+- <a href="https://www.linkedin.com/in/guilherme-ludovico-fraga-0625b425a/">Guilherme Ludovico Fraga</a> 
+- <a href="https://www.linkedin.com/in/laura-fontoura-tosar-2210593b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Laura Fontoura Tosar</a> 
+- <a href="https://www.linkedin.com/in/lucas-delmirio-da-silva-26b245359/">Lucas Delmirio da Silva</a>
+- <a href="https://www.linkedin.com/in/marco-tulio-vieira-teixeira-a229a727b/">Marco Túlio Vieira Teixeira</a> 
+- <a href="https://www.linkedin.com/in/matteus-haikal-86b2bb39b">Matteus Ferreira Haikal Giglio</a>
+- <a href="https://www.linkedin.com/in/stephany-marq">Stephany Marques dos Santos</a>
 
 ## Sumário
 
 [1. Introdução](#c1)
+
 [2. Visão Geral do Jogo](#c2)
+
 [3. Game Design](#c3)
+
 [4. Desenvolvimento do jogo](#c4)
+
 [5. Casos de Teste](#c5)
+
 [6. Conclusões e trabalhos futuros](#c6)
+
 [7. Referências](#c7)
+
 [Anexos](#c8)
 
-<br>
 
 # <a name="c1"></a>1. Introdução
 
@@ -103,7 +115,7 @@ Estrutura do Setor: O mercado é estruturado e regulado, com alta complexidade o
 
 Ambiente Competitivo: A rivalidade é intensa, marcada por pressão sobre preços e baixa diferenciação nos serviços básicos, forçando as adquirentes a buscar novas fontes de receita além da simples captura de transações.
 
-### 1.1.2. Análise SWOT (sprint 2)
+### 1.1.2. Análise SWOT 
 
 A análise SWOT (acrônimo para Strengths, Weaknesses, Opportunities and Threats) constitui uma ferramenta fundamental para o planejamento estratégico da Cielo S.A., permitindo uma avaliação integrada entre suas competências internas e as variáveis do ambiente macroeconômico. Este diagnóstico é essencial para compreender como a organização pode alavancar suas forças operacionais para mitigar fraquezas e se posicionar frente aos desafios de um mercado em constante disrupção tecnológica (Cielo, 2025; Mazzoco, 2022).
 
@@ -302,7 +314,7 @@ O desenvolvimento do jogo foi inspirado principalmente em títulos do gênero Vi
 
 Outra inspiração foi *Amor Doce*, conhecido por seu sistema de escolhas durante diálogos que alteram o desenvolvimento da história e a relação entre os personagens. Esse elemento foi adaptado para o contexto do projeto, no qual as decisões do jogador influenciam o nível de satisfação do cliente durante as negociações. Apesar dessas semelhanças estruturais, o jogo desenvolvido possui um propósito distinto: enquanto os títulos citados possuem foco narrativo e de entretenimento, o projeto busca aplicar essas mecânicas em um contexto educacional, simulando situações reais de vendas enfrentadas pelos Gerentes de Negócios da Cielo.
 
-### 2.2.5. Tempo estimado de jogo (sprint 5)
+### 2.2.5. Tempo estimado de jogo
 O tempo estimado de jogo para um jogador concluir a experiência de forma linear e bem-sucedida (sem falhas) é de aproximadamente 6 a 10 minutos. Esse período compreende a transição pelo mapa navegável e a conclusão interativa das 4 fases de negociação estipuladas.
 
 No entanto, por se tratar de uma Visual Novel com viés educacional e simulador de vendas, a duração real das sessões é flexível e pode variar consideravelmente de acordo com o perfil do usuário. Fatores como a velocidade de leitura, o tempo dedicado à análise e reflexão antes da escolha das abordagens de diálogo, e o nível de conhecimento prévio do jogador sobre os produtos da Cielo influenciam diretamente o ritmo da progressão.
@@ -423,7 +435,7 @@ O jogo apresenta um sistema de navegação do qual o usuário pode selecionar um
 Essa estrutura de progressão foi pensada para respeitar a curva de aprendizado do jogador, introduzindo gradualmente cenários de maior complexidade. A padaria, por ser a fase inicial, funciona como ponto de entrada acessível, onde o GN se familiariza com as mecânicas do jogo. A partir dela, quitanda e restaurante se abrem em paralelo, oferecendo caminhos distintos de evolução. O posto de gasolina, por sua vez, representa o desafio mais avançado, exigindo que o jogador tenha consolidado as habilidades desenvolvidas nas etapas anteriores antes de enfrentá-lo. Dessa forma, a navegação pelo mundo não é apenas funcional, mas também pedagógica, conduzindo o GN por uma jornada de aprendizado progressivo e consistente.
 
 ### 3.3.3. Condições climáticas e temporais 
-*Não aplicável ao escopo atual do projeto.*
+Não aplicável ao escopo do projeto.
 
 ### 3.3.4. Concept Art
 No Conexão Cielo, a concept art foi pensada para definir a identidade visual do jogo antes da criação final dos assets. Ela ajuda a guiar como os cenários, objetos e outros elementos visuais devem ser produzidos, mantendo um mesmo estilo em todo o projeto. Como o jogo foi desenvolvido em pixel art, essa etapa é importante para garantir que os ambientes tenham unidade visual e façam sentido dentro da proposta do jogo.
@@ -457,9 +469,9 @@ A seguir, na Tabela 3.3.5.1, estão elencados os elementos sonoros e as músicas
 10 | Música do restaurante | Ocorre quando o jogador entra no restaurante | Autoral | <a href = "https://drive.google.com/file/d/15S0J_IlEH6S06KQ3Eedj5P8I_oKybIrY/view?usp=sharing">Ouça a música clicando aqui!</a>
 11 | Música do posto | Ocorre quando o jogador entra no posto | Autoral | <a href = "https://drive.google.com/file/d/1rdI_gudatzL0FeVhH1d9GTnBKqfMZBTG/view?usp=sharing">Ouça a música clicando aqui!</a>
 
-<p align = 'center'>Fonte: Tabela produzida pelos autores, com base em áudios do Pixabay e em gerações de faixas no Gemini.</p> <br>
+<p align = 'center'>Fonte: Tabela produzida pelos autores, com base em áudios do Pixabay e em gerações de faixas no Gemini.</p> 
 
-## 3.4. Inventário e Bestiário (sprint 3)
+## 3.4. Inventário e Bestiário 
 Não aplicável ao modelo de jogo (Visual Novel educacional).
 
 ## 3.5. Gameflow (Diagrama de cenas) 
@@ -472,12 +484,19 @@ O diagrama de cenas (Figura 3.5.1) é uma ferramenta técnica essencial para o p
 
 **Explicação sobre o gameflow:**
 * **Tela de início:** A tela de início é simples, contando apenas o botão de jogar, botão de tutorial, o nome do jogo e uma cidade em formato pixel art de fundo.
+<br>
 * **Tela de tutorial:** A tela de tutorial conta com uma tela branca com elementos do jogo e textos explicando ao jogador como jogar.
+<br>
 * **Introdução Cielita:** A tela de introdução conta com a Cielita explicando ao jogador como se mover pelo mapa, dizendo seu objetivo e falando onde ele deve ir.
+<br>
 * **Mapa:** O mapa do jogo é um mapa grande que pode ser navegado com o jogador clicando e arrastando sobre ele, contém setas amarelas indicando ao jogador onde ele deve ir, um botão de ajuda que mostra a Cielita orientando onde o jogador deve ir, um indicador de reputação e inicialmente apenas a padaria desbloqueada.
+<br>
 * **Fase da padaria:** É a primeira fase do jogo e é a fase mais fácil do jogo, serve para o jogador se adaptar ao modelo do game. O padeiro é mais propício a ouvir a proposta do player então seus diálogos são mais brandos e a punição por errar não é tão grande na barra de satisfação. Todos os diálogos são adaptativos à resposta do jogador.
+<br>
 * **Fase da quitanda:** A fase da quitanda é uma fase intermediária do jogo e exige mais do jogador, exige que o jogador use técnicas de sondagem para entender o problema da Julie e escolha os diálogos corretos baseado no problema dela. Julie não é tão propícia a ouvir as propostas do jogador quanto o Osvaldo.
+<br>
 * **Fase do restaurante:** A fase do restaurante é uma fase intermediária do jogo e exige que o jogador use técnicas de sondagem para entender o problema do Txori e escolha os diálogos corretos baseado no problema dele. Txori já não é tão propício a ouvir as propostas do jogador quanto o Osvaldo.
+<br>
 * **Fase do posto:** A fase do posto é a última fase do jogo e não possui uma barra de satisfação igual as outras o jogador deve se basear apenas no feedback visual de sprites do José. O dono do posto não tem paciência para vendedores e está muito estressado com o seu negócio. É a fase que mais exige do jogador, é necessário um grande conhecimento de técnicas de sondagem para entender o problema e conhecimento sobre os produtos da Cielo para dar uma solução viável ao dono do posto.
 
 ## 3.6. Regras do jogo 
@@ -1161,8 +1180,7 @@ O botão "Ajuda" está disponível em qualquer momento na tela do mapa (MapScene
 
 Os casos de teste descritos acima cobrem os principais fluxos do jogo, desde a navegação entre telas até a lógica de progressão por reputação, garantindo que cada camada da experiência do jogador funcione de forma isolada e integrada. A execução iterativa desses testes ao longo do desenvolvimento permite identificar e corrigir falhas com antecedência, assegurando que o produto final entregue uma experiência estável, coerente e alinhada aos objetivos pedagógicos do Conexão Cielo. À medida que novas funcionalidades forem incorporadas ao jogo, novos casos de teste deverão ser documentados e adicionados a esta tabela, mantendo o processo de validação atualizado e consistente com o crescimento do sistema.
 
-## 5.2. Testes de jogabilidade (playtests) (sprint 5)
-
+## 5.2. Testes de jogabilidade (playtests) 
 Os testes de jogabilidade (playtests) são métodos de avaliação nos quais usuários reais interagem diretamente com o jogo, com o objetivo de identificar problemas de usabilidade, compreender a experiência do jogador e avaliar a eficácia das mecânicas propostas.
 
 De acordo com Fullerton (2018), os playtests constituem uma etapa essencial no desenvolvimento de jogos, pois permitem avaliar a experiência do jogador a partir de sua interação direta com o sistema. A autora destaca que a observação do comportamento real dos jogadores possibilita identificar problemas de usabilidade, compreender como as mecânicas são interpretadas e ajustar decisões de design com base em evidências empíricas, em vez de suposições da equipe de desenvolvimento.

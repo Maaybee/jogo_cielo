@@ -22,7 +22,7 @@ Blue Codes
 - <a href="https://www.linkedin.com/in/lucas-delmirio-da-silva-26b245359/">Lucas Delmirio da Silva</a>
 - <a href="https://www.linkedin.com/in/marco-tulio-vieira-teixeira-a229a727b/">Marco Túlio Vieira Teixeira</a> 
 - <a href="https://www.linkedin.com/in/matteus-haikal-86b2bb39b">Matteus Ferreira Haikal Giglio</a>
-- <a href="https:/www.linkedin.com/in/stephany-marq">Stephany Marques dos Santos</a>
+- <a href="https://www.linkedin.com/in/stephany-marq">Stephany Marques dos Santos</a>
 
 ## 👩‍🏫 Professores:
 ### Orientador(a) 
@@ -47,7 +47,9 @@ A cada etapa do diálogo, o jogador escolhe entre diferentes respostas. O desemp
 
 O grande valor da solução está em oferecer um ambiente digital seguro onde a força de vendas pode errar, testar abordagens e absorver conhecimentos teóricos de forma totalmente imersiva. Com isso, o projeto garante um treinamento padronizado, engajador e altamente escalável, focado em aprimorar a inteligência emocional do vendedor e impulsionar a performance comercial em campo de maneira autônoma.
 
-[https://graduacao.pages.git.inteli.edu.br/2026-1a/t28/g01/]
+<b> Link para o jogo no Github Pages </b>
+
+<a href="https://maaybee.github.io/jogo_cielo/">Clique aqui e jogue</a> 
 
 
 ## 📁 Estrutura de pastas
@@ -90,7 +92,7 @@ Para garantir a melhor experiência, certifique-se de ter:
 - Um navegador web moderno e atualizado (recomendamos as versões mais recentes do Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari).
 
 2. Passo a passo para jogar
--Acesse o link oficial: Abra o seu navegador e acesse o endereço onde o jogo está /hospedado: [https://graduacao.pages.git.inteli.edu.br/2026-1a/t28/g01/]
+-Acesse o link oficial: Abra o seu navegador e acesse o endereço onde o jogo está hospedado: [https://maaybee.github.io/jogo_cielo/]
 
 - Aguarde o carregamento: A tela inicial do jogo será carregada automaticamente. Os assets (imagens em pixel art e áudios) são leves, mas podem levar alguns segundos para carregar dependendo da sua conexão.
 
@@ -117,7 +119,7 @@ Para garantir a melhor experiência, certifique-se de ter:
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://git.inteli.edu.br/graduacao/2026-1a/t28/g01">Conexão Cielo</a> by  <a href="https://www.linkedin.com/in/bruno-calenda-45607b3aa/">Bruno Calenda Abreu</a>, <a href="https://www.linkedin.com/in/enzo-ferreira-de-andrade-88566829a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Enzo Ferreira de Andrade</a>, <a href="https://www.linkedin.com/in/guilherme-ludovico-fraga-0625b425a/">Guilherme Ludovico Fraga</a>, <a href="https://www.linkedin.com/in/laura-fontoura-tosar-2210593b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Laura Fontoura Tosar</a>, <a href="https://www.linkedin.com/in/lucas-delmirio-da-silva-26b245359/">Lucas Delmirio da Silva</a>, <a href="https://www.linkedin.com/in/marco-tulio-vieira-teixeira-a229a727b/">Marco Túlio Vieira Teixeira</a>, <a href="https://www.linkedin.com/in/matteus-haikal-86b2bb39b">Matteus Ferreira Haikal Giglio</a>, <a href="https:/www.linkedin.com/in/stephany-marq">Stephany Marques dos Santos</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://git.inteli.edu.br/graduacao/2026-1a/t28/g01">Conexão Cielo</a> by  <a href="https://www.linkedin.com/in/bruno-calenda-45607b3aa/">Bruno Calenda Abreu</a>, <a href="https://www.linkedin.com/in/enzo-ferreira-de-andrade-88566829a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Enzo Ferreira de Andrade</a>, <a href="https://www.linkedin.com/in/guilherme-ludovico-fraga-0625b425a/">Guilherme Ludovico Fraga</a>, <a href="https://www.linkedin.com/in/laura-fontoura-tosar-2210593b0?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Laura Fontoura Tosar</a>, <a href="https://www.linkedin.com/in/lucas-delmirio-da-silva-26b245359/">Lucas Delmirio da Silva</a>, <a href="https://www.linkedin.com/in/marco-tulio-vieira-teixeira-a229a727b/">Marco Túlio Vieira Teixeira</a>, <a href="https://www.linkedin.com/in/matteus-haikal-86b2bb39b">Matteus Ferreira Haikal Giglio</a>, <a href="https://www.linkedin.com/in/stephany-marq">Stephany Marques dos Santos</a>
  is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 
