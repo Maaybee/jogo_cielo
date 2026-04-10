@@ -68,7 +68,7 @@ export class BakeryScene extends Phaser.Scene {
     this.load.audio("bakeryMusic", "public/assets/sounds/bakeryMusic.mp3");
     this.load.audio("buttonDialog", "public/assets/sounds/buttonDialog.mp3");
     this.load.audio("soundVictory", "public/assets/sounds/soundVictory.mp3");
-    this.load.audio("soundDefeat", "public/sounds/soundDefeat.mp3");
+    this.load.audio("soundDefeat", "public/assets/sounds/soundDefeat.mp3");
   }
 
   // Cria os elementos visuais e inicia a lógica da cena
@@ -606,9 +606,6 @@ export class BakeryScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true })
       .setScale(1.8);
 
-    // Som de resultado
-    this.sound.play(isSuccess ? "soundVictory" : "soundDefeat");
-
     btnExit.on("pointerdown", () => {
       if (isSuccess) {
         GAME_STATE.playerReputation += 100;
@@ -625,5 +622,13 @@ export class BakeryScene extends Phaser.Scene {
         isSuccess ? { completedLocation: "bakery" } : undefined,
       );
     });
+
+    // Som de resultado (com fallback para evitar quebrar a tela caso o asset falhe)
+    const resultSoundKey = isSuccess ? "soundVictory" : "soundDefeat";
+    if (this.cache.audio.exists(resultSoundKey)) {
+      this.sound.play(resultSoundKey);
+    } else {
+      console.warn(`Audio key missing from cache: ${resultSoundKey}`);
+    }
   }
 }

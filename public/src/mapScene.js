@@ -25,7 +25,7 @@ export class MapScene extends Phaser.Scene {
     this.load.image("gasStationManager", "public/assets/characters/gasmanager.png");
     this.load.image(
       "restaurantOwner",
-      "public/assets/characters/restaurantOwner.png",
+      "public/assets/characters/restaurantowner.png",
     );
 
     this.load.image("introBalloon", "public/assets/baloonIntro.png");

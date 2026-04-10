@@ -293,6 +293,8 @@ A reputação do jogador é representada dentro de cada fase pela barra de satis
 
 ## 2.2. Características do Jogo 
 
+Esta seção estabelece as diretrizes estruturais e técnicas que definem a identidade do Conexão Cielo. A seguir, são detalhados os parâmetros fundamentais que moldam a experiência do jogador, englobando a escolha do gênero gamificado, as plataformas e dispositivos suportados, a modalidade de interação, as referências de mercado que inspiraram as mecânicas e a expectativa de duração das sessões. O alinhamento de todas essas características foi planejado para garantir que o simulador cumpra seu propósito educacional de forma acessível, engajadora e tecnicamente viável para a realidade dos Gerentes de Negócios.
+
 ### 2.2.1. Gênero do Jogo 
 
 O jogo se enquadra no gênero Visual Novel, caracterizado pela condução da narrativa por meio de diálogos interativos e escolhas realizadas pelo jogador. Nesse tipo de jogo, a progressão ocorre principalmente através da leitura de textos e da tomada de decisões que influenciam o desenvolvimento da história e o resultado das interações com os personagens. Diferentemente de jogos focados em reflexos ou ações rápidas, as Visual Novels priorizam a narrativa, o desenvolvimento de personagens e a tomada de decisões estratégicas durante conversas.
@@ -322,6 +324,7 @@ No entanto, por se tratar de uma Visual Novel com viés educacional e simulador 
 Além disso, o tempo total de interação pode ser estendido devido à mecânica de acertos e erros. Caso o jogador tome decisões inadequadas que reduzam a satisfação do cliente e culminem na perda da venda, será necessário repetir a respectiva fase. Essa abordagem de repetição incentiva a fixação do conteúdo educacional, mas adiciona minutos adicionais ao tempo total necessário para finalizar o jogo (conquistar todos os clientes no mapa).
 
 # <a name="c3"></a>3. Game Design 
+
 Esta seção apresenta a estrutura completa do Game Design do projeto. São descritos os elementos narrativos, mecânicos e estruturais que compõem a experiência do jogador, incluindo enredo, personagens, mundo do jogo, progressão entre fases, regras, mecânicas e trilha sonora.
 
 ## 3.1. Enredo do Jogo 
@@ -346,6 +349,8 @@ O principal conflito do jogo está na dificuldade de convencer os empreendedores
 A progressão narrativa culmina quando o jogador se torna um Gerente de Negócios experiente, conquistando a confiança dos comerciantes e expandindo a presença da Cielo na cidade. Nesse estágio, o jogador demonstra domínio das mecânicas de negociação, tomada de decisão estratégica e gestão de relacionamento com clientes.
 
 ## 3.2. Personagens
+
+Esta seção detalha os agentes que compõem a narrativa e a mecânica de interações de Conexão Cielo. Os personagens são a peça central da simulação educacional, pois é por meio deles que os desafios de vendas e as abordagens de negociação ganham vida. A seguir, são apresentadas a perspectiva imersiva adotada para o protagonista, a caracterização e o papel dos Non-Playable Characters (NPCs) — que atuam como os clientes em cada fase — e o compromisso do projeto com a diversidade e a representatividade. Esse cuidado na construção dos perfis tem como propósito garantir que a experiência virtual reflita, de maneira autêntica e inclusiva, a pluralidade do mercado empreendedor brasileiro.
 
 ### 3.2.1. Controláveis
 Como o projeto segue a premissa de uma Visual Novel, optou-se por não utilizar um personagem visível em tela. Essa escolha permite que o jogador assuma diretamente o papel do protagonista (em primeira pessoa), promovendo uma imersão total onde ele se sente o verdadeiro centro da narrativa e das decisões.
@@ -624,8 +629,11 @@ A função `movimentoDoBalao` está implementada no arquivo `startScene.js`
 Nesta seção, é detalhado o processo de construção técnica e criativa do simulador, dividindo-o pelas etapas de desenvolvimento do projeto (sprints). Aqui, é apresentada a evolução do código, a implementação das interfaces e as funcionalidades que transformam o conceito em um artefato jogável. Cada subseção reflete o progresso da equipe em direção ao MVP (Produto Mínimo Viável).
 
 ## 4.1. Desenvolvimento preliminar do jogo 
+
 Esta seção documenta o desenvolvimento preliminar do Conexão Cielo, registrando as decisões técnicas e de design tomadas ao longo da primeira etapa do projeto. O relato está organizado de forma a apresentar o conceito central do jogo, os objetivos definidos para a versão inicial, o escopo efetivamente entregue tanto em termos de interface quanto de implementação técnica, e as evidências visuais que comprovam o progresso alcançado. Também são apresentadas as telas planejadas para as próximas etapas, oferecendo uma visão do caminho que o desenvolvimento irá percorrer. O conjunto dessas informações permite acompanhar a evolução do projeto de maneira transparente e estruturada, conectando as decisões de produto com os resultados concretos obtidos em cada ciclo de desenvolvimento.
+
 ### 4.1.1 O que é o jogo
+
 O jogo é um simulador de vendas em ambiente urbano, inspirado no formato de visual novel, no qual o jogador assume o papel de um Gerente de Negócios (GN) da Cielo. O objetivo principal é percorrer um mapa interativo, visitar estabelecimentos comerciais e converter potenciais clientes por meio de técnicas de negociação, gestão de objeções e conhecimento dos produtos da empresa. Este projeto foi desenvolvido com base em análise estratégica da empresa (Cielo, 2024; Cielo, 2026) e no contexto do mercado brasileiro de negócios.
 
 ### 4.1.2 Objetivo da Versão 1
@@ -706,6 +714,8 @@ Descrição: Tela contendo definições gerais do sistema, incluindo parâmetros
 
 ## 4.2. Desenvolvimento básico do jogo 
 
+Esta seção documenta a segunda fase de construção do simulador, que marca a transição de uma estrutura visual preliminar para um ambiente interativo. O foco do desenvolvimento básico foi dar vida às mecânicas centrais do Conexão Cielo, transformando as telas navegáveis em um sistema de jogo funcional. A seguir, são detalhados os objetivos desta etapa, o escopo de interface e as implementações técnicas entregues — com destaque para a integração do primeiro cenário jogável (Padaria) e a estruturação da lógica de ramificação dos diálogos e da Barra de Satisfação. Além disso, são pontuadas as limitações desta versão, que serviram como direcionamento para os ciclos seguintes do projeto.
+
 ### 4.2.1 Objetivo da Versão 2
 A segunda versão do projeto teve como foco a implementação das primeiras mecânicas jogáveis do sistema, transformando a estrutura inicial em uma experiência funcional. Nesta etapa foram integradas as principais telas do jogo, além da introdução do primeiro cenário jogável e do sistema inicial de diálogo com NPCs. Também foi iniciada a implementação da lógica da Barra de Satisfação do cliente.
 
@@ -758,6 +768,8 @@ Nesta versão, algumas funcionalidades ainda não foram completamente implementa
 * Sistema de progressão baseado em reputação do jogador
 
 ## 4.3. Desenvolvimento intermediário do jogo 
+
+Esta seção apresenta os avanços alcançados na terceira iteração do projeto, caracterizada pela expansão do universo do jogo e pelo amadurecimento de suas mecânicas principais. Com o alicerce funcional estabelecido na versão anterior, o desenvolvimento intermediário concentrou-se em diversificar os desafios de negociação oferecidos ao jogador. Abaixo, descreve-se a evolução do escopo técnico e visual da sprint, englobando a implementação de novos ambientes comerciais (Quitanda e Posto de Gasolina) e o refinamento definitivo do fluxo de diálogos e do cálculo da Barra de Satisfação do cliente, passos essenciais que aproximaram o simulador de seu Produto Mínimo Viável (MVP).
 
 ### 4.3.1 Objetivo da Versão 3
 A terceira versão do projeto teve como foco a implementação da fase da Quitanda e da fase final do Posto de Gasolina. Além disso, foi desenvolvida a lógica da Barra de Satisfação do Cliente, responsável por medir o desempenho do jogador durante as interações de venda. Também foram realizadas correções no sistema de diálogos do jogo.
@@ -1199,6 +1211,23 @@ Os participantes não receberam instruções detalhadas sobre como jogar, sendo 
 
 Os testes foram realizados com um total de 11 participantes, incluindo estudantes universitários e professores, com diferentes níveis de experiência prévia com jogos digitais. Essa diversidade de perfis possibilitou avaliar tanto a experiência de jogadores casuais quanto de usuários sem familiaridade com jogos.
 
+Abaixo, a distribuição demográfica e o nível de experiência dos testadores:
+
+<p align="center"><b>Figura 5.2.1.1</b> - Distribuição por Gênero</p>
+
+![Distribuição por Gênero](assets/Distribuicao_por_Genero.png) 
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+<p align="center"><b>Figura 5.2.1.2</b> - Faixa Etária</p>
+
+![Faixa Etária](assets/Faixa_Etaria.png) 
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
+<p align="center"><b>Figura 5.2.1.3</b> - Nível de Experiência Prévia</p>
+
+![Nível de Experiência](assets/Experiencia.png) 
+<p align="center">Fonte: Elaborado pelos autores.</p>
+
 Cada sessão teve duração média entre 10 e 20 minutos, incluindo o tempo de interação com o jogo e um breve momento de coleta de feedback após a experiência. Essa abordagem possibilitou a obtenção de dados qualitativos relevantes para a identificação de problemas e direcionamento de melhorias no jogo.
 
 
@@ -1410,48 +1439,6 @@ As tabelas contemplam informações relacionadas à experiência prévia dos jog
 | O que gostou no jogo? | Gostou do visual e da organização do jogo |
 | O que poderia melhorar no jogo? | Reduzir a quantidade de texto e melhorar a navegação e a identificação das fases |
 
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
-**Analise qualitativa:** 
-
-
-Tester 1 : mostrou um perfil de jogador que aprende rápido e consegue avançar sem precisar de ajuda, o que indica que as mecânicas principais do jogo funcionam bem para quem já tem experiência com jogos digitais. Ao mesmo tempo, o fato de ele ter pulado diálogos importantes e depois ficado sem saber exatamente qual era o próximo objetivo revela que boa parte da compreensão da experiência depende da atenção aos diálogos. A nota 7 mostra esse equilíbrio entre uma experiência positiva e alguns momentos de dúvida. Ele também destacou o visual e os personagens, o que mostra que esses elementos chamaram sua atenção durante a partida.
-
-Tester 2 : teve uma experiência positiva, mas o começo foi mais travado por causa da dificuldade para entender a movimentação. O fato de ele ter precisado testar bastante antes de compreender a lógica da interação mostra que seu processo de adaptação foi mais baseado em tentativa e erro. Como ele já tinha experiência com jogos, esse caso mostra que a primeira impressão do jogo não foi totalmente imediata. Mesmo assim, a nota 8 indica que, depois dessa adaptação inicial, ele conseguiu aproveitar bem a experiência e entender a proposta geral.
-
-Tester 3 : foi um dos casos mais positivos de toda a rodada de testes. Ele iniciou o jogo sem dificuldade, entendeu rapidamente as mecânicas, explorou o mapa com segurança e concluiu a experiência de forma fluida. Isso mostra que, para jogadores com familiaridade com jogos digitais, o projeto já consegue entregar uma experiência bem estruturada, com boa lógica de progressão e interação. A nota 9 combina com esse desempenho, já que a vivência dele foi majoritariamente positiva e sem travas relevantes.
-
-Tester 4 : representa um caso interessante porque, mesmo tendo experiência com jogos, ele apresentou uma navegação mais cautelosa e com mais voltas pelo mapa. Isso sugere que a orientação espacial foi um fator marcante na experiência dele. O fato de ter retornado para áreas já visitadas antes de achar o caminho certo mostra que sua leitura do mapa foi mais lenta. Ainda assim, ele conseguiu avançar bem e gostou do sistema de diálogos, então sua percepção geral continuou positiva, o que também aparece na nota 8.
-
-Tester 5 : foi um dos testes mais importantes porque mostra como o jogo se comporta com uma pessoa sem experiência prévia com jogos digitais. Ela conseguiu começar sem problema técnico e deu nota 9, o que mostra que a proposta, o ambiente e os diálogos foram percebidos de forma positiva. Ao mesmo tempo, não conseguiu concluir o jogo, o que evidencia uma diferença entre gostar da experiência e conseguir acompanhar sua lógica até o fim. Esse caso é relevante porque mostra que o jogo desperta interesse mesmo quando a progressão não acontece de forma completa.
-
-Tester 6 : teve um desempenho muito consistente e mostrou que o jogo já está bem montado para quem possui repertório com jogos digitais. Ele entendeu rápido as mecânicas, navegou de forma segura e concluiu a experiência sem obstáculos relevantes. Isso é um sinal forte de que a estrutura central do jogo funciona e consegue sustentar uma experiência fluida. A nota 9 reforça essa leitura, já que o tester demonstrou segurança, constância e entendimento desde o começo.
-
-Tester 7 : conseguiu se adaptar bem ao jogo e avançou sem grandes travas, mas passou por áreas desnecessárias antes de identificar o caminho correto. Isso mostra que sua experiência teve uma pequena fase de exploração até ele entrar no ritmo da progressão. O caso dele ajuda a confirmar um padrão que apareceu em vários testers: boa parte da experiência está ligada à forma como o jogador lê o mapa e entende o fluxo das fases. A nota 8 combina com uma vivência positiva, mas com alguns momentos de hesitação.
-
-Tester 8 : teve uma experiência estável e sem grandes dificuldades, o que ajuda a mostrar que o jogo mantém uma consistência básica entre perfis diferentes. Um ponto interessante do teste dele foi destacar o feedback sonoro, porque isso mostra que o áudio teve participação real na experiência e não ficou só como detalhe de fundo. A nota 8 acompanha essa leitura de uma experiência sólida, agradável e funcional.
-
-Tester 9 : teve um dos melhores desempenhos entre todos os participantes. Ele entendeu rapidamente as mecânicas, avançou com segurança e concluiu o jogo, o que mostra que, para jogadores com repertório mais amplo, a experiência é sólida e envolvente. O dado mais interessante do caso dele é que a principal dificuldade apareceu só na fase final, com várias tentativas até conseguir avançar. Isso mostra que a experiência dele foi marcada por um bom domínio geral, mas com um momento final de maior desafio. A nota 9 e a ausência de críticas mais fortes mostram que o jogo manteve seu engajamento de forma muito positiva.
-
-Tester 10 : mostra como o comportamento do jogador durante a sessão também influencia muito a experiência. Ela clicou rápido, ignorou partes importantes dos diálogos e, por isso, teve mais dificuldade para entender a navegação e a progressão. Esse teste é importante porque mostra que a experiência do jogador não depende só da estrutura do jogo, mas também da forma como ele interage com as informações apresentadas. Mesmo com essas dificuldades, a nota 8 e o elogio à gamificação e aos desafios mostram que ela ainda teve uma percepção positiva da proposta.
-
-Tester 11 : reforça de maneira muito clara as barreiras que aparecem para jogadores com pouca familiaridade com jogos digitais. Mesmo conseguindo avançar, ele teve dificuldade para entender os objetivos, explorar o mapa e perceber com clareza a condição de vitória. O fato de quase sair do jogo por engano mostra que sua experiência foi mais instável e com mais momentos de confusão do que a de outros participantes. A nota 7 acompanha essa sensação, mesmo ele reconhecendo pontos positivos no visual e na organização do jogo.
-
-Olhando todos os testers em conjunto, fica bem claro que existe uma diferença forte entre os participantes que já têm experiência com jogos e os que têm pouca ou nenhuma familiaridade com esse tipo de interação. Os jogadores mais experientes, em geral, entenderam rápido as mecânicas, avançaram com mais segurança e mantiveram um ritmo mais estável ao longo da experiência. Já os menos experientes tiveram mais momentos de hesitação, dúvidas durante a exploração e dificuldades para acompanhar o fluxo do jogo. Ainda assim, mesmo entre esses participantes, a percepção geral sobre a proposta continuou positiva em muitos casos.
-
-Outro ponto importante é que as notas, em vários casos, continuaram altas mesmo quando o tester relatou dificuldades. Isso sugere que o jogo conseguiu gerar engajamento, curiosidade e uma percepção positiva geral, mesmo quando a experiência não foi totalmente fluida. Em outras palavras, os participantes demonstraram interesse real pela proposta, pelo visual, pelas interações e pelo formato do jogo. Isso mostra que a experiência foi considerada envolvente por boa parte dos testers, mesmo quando apareceram momentos de dúvida ou instabilidade durante a partida.
-
-No geral, a análise qualitativa mostra que o jogo tem uma base forte em visual, proposta interativa e capacidade de engajar diferentes perfis de participante. Os padrões que mais se repetem envolvem a navegação pelo mapa, a forma como os objetivos são percebidos e a relação entre leitura de diálogos e compreensão da progressão. Com base nisso, dá para dizer que o jogo já funciona bem como ideia e como experiência para parte do público, além de demonstrar potencial para envolver tanto jogadores mais experientes quanto participantes com menos contato com jogos digitais.
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
-
-
 <p align="center">Fonte: Elaborado pelos autores.</p>
 
 
@@ -1462,13 +1449,6 @@ Esses resultados qualitativos servem como base para a análise quantitativa apre
 
  
 #### 5.2.1.2. Análise Quantitativa 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-## Principais dificuldades
->>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
 
 Com base nos dados coletados durante os testes de jogabilidade, foi realizada uma análise quantitativa com o objetivo de identificar padrões recorrentes no comportamento dos participantes.
 
@@ -1476,37 +1456,6 @@ Considerando o total de 11 jogadores avaliados, foram levantadas as principais d
 
 Os resultados indicam que:
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
-- 45% dos participantes, o equivalente a 5 de 11 jogadores, apresentaram dificuldades relacionadas à navegação no mapa;
-- 36% dos participantes, o equivalente a 4 de 11 jogadores, tiveram problemas na compreensão dos objetivos do jogo;
-- 36% dos participantes, o equivalente a 4 de 11 jogadores, ignoraram ou não leram completamente os diálogos;
-- 27% dos participantes, o equivalente a 3 de 11 jogadores, demonstraram dificuldades na identificação de caminhos ou fases disponíveis;
-- 18% dos participantes, o equivalente a 2 de 11 jogadores, apresentaram dificuldades relacionadas à compreensão das mecânicas;
-- 18% dos participantes, o equivalente a 2 de 11 jogadores, não apresentaram dificuldades relevantes durante a experiência.
-
-Olhando para os dados, dá para perceber que a dificuldade mais comum foi a navegação no mapa. Isso apareceu em 45% dos participantes, ou seja, quase metade das pessoas testadas teve algum problema para se localizar, entender para onde ir ou reconhecer o caminho certo. Esse número já mostra que a navegação teve um peso grande na experiência geral dos jogadores.
-
-Logo depois, aparecem dois pontos com a mesma porcentagem: a compreensão dos objetivos do jogo e a leitura incompleta dos diálogos, ambos com 36%, o equivalente a 4 de 11 participantes. Isso mostra que uma parte importante da experiência depende da forma como o jogador recebe e entende as informações durante a partida. Em outras palavras, não basta só o jogo ter objetivos definidos; essas informações precisam chegar ao jogador de um jeito claro.
-
-Outro dado importante é que 27% dos participantes tiveram dificuldade para identificar caminhos ou fases disponíveis. Mesmo sendo um número menor do que o da navegação geral, ele continua reforçando o mesmo padrão: muitos jogadores ainda tiveram dúvidas para interpretar visualmente o mapa e entender como a progressão estava organizada.
-
-Já a dificuldade na compreensão das mecânicas apareceu em 18% dos casos, o que equivale a 2 de 11 participantes. Esse resultado mostra que o problema principal dos testes não estava tanto nas mecânicas básicas do jogo, mas mais na forma como o jogador se orientava dentro da experiência. Isso é importante porque mostra que a estrutura central do jogo foi entendida por boa parte dos testers, enquanto as maiores dúvidas apareceram no fluxo da progressão.
-
-Também chama atenção o fato de apenas 18% dos participantes não terem apresentado dificuldades relevantes. Em números absolutos, isso significa que só 2 dos 11 jogadores passaram pela experiência sem registrar problemas mais marcantes. Esse dado é importante porque mostra que, no geral, a maioria dos testers teve pelo menos algum momento de hesitação, dúvida ou dificuldade durante a partida.
-
-Quando os números são analisados juntos, dá para organizar os resultados em três grupos principais. O primeiro grupo é o da navegação, que aparece com mais força nos dados e inclui a dificuldade para se localizar e encontrar o caminho certo. O segundo grupo é o da comunicação, que aparece na compreensão dos objetivos e na leitura dos diálogos. O terceiro grupo é o da progressão, que envolve reconhecer fases disponíveis, entender o fluxo do mapa e acompanhar o avanço dentro do jogo. Esses três grupos ajudam a entender melhor onde estão concentrados os comportamentos mais recorrentes observados nos testes.
-
-Outro ponto importante é que essas dificuldades não aparecem totalmente separadas. Muitas vezes, uma acaba puxando a outra. Por exemplo, quando o jogador não lê bem os diálogos, ele pode ter mais dificuldade para entender os objetivos. E quando ele não entende os objetivos, fica mais difícil saber para onde ir no mapa. Então, os dados quantitativos mostram não só quais problemas apareceram mais, mas também como eles se conectam ao longo da experiência.
-
-Se for colocar os resultados em ordem de frequência, a navegação no mapa aparece em primeiro lugar, com 45%. Depois vêm a compreensão dos objetivos e a leitura incompleta dos diálogos, ambos com 36%. Em seguida aparece a dificuldade na identificação de caminhos ou fases, com 27%. Por fim, aparecem a dificuldade na compreensão das mecânicas e o grupo sem dificuldades relevantes, os dois com 18%. Essa ordem ajuda a visualizar com mais clareza quais fatores tiveram maior impacto nos testes.
-
-No geral, os números mostram que os principais desafios encontrados pelos participantes estão menos ligados ao ato de jogar em si e mais à forma como o jogo orienta o jogador. Ou seja, a maior parte dos problemas observados não está só nas ações básicas, mas no entendimento do caminho, dos objetivos e da progressão. Isso deixa a análise quantitativa bem alinhada com o que já apareceu na análise qualitativa, porque ambas apontam para os mesmos padrões de comportamento.
-<<<<<<< HEAD
-=======
-=======
 - 45% dos participantes apresentaram dificuldades relacionadas à navegação no mapa;
 - 36% dos participantes tiveram problemas na compreensão dos objetivos do jogo;
 - 36% dos participantes ignoraram ou não leram completamente os diálogos;
@@ -1515,81 +1464,28 @@ No geral, os números mostram que os principais desafios encontrados pelos parti
 - 18% dos participantes não apresentaram dificuldades relevantes durante a experiência.
 
 Esses dados evidenciam que a navegação no mapa e a comunicação das informações (especialmente por meio de diálogos) são os principais pontos de atenção identificados nos testes.
->>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
 
 
 
 A Figura 5.2.1.2 apresenta a distribuição percentual das principais dificuldades observadas nos testes de jogabilidade.
 
 
-<p align="center"><b>Figura 5.2.1.2</b> - Principais dificuldades identificadas nos testes de jogabilidade</p>
+<p align="center"><b>Figura 5.2.1.4</b> - Principais dificuldades identificadas nos testes de jogabilidade</p>
 
-![Códigos do Cenário da Quitanda](assets/graficoPlaytest.png) 
+![Mapeamento de Dificuldades](assets/Mapeamento_de_Dificuldades.png)
 
 
 <p align="center">Fonte: Elaborado pelos autores.</p>
 
 
-<<<<<<< HEAD
-Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador. A leitura do gráfico reforça isso de forma bem clara, já que essas categorias aparecem com porcentagens maiores do que as dificuldades ligadas às mecânicas básicas. Dessa forma, o gráfico ajuda a visualizar rapidamente quais foram os pontos que mais impactaram a experiência dos participantes.
-=======
-<<<<<<< HEAD
-Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador. A leitura do gráfico reforça isso de forma bem clara, já que essas categorias aparecem com porcentagens maiores do que as dificuldades ligadas às mecânicas básicas. Dessa forma, o gráfico ajuda a visualizar rapidamente quais foram os pontos que mais impactaram a experiência dos participantes.
-=======
 Observa-se que os problemas mais recorrentes estão diretamente relacionados à navegação no mapa e à comunicação das informações ao jogador, indicando a necessidade de melhorias nesses aspectos para tornar a experiência mais intuitiva.
 
+Apesar dos atritos mapeados, a avaliação geral do simulador foi altamente positiva. A Figura 5.2.1.5 ilustra a distribuição das notas atribuídas pelos participantes ao final da experiência, variando de 7.0 a 9.0.
 
----
-## Distribuição de Notas dos Playtests
+<p align="center"><b>Figura 5.2.1.5</b> - Distribuição de notas nos testes de jogabilidade</p>
 
-Com base nas avaliações atribuídas pelos participantes ao final dos testes de jogabilidade, foi realizada uma análise quantitativa das notas com o objetivo de mensurar o nível geral de satisfação com a experiência proposta pelo jogo.
-
-Considerando o total de 11 jogadores avaliados, os resultados indicam que:
-
-- 45% dos participantes atribuíram nota 8 ao jogo  
-- 36% dos participantes atribuíram nota 9  
-- 18% dos participantes atribuíram nota 7  
-
-Os dados demonstram uma predominância de avaliações positivas, com a maioria dos jogadores concentrando suas notas entre 8 e 9, indicando uma boa recepção geral do jogo. A ausência de notas mais baixas reforça que, apesar das dificuldades identificadas anteriormente, a experiência ainda foi considerada satisfatória pelos participantes.
-
-  
-<p align="center"><b>Figura 5.2.1.3</b> - Distribuição de notas nos testes de jogabilidade</p>
-
-![Gráfico de notas dos playtests](assets/graficoPlaytest3.png)
-
+![Notas de feedback](assets/Notas_de_feedback.png)
 <p align="center">Fonte: Elaborado pelos autores.</p>
-
-Observa-se que a avaliação geral do jogo é positiva, porém ainda há espaço para melhorias que possam elevar a experiência dos jogadores para níveis ainda mais altos de satisfação.
-
----
-## Clareza na Experiência de Uso
-Com base nos dados coletados durante os testes, foi realizada uma análise comparativa entre jogadores com experiência prévia em jogos digitais e aqueles sem experiência, com o objetivo de avaliar a clareza da experiência de uso.
-
-Considerando o total de 11 participantes, sendo 8 com experiência e 3 sem experiência, os resultados indicam que:
-
-- **Entre os jogadores com experiência:**
-  - 50% (4 de 8) apresentaram dificuldades durante a interação  
-  - 50% (4 de 8) não apresentaram dificuldades relevantes  
-
-- **Entre os jogadores sem experiência:**
-  - 100% (3 de 3) apresentaram dificuldades durante a interação  
-  - 0% não apresentaram dificuldades relevantes  
-
-Os dados evidenciam que a falta de experiência prévia com jogos impacta diretamente na compreensão e interação com o sistema, tornando a experiência mais desafiadora para esse público. Mesmo entre jogadores experientes, a divisão equilibrada entre aqueles que tiveram dificuldades e os que não tiveram indica que ainda existem pontos de melhoria na clareza e usabilidade do jogo.
-
-
-<p align="center"><b>Figura 5.2.1.4</b> - Comparação da clareza da experiência de uso entre jogadores com e sem experiência </p> 
-
-![Gráfico de experiência de uso](assets/graficoPlaytest2.png)
-
-<p align="center">Fonte: Elaborado pelos autores.</p>
-
-Observa-se que a experiência de uso ainda não é totalmente intuitiva, especialmente para jogadores sem familiaridade com jogos digitais, indicando a necessidade de melhorias em tutoriais, feedbacks visuais e comunicação das mecânicas.
-
-
->>>>>>> 1ca551dc2ffdee9b756f85ba41d253204a6daedd
->>>>>>> 45de018cec4954a4796cb829b7a30f5f6bf22992
 
 #### 5.2.1.3. Síntese dos Resultados
 A partir da análise qualitativa e quantitativa dos testes de jogabilidade, foi possível identificar padrões consistentes no comportamento dos participantes, permitindo uma análise aprofundada e baseada em evidências do comportamento dos jogadores durante a interação com o sistema.
@@ -1610,8 +1506,6 @@ Dessa forma, conclui-se que o jogo possui uma base sólida e boa aceitação ini
 
 O aprimoramento desses aspectos, aliado à melhoria na identificação de caminhos (27%) e na clareza das mecânicas (18%), tende a tornar a experiência mais intuitiva, acessível e alinhada ao público-alvo. Esses achados fundamentam diretamente as propostas de melhoria apresentadas na seção seguinte, orientando a evolução do jogo com base em evidências obtidas nos testes.
 
-
-
 ### 5.2.2 Melhorias
 
 
@@ -1619,7 +1513,12 @@ Com base nos resultados obtidos nos testes de jogabilidade, foram identificados 
 
 A seguir, são apresentados os principais problemas identificados, acompanhados de suas respectivas propostas de melhoria.
 
+A Figura 5.2.2.1 sintetiza as principais categorias de sugestões levantadas de forma quantitativa pelos usuários durante as sessões:
 
+<p align="center"><b>Figura 5.2.2.1</b> - Sugestões de melhorias indicadas pelos usuários</p>
+
+![Sugestões de melhoria](assets/Sugestoes_de_Melhoria.png)
+<p align="center">Fonte: Elaborado pelos autores.</p>
 
 #### Problema 1: Dificuldade na navegação do mapa (45%)
 
